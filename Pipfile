@@ -17,6 +17,7 @@ coverage = "*"
 sphinx = "*"
 pytest = "*"
 pytest-runner = "*"
+ipython = "*"
 
 [requires]
 python_version = "3.6"
