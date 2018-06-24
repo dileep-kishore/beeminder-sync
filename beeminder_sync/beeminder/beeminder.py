@@ -2,7 +2,6 @@
     Module to interact with the beeminder api
 """
 
-import json
 from typing import Any, Dict, List
 import requests
 
@@ -32,27 +31,23 @@ class Beeminder:
         self._base_url = base_url
         self._user_name = user_name
         self._auth_token = auth_token
-        goals_url = f"{base_url}/{user_name}/goals?auth_token={auth_token}"
-        self.goals = self._get_goals(goals_url)
+        self.goals = self._get_goals()
         return None
 
-    @staticmethod
-    def _get_goals(goals_url: str) -> List[str]:
+    def _get_goals(self) -> List[str]:
         """
             Get all the `beeminder` goals for the current user
-
-        Parameters
-        ----------
-        goals_url : str
 
         Returns
         -------
         List[str]
             A list of goals in the current user's `beeminder` profile
         """
-        response = requests.get(goals_url)
-        response_data = json.loads(response.text)
-        return [elem['slug'] for elem in response_data]
+        goals_url = f"{self._base_url}users/{self._user_name}/goals"
+        params = {"auth_token": self._auth_token}
+        response = requests.get(goals_url, params=params)
+        response_data = response.json()
+        return [elem["slug"] for elem in response_data]
 
     def __getitem__(self, goal: str) -> Dict[str, Any]:
         """
