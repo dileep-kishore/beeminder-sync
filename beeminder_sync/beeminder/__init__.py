@@ -1,0 +1,1 @@
+from .beeminder import Beeminder
