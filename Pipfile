@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 click = "*"
 halo = "*"
+furl = "*"
 
 [dev-packages]
 bumpversion = "*"
@@ -18,6 +19,8 @@ sphinx = "*"
 pytest = "*"
 pytest-runner = "*"
 ipython = "*"
+pylint = "*"
+mypy = "*"
 
 [requires]
 python_version = "3.6"
