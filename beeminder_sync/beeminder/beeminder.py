@@ -4,6 +4,7 @@
 
 from typing import Any, Dict, List
 import requests
+from furl import furl
 
 
 class Beeminder:
@@ -34,20 +35,24 @@ class Beeminder:
         self.goals = self._get_goals()
         return None
 
+    # TODO: Incorporate `diff_since` in the call
     def _get_goals(self) -> List[str]:
         """
             Get all the `beeminder` goals for the current user
 
-        Returns
-        -------
-        List[str]
-            A list of goals in the current user's `beeminder` profile
+            Returns
+            -------
+            List[str]
+                A list of goals in the current user's `beeminder` profile
         """
-        goals_url = f"{self._base_url}users/{self._user_name}/goals"
-        params = {"auth_token": self._auth_token}
-        response = requests.get(goals_url, params=params)
+        goals_url = furl(self._base_url)
+        goals_url.add(path=f"users/{self._user_name}.json")
+        goals_url.add(args={"auth_token": self._auth_token})
+        response = requests.get(goals_url)
+        response.raise_for_status()
         response_data = response.json()
-        return [elem["slug"] for elem in response_data]
+        self._user_resource = response_data
+        return response_data['goals']
 
     def __getitem__(self, goal: str) -> Dict[str, Any]:
         """

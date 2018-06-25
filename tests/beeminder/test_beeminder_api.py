@@ -4,6 +4,7 @@
 
 import requests
 import pytest
+from furl import furl
 from beeminder_sync.beeminder import Beeminder
 
 
@@ -23,9 +24,10 @@ class TestBeeminderApi:
         base_url = beeminder_config['api']
         username = beeminder_config['username']
         auth_token = beeminder_config['auth_token']
-        user_url = f"{base_url}users/{username}.json"
-        params = {"auth_token": auth_token}
-        response = requests.get(user_url, params=params)
+        user_url = furl(base_url)
+        user_url.add(path=f"users/{username}.json")
+        user_url.add(args={"auth_token": auth_token})
+        response = requests.get(user_url)
         assert response.status_code != 404
         response_data = response.json()
         assert response_data['username'] == username
@@ -36,3 +38,5 @@ class TestBeeminderApi:
         auth_token = beeminder_config['auth_token']
         Beeminder(base_url, username, auth_token)
         assert True
+        with pytest.raises(requests.exceptions.HTTPError):
+            Beeminder(base_url, 'test', 'token')
