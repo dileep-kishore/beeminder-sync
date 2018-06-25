@@ -18,6 +18,7 @@ Beeminder Sync
      :target: https://pyup.io/repos/github/dileep-kishore/beeminder_sync/
      :alt: Updates
 
+.. image:: https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg
 
 
 A python CLI to sync various datasources with Beeminder
@@ -26,6 +27,11 @@ A python CLI to sync various datasources with Beeminder
 * Free software: MIT license
 * Documentation: https://beeminder-sync.readthedocs.io.
 
+
+Work in progress
+----------------
+
+This is a 'work in progress' and is not ready for use of any kind at this time.
 
 Features
 --------
