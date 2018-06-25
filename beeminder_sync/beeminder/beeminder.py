@@ -56,11 +56,16 @@ class Beeminder:
 
     def __getitem__(self, goal: str) -> Dict[str, Any]:
         """
-        """
-        pass
+            Retrieve information about a particular goals
 
-    @property
-    def goal_data(self) -> Dict[str, dict]:
+            Returns
+            -------
+            Dict[str, Any]
+                A dictionary containing all the goal related data
         """
-        """
-        pass
+        goal_url = furl(self._base_url)
+        goal_url.add(path=f"users/{self._user_name}/goals/{goal}.json")
+        goal_url.add(args={"auth_token": self._auth_token})
+        response = requests.get(goal_url)
+        response.raise_for_status()
+        return response.json()
