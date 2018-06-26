@@ -97,5 +97,25 @@ class Beeminder:
         response = requests.get(goal_url)
         response.raise_for_status()
         return response.json()
+
+    def get_datapoints(self, goal: str) -> List[Dict[str, Any]]:
+        """
+            Retrieve datapoints for a particular goal
+
+            Parameters
+            ----------
+            goal : str
+                The goal to be queried
+
+            Returns
+            -------
+            List[Dict[str, Any]]
+                A list of every datapoint entry for the goal
+        """
+        data_url = self._url_maker('datapoints')
+        data_url.add(path=f"{goal}/datapoints.json")
+        response = requests.get(data_url)
+        response.raise_for_status()
+        return response.json()
         response.raise_for_status()
         return response.json()
