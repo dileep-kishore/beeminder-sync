@@ -5,6 +5,7 @@
 import json
 import pathlib
 import pytest
+from beeminder_sync.beeminder import Beeminder
 
 
 BASE_DIR = pathlib.Path.cwd()
@@ -21,6 +22,17 @@ def config():
 
 @pytest.fixture
 def beeminder_config(config):
+    """ The configuration for the beeminder api """
     data = config['beeminder']
     data['required_fields'] = ["api", "username", "auth_token"]
     return data
+
+
+@pytest.fixture
+def beeminder_interface(beeminder_config):
+    """ The `Beeminder` instance to communicate with the api """
+    base_url = beeminder_config["api"]
+    username = beeminder_config["username"]
+    auth_token = beeminder_config["auth_token"]
+    interface = Beeminder(base_url, username, auth_token)
+    return interface
