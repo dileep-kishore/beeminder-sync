@@ -2,6 +2,7 @@
     Tests for the beeminder api
 """
 
+import random
 import requests
 import pytest
 from furl import furl
@@ -40,6 +41,20 @@ class TestBeeminderApi:
         username = beeminder_config["username"]
         auth_token = beeminder_config["auth_token"]
         Beeminder(base_url, username, auth_token)
-        assert True
         with pytest.raises(requests.exceptions.HTTPError):
             Beeminder(base_url, "test", "token")
+
+    def test_getitem(self, beeminder_config):
+        """ Test whether the `Beeminder` interface gets goal data """
+        base_url = beeminder_config["api"]
+        username = beeminder_config["username"]
+        auth_token = beeminder_config["auth_token"]
+        interface = Beeminder(base_url, username, auth_token)
+        goal = random.choice(interface.goals)
+        goal_data = interface[goal]
+        assert goal_data["slug"] == goal
+
+    def test_get_datapoints(self, beeminder_interface):
+        goal = random.choice(beeminder_interface.goals)
+        datapoints = beeminder_interface.get_datapoints(goal)
+        assert len(datapoints) >= 1
