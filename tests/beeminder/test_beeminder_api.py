@@ -33,7 +33,7 @@ class TestBeeminderApi:
         response = requests.get(user_url)
         assert response.status_code != 404
         response_data = response.json()
-        assert response_data['username'] == username
+        assert response_data["username"] == username
 
     def test_interface(self, beeminder_config):
         """ Test whether the `Beeminder` interface connects to the api """
