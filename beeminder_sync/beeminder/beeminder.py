@@ -2,6 +2,7 @@
     Module to interact with the beeminder api
 """
 
+from time import time
 from typing import Any, Dict, List
 import requests
 from furl import furl
@@ -117,5 +118,30 @@ class Beeminder:
         response = requests.get(data_url)
         response.raise_for_status()
         return response.json()
+
+    def create_datapoint(self, goal: str, value: int, timestamp: float = time(),
+                         comment: str = '') -> bool:
+        """
+            Create datapoint for a particular goal
+
+            Parameters
+            ----------
+            goal : str
+                The goal for which datapoint needs to be created
+            value : int
+                The value for the new datapoint
+            timestamp : float
+                Timestamp for the new datatpoint (default is current time)
+            comment : str
+                Comment for the new datapoint (default is '')
+        """
+        data_url = self._url_maker('datapoints')
+        data_url.add(path=f"{goal}/datapoints.json")
+        data_url.add(args={
+            'value': value,
+            'timestamp': timestamp,
+            'comment': comment
+        })
+        response = requests.post(data_url)
         response.raise_for_status()
         return response.json()
