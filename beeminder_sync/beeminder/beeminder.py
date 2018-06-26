@@ -35,6 +35,30 @@ class Beeminder:
         self.goals = self._get_goals()
         return None
 
+    def _url_maker(self, endpoint: str) -> furl:
+        """
+            Create urls based on endpoint
+
+            Parameters
+            ----------
+            endpoint : str
+                The url endpoint to be queried
+
+            Returns
+            -------
+            furl
+                A `furl` instance of the url
+        """
+        url = furl(self._base_url)
+        if endpoint == 'user':
+            url.add(path=f"users/{self._user_name}.json")
+        elif endpoint in ['goals', 'datapoints']:
+            url.add(path=f"users/{self._user_name}/goals/")
+        else:
+            raise TypeError("The endpoint you entered is not supported")
+        url.add(args={"auth_token": self._auth_token})
+        return url
+
     # TODO: Incorporate `diff_since` in the call
     def _get_goals(self) -> List[str]:
         """
@@ -45,10 +69,8 @@ class Beeminder:
             List[str]
                 A list of goals in the current user's `beeminder` profile
         """
-        goals_url = furl(self._base_url)
-        goals_url.add(path=f"users/{self._user_name}.json")
-        goals_url.add(args={"auth_token": self._auth_token})
-        response = requests.get(goals_url)
+        user_url = self._url_maker('user')
+        response = requests.get(user_url)
         response.raise_for_status()
         response_data = response.json()
         self._user_resource = response_data
@@ -56,16 +78,24 @@ class Beeminder:
 
     def __getitem__(self, goal: str) -> Dict[str, Any]:
         """
-            Retrieve information about a particular goals
+            Retrieve information for a particular goal
+
+            Parameters
+            ----------
+            goal : str
+                The goal to be queried
 
             Returns
             -------
             Dict[str, Any]
                 A dictionary containing all the goal related data
         """
-        goal_url = furl(self._base_url)
-        goal_url.add(path=f"users/{self._user_name}/goals/{goal}.json")
-        goal_url.add(args={"auth_token": self._auth_token})
+        if goal not in self.goals:
+            raise KeyError(f"{goal} not found in user's beeminder goals")
+        goal_url = self._url_maker('goals')
+        goal_url.add(path=f"{goal}.json")
         response = requests.get(goal_url)
+        response.raise_for_status()
+        return response.json()
         response.raise_for_status()
         return response.json()
