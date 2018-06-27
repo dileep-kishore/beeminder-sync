@@ -2,8 +2,8 @@
     Module to interact with the beeminder api
 """
 
-from time import time
-from typing import Any, Dict, List
+import maya
+from typing import Any, Dict, List, Union
 import requests
 from furl import furl
 
@@ -119,8 +119,8 @@ class Beeminder:
         response.raise_for_status()
         return response.json()
 
-    def create_datapoint(self, goal: str, value: int, timestamp: float = time(),
-                         comment: str = '') -> bool:
+    def create_datapoint(self, goal: str, value: int, comment: str = '',
+                         timestamp: Union[int, float] = maya.now().epoch) -> bool:
         """
             Create datapoint for a particular goal
 
@@ -130,7 +130,7 @@ class Beeminder:
                 The goal for which datapoint needs to be created
             value : int
                 The value for the new datapoint
-            timestamp : float
+            timestamp : Union[int, float]
                 Timestamp for the new datatpoint (default is current time)
             comment : str
                 Comment for the new datapoint (default is '')
