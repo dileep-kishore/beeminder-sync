@@ -5,7 +5,7 @@ import sys
 import click
 
 
-@click.command()
+@click.group()
 def main(args=None):
     """Console script for beeminder_sync."""
     click.echo("Replace this message by putting your code into "
@@ -14,5 +14,14 @@ def main(args=None):
     return 0
 
 
+@main.command()
+@click.option("--username", "-u")
+@click.option("--auth_token", "-p")
+@click.argument("method")  # TODO: correspond to methods like `get_datapoints`
+def beeminder():
+    click.echo("Beeminder sub-command")
+    return 0
+
+
 if __name__ == "__main__":
-    sys.exit(main())  # pragma: no cover
+    main()
