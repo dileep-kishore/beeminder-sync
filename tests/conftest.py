@@ -2,7 +2,7 @@
     Common configuration for all the tests
 """
 
-import json
+from configparser import ConfigParser
 import pathlib
 import pytest
 from beeminder_sync.beeminder import Beeminder
@@ -14,16 +14,18 @@ BASE_DIR = pathlib.Path.cwd()
 @pytest.fixture(scope="module")
 def config():
     """ Configuration settings for all the apis """
-    fpath = BASE_DIR / "config.json"
+    fpath = BASE_DIR / "config.ini"
+    config = ConfigParser()
     with open(fpath, 'r') as fid:
-        data = json.load(fid)
-    return data
+        config.read_file(fid)
+    return config
 
 
 @pytest.fixture
 def beeminder_config(config):
     """ The configuration for the beeminder api """
-    data = config['beeminder']
+    assert 'beeminder' in config.keys()
+    data = dict(config['beeminder'])
     data['required_fields'] = ["api", "username", "auth_token"]
     return data
 
