@@ -102,4 +102,4 @@ ENV/
 .mypy_cache/
 
 # Authentication
-config.json
+config.ini
