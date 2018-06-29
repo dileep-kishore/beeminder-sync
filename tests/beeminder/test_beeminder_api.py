@@ -61,9 +61,16 @@ class TestBeeminderApi:
 
     def test_create_datapoint(self, beeminder_interface):
         goal = random.choice(beeminder_interface.goals)
-        dpt1 = beeminder_interface.create_datapoint(goal, 1, comment='Test add')
+        dpt1 = (
+            beeminder_interface
+            .create_datapoint(goal, 1, comment='Test add from beeminder-sync')
+        )
         assert dpt1['status'] == 'created'
         dpt1.pop('status', None)
         actual_dpts = beeminder_interface.get_datapoints(goal)
         assert dpt1 == actual_dpts[0]
-        beeminder_interface.create_datapoint(goal, -1, comment='Test sub')
+        dpt2 = (
+            beeminder_interface
+            .create_datapoint(goal, -1, comment='Test sub from beeminder-sync')
+        )
+        assert dpt2['status'] == 'created'
