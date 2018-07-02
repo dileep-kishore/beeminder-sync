@@ -62,4 +62,45 @@ class BeeSync:
             raise FileNotFoundError(f"The configuration file: {config_path} does not exist")
         return validity
 
+    def update(self, section: str, option: str, value: str):
+        """
+            Update a particular value in the configuration file
+
+            Parameters
+            ----------
+            section : str
+                Section header
+            option : str
+                Option name
+            value : str
+                Value to be added
+
+            Returns
+            -------
+            str
+                Returns the value that was updated
+        """
+        self.config.set(section, option, value=value)
+        with open(self.config_path, 'w') as fid:
+            self.config.write(fid)
+        return self.config.get(section, option)
+
+    def get(self, section: str, option: str):
+        """
+            Get a particular value from the configuration file
+
+            Parameters
+            ----------
+            section : str
+                Section header
+            option : str
+                Option name
+
+            Returns
+            -------
+            str
+                Returns the option value for the desired section and optio
+        """
+        return self.config.get(section, option)
+
     # TODO: When given a new config.ini copy this to base_dir and make backup of old
