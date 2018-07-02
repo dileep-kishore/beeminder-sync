@@ -9,7 +9,6 @@ halo = "*"
 furl = "*"
 sqlalchemy = "*"
 maya = "*"
-colorama = "*"
 
 [dev-packages]
 bumpversion = "*"
