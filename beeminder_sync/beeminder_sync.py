@@ -6,7 +6,7 @@ import pathlib
 import os
 import click
 
-from .config import read_config, verify_config
+from .config import read_config, verify_config, write_config
 
 
 class BeeSync:
@@ -37,6 +37,7 @@ class BeeSync:
         if self._verify_config(config_path):
             raise ValueError("The configuration file provided is not valid")
         self.config_path = config_path
+        self.config = read_config(self.config_path)
         # TODO: Check if there's a config file in base_dir
         # If contents of base_dir/config.ini and config_path are the same no need to overwrite
 
@@ -81,8 +82,7 @@ class BeeSync:
                 Returns the value that was updated
         """
         self.config.set(section, option, value=value)
-        with open(self.config_path, 'w') as fid:
-            self.config.write(fid)
+        write_config(self.config_path, self.config)
         return self.config.get(section, option)
 
     def get(self, section: str, option: str):

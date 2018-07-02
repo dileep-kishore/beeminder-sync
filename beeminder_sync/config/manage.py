@@ -60,3 +60,18 @@ def verify_config(config_path: pathlib.Path) -> bool:
         return True
     except:
         return False
+
+
+def write_config(config_path: pathlib.Path, config: ConfigParser) -> None:
+    """
+        Write data into configuration file
+
+        Parameters
+        ----------
+        config_path : pathlib.Path
+            The path to which the configuration file is to be written
+        config : ConfigParser
+            Write the ConfigParser instance into a configuration file
+    """
+    with open(config_path, 'w') as fid:
+        config.write(fid)
