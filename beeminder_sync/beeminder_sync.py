@@ -6,6 +6,8 @@ import pathlib
 import os
 import click
 
+from halo import Halo
+
 from .config import read_config, verify_config, write_config
 
 
@@ -29,12 +31,14 @@ class BeeSync:
     base_dir = pathlib.Path(click.get_app_dir('beeminder_sync'))
     config_path = base_dir / "config.ini"
 
-    def __init__(self, base_dir: pathlib.Path, config_path: pathlib.Path) -> None:
+    def __init__(self, base_dir: pathlib.Path, config_path: pathlib.Path, spinner: Halo) -> None:
         self.base_dir = base_dir
+        self._spinner = spinner
         if not self.base_dir.is_dir():
             os.mkdir(self.base_dir)
             # TODO: Also need to reinitialize the other files that are supposed to be here
         if self._verify_config(config_path):
+            self._spinner.fail("The configuration file provided is not valid")
             raise ValueError("The configuration file provided is not valid")
         self.config_path = config_path
         self.config = read_config(self.config_path)
@@ -60,6 +64,7 @@ class BeeSync:
             if verify_config(config_path):
                 validity = True
         else:
+            self._spinner.fail(f"The configuration file: {config_path} does not exist")
             raise FileNotFoundError(f"The configuration file: {config_path} does not exist")
         return validity
 
@@ -101,6 +106,10 @@ class BeeSync:
             str
                 Returns the option value for the desired section and optio
         """
-        return self.config.get(section, option)
+        if section in self.config.sections() and option in self.config.options(section):
+            return self.config.get(section, option)
+        else:
+            self._spinner.fail("Incorrect section or option value entered")
+            raise ValueError("Incorrect section or option value entered")
 
     # TODO: When given a new config.ini copy this to base_dir and make backup of old
