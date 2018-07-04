@@ -89,8 +89,10 @@ class BeeSync:
             str
                 Returns the value that was updated
         """
+        self._spinner.start()
         self.config.set(section, option, value=value)
         write_config(self.config_path, self.config)
+        self._spinner.succeed(text="Update successful")
         return self.config.get(section, option)
 
     def get(self, section: str, option: str):
@@ -109,8 +111,11 @@ class BeeSync:
             str
                 Returns the option value for the desired section and optio
         """
+        self._spinner.start()
         if section in self.config.sections() and option in self.config.options(section):
-            return self.config.get(section, option)
+            val = self.config.get(section, option)
+            self._spinner.succeed(text=val)
+            return val
         else:
             self._spinner.fail("Incorrect section or option value entered")
             raise ValueError("Incorrect section or option value entered")
