@@ -2,11 +2,13 @@
     The main beeminder-sync class
 """
 
-import pathlib
+from configparser import ConfigParser
 import os
-import click
+import pathlib
+import shutil
 from typing import Dict
 
+import click
 from halo import Halo
 
 from .config import read_config, verify_config, write_config
@@ -43,10 +45,8 @@ class BeeSync:
             self._spinner.fail("The configuration file provided is not valid")
             raise ValueError("The configuration file provided is not valid")
         self.config_path = config_path
-        self.config = read_config(self.config_path)
+        self.config = self._read_replace_config()
         self._spinner.succeed(text="Initialization successful")
-        # TODO: Check if there's a config file in base_dir
-        # If contents of base_dir/config.ini and config_path are the same no need to overwrite
 
     def _verify_config(self, config_path: pathlib.Path) -> bool:
         """
@@ -70,6 +70,30 @@ class BeeSync:
             self._spinner.fail(f"The configuration file: {config_path} does not exist")
             raise FileNotFoundError(f"The configuration file: {config_path} does not exist")
         return validity
+
+    def _read_replace_config(self) -> ConfigParser:
+        """
+            Determines whether to configuration file is to be replaced or not
+            Also returns the appropriate `ConfigParser` instance
+
+            Returns
+            -------
+            ConfigParser
+        """
+        base_config = self.base_dir / "config.ini"
+        if base_config != self.config_path and base_config.exists():
+            answer = click.confirm(
+                "A configuration file already exists at {self.base_dir}. "
+                "Replace?",
+                default=False,
+                abort=True,
+            )
+            if answer:
+                shutil.copy(base_config, self.base_dir / "config.ini.bak")
+                shutil.copy(self.config_path, base_config)
+        elif base_config != self.config_path:
+            shutil.copy(self.config_path, base_config)
+        return read_config(base_config)
 
     def update(self, section: str, option: str, value: str):
         """
@@ -140,5 +164,3 @@ class BeeSync:
             else:
                 raise KeyError("Unsupported attribute supplied to spinner instance")
         return self._spinner
-
-    # TODO: When given a new config.ini copy this to base_dir and make backup of old
