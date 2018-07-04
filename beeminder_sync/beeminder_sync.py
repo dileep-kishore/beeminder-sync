@@ -83,8 +83,7 @@ class BeeSync:
         base_config = self.base_dir / "config.ini"
         if base_config != self.config_path and base_config.exists():
             answer = click.confirm(
-                "A configuration file already exists at {self.base_dir}. "
-                "Replace?",
+                "A configuration file already exists at {self.base_dir}. Replace?",
                 default=False,
                 abort=True,
             )
