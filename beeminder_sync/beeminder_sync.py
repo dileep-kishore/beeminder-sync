@@ -40,7 +40,7 @@ class BeeSync:
         self._spinner.start()
         if not self.base_dir.is_dir():
             os.mkdir(self.base_dir)
-            # TODO: Also need to reinitialize the other files that are supposed to be here
+            # TODO: Also need to reinitialize the other files that are supposed to be here like db
         if self._verify_config(config_path):
             self._spinner.fail("The configuration file provided is not valid")
             raise ValueError("The configuration file provided is not valid")
@@ -90,8 +90,10 @@ class BeeSync:
             if answer:
                 shutil.copy(base_config, self.base_dir / "config.ini.bak")
                 shutil.copy(self.config_path, base_config)
+                os.chmod(base_config, 600)
         elif base_config != self.config_path:
             shutil.copy(self.config_path, base_config)
+            os.chmod(base_config, 600)
         return read_config(base_config)
 
     def update(self, section: str, option: str, value: str):
