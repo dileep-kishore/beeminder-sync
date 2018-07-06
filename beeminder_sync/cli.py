@@ -2,34 +2,34 @@
     Console script for beeminder_sync.
 """
 
+import os
 import sys
 
 import click
 
-from . import BeeSync, BEESYNC_DIR, BEESYNC_CONFIG
+from . import BeeSync, BEESYNC_DIR
 from .beeminder import Beeminder
 
 
 # TODO: Anticipate for `envvar` as well.
 # What takes higher priority when both `envvar` and `default` are present
-BEESYNC_DIR = str(BEESYNC_DIR)
-BEESYNC_CONFIG = str(BEESYNC_CONFIG)
+ENV_PATH = os.environ.get('BEESYNC_DIR')
+BASE_DIR = ENV_PATH if ENV_PATH else str(BEESYNC_DIR)
 
 
 @click.group()
 @click.option(
     "--basedir",
     "-d",
-    envvar="BEESYNC_DIR",
-    default=BEESYNC_DIR,
+    default=BASE_DIR,
     type=click.Path(),
     help="The path to the base application directory"
 )
 @click.option(
     "--config",
     "-c",
-    default=BEESYNC_CONFIG,
-    type=click.Path(exists=True),
+    default=None,
+    type=click.Path(),
     help="The path to the configuration file"
 )
 @click.pass_context

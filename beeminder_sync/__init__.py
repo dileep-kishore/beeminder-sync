@@ -7,4 +7,4 @@ __email__ = 'k.dileep1994@gmail.com'
 __version__ = '0.1.0'
 
 
-from.beeminder_sync import BeeSync
+from.beeminder_sync import BeeSync, BEESYNC_DIR
