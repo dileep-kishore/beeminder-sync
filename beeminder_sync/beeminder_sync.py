@@ -6,6 +6,7 @@ from configparser import ConfigParser
 import os
 import pathlib
 import shutil
+import sys
 from typing import Dict
 
 import click
@@ -24,9 +25,9 @@ class BeeSync:
 
         Parameters
         ----------
-        base_dir : pathlib.Path
+        base_dir : str
             The default path to the settings directory
-        config_path : pathlib.Path
+        config_path : str
             The default path to the configuration file
 
         Attributes
@@ -34,20 +35,36 @@ class BeeSync:
         base_dir : pathlib.Path
         config_path : pathlib.Path
     """
-    base_dir = pathlib.Path(click.get_app_dir('beeminder_sync'))
-    config_path = base_dir / "config.ini"
+    _config_template_path = pathlib.Path(__file__) / "config/config_template.ini"
 
-    def __init__(self, base_dir: pathlib.Path, config_path: pathlib.Path) -> None:
-        self.base_dir = base_dir
+    def __init__(self, base_dir: str, config_path: str) -> None:
         self._spinner = Halo(text="Initializing application...", color='green', spinner="dots")
         self._spinner.start()
+        self.base_dir = pathlib.Path(base_dir)
         if not self.base_dir.is_dir():
             os.mkdir(self.base_dir)
             # TODO: Also need to reinitialize the other files that are supposed to be here like db
-        if self._verify_config(config_path):
+        if config_path:
+            config_file = pathlib.Path(config_path)
+        else:
+            config_file = self.base_dir / "config.ini"
+        if not config_file.exists():
+            new_config_path = self.base_dir / "config.ini"
+            answer = click.confirm(
+                "Could not find configuration file. "
+                f"Create new one at {new_config_path}?",
+                default=False,
+                abort=True
+            )
+            if answer:
+                self._spinner.text = "Creating new configuration file template"
+                self._create_config(new_config_path)
+                self._spinner.succeed("Configuration template created. Please fill in the required options")
+                sys.exit()
+        if self._verify_config(config_file):
             self._spinner.fail("The configuration file provided is not valid")
             raise ValueError("The configuration file provided is not valid")
-        self.config_path = config_path
+        self.config_path = config_file
         self.config = self._read_replace_config()
         self._spinner.succeed(text="Initialization successful")
 
