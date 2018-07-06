@@ -51,6 +51,21 @@ class BeeSync:
         self.config = self._read_replace_config()
         self._spinner.succeed(text="Initialization successful")
 
+    def _create_config(self, config_path: pathlib.Path) -> None:
+        """
+            Create a config file at destination using the template
+
+            Parameters
+            ----------
+            config_path : pathlib.Path
+
+            Returns
+            -------
+            None
+        """
+        shutil.copy(self._config_template_path, config_path)
+        os.chmod(config_path, 600)
+
     def _verify_config(self, config_path: pathlib.Path) -> bool:
         """
             Verify whether the configuration file is valid
