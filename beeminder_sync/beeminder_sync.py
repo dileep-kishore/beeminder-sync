@@ -82,7 +82,7 @@ class BeeSync:
             None
         """
         shutil.copy(self._config_template_path, config_path)
-        os.chmod(config_path, 600)
+        os.chmod(config_path, 0o600)
 
     def _verify_config(self, config_path: pathlib.Path) -> bool:
         """
@@ -126,10 +126,10 @@ class BeeSync:
             if answer:
                 shutil.copy(base_config, self.base_dir / "config.ini.bak")
                 shutil.copy(self.config_path, base_config)
-                os.chmod(base_config, 600)
+                os.chmod(base_config, 0o600)
         elif base_config != self.config_path:
             shutil.copy(self.config_path, base_config)
-            os.chmod(base_config, 600)
+            os.chmod(base_config, 0o600)
         return read_config(base_config)
 
     def update(self, section: str, option: str, value: str):
