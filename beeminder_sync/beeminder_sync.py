@@ -35,13 +35,14 @@ class BeeSync:
         base_dir : pathlib.Path
         config_path : pathlib.Path
     """
-    _config_template_path = pathlib.Path(__file__) / "config/config_template.ini"
+    _config_template_path = pathlib.Path(__file__).parent / "config/config_template.ini"
 
     def __init__(self, base_dir: str, config_path: str) -> None:
         self._spinner = Halo(text="Initializing application...", color='green', spinner="dots")
         self._spinner.start()
         self.base_dir = pathlib.Path(base_dir)
         if not self.base_dir.is_dir():
+            self._spinner.text = "Creating base directory..."
             os.mkdir(self.base_dir)
             # TODO: Also need to reinitialize the other files that are supposed to be here like db
         if config_path:
@@ -50,8 +51,8 @@ class BeeSync:
             config_file = self.base_dir / "config.ini"
         if not config_file.exists():
             new_config_path = self.base_dir / "config.ini"
+            self._spinner.fail("Could not find a configuration file.")
             answer = click.confirm(
-                "Could not find configuration file. "
                 f"Create new one at {new_config_path}?",
                 default=False,
                 abort=True
