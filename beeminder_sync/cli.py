@@ -46,14 +46,14 @@ def main(ctx, basedir, config):
 @click.pass_context
 def config(ctx, section, option, value):
     """ Get and set configuration options """
-    spinner_settings = dict(color='blue', spinner="dots")
+    spinner_settings = dict(color="blue", spinner="dots")
     beesync = ctx.obj['CONFIG']
     if value:
-        spinner_settings['text'] = "Updating configuration...",
+        spinner_settings["text"] = "Updating configuration..."
         beesync.set_spinner(spinner_settings)
         conf_val = beesync.update(section, option, value)
     else:
-        spinner_settings['text'] = "Getting configuration...",
+        spinner_settings["text"] = "Getting configuration..."
         beesync.set_spinner(spinner_settings)
         conf_val = beesync.get(section, option)
     return conf_val
