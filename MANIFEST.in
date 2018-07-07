@@ -4,6 +4,8 @@ include HISTORY.rst
 include LICENSE
 include README.rst
 
+include beeminder_sync/config/config_template.ini
+
 recursive-include tests *
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
