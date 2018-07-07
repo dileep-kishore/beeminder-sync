@@ -33,13 +33,13 @@ BASE_DIR = ENV_PATH if ENV_PATH else str(BEESYNC_DIR)
     help="The path to the configuration file"
 )
 @click.pass_context
-def main(ctx, basedir, config):
-    """ Main entry point to beeminder_sync """
+def cli(ctx, basedir, config):
+    """ cli entry point to beeminder_sync """
     ctx.obj['CONFIG'] = BeeSync(basedir, config)
     return None
 
 
-@main.command()
+@cli.command()
 @click.option("--section", "-s", help="Configuration section header")
 @click.option("--option", "-o", help="Option name under section")
 @click.argument("VALUE", default="")
@@ -59,7 +59,7 @@ def config(ctx, section, option, value):
     return conf_val
 
 
-@main.command()
+@cli.command()
 @click.option("--username", "-u")
 @click.option("--authtoken", "-p")
 @click.argument("--method", "-m")  # TODO: correspond to methods like `get_datapoints`
@@ -70,5 +70,9 @@ def beeminder(ctx, username, authtoken, method):
     return 0
 
 
+def main():
+    cli(obj={})
+
+
 if __name__ == "__main__":
-    main(obj={})
+    main()
