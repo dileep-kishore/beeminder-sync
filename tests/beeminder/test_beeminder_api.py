@@ -11,7 +11,6 @@ from beeminder_sync.beeminder import Beeminder
 
 @pytest.mark.usefixtures("beeminder_config")
 class TestBeeminderApi:
-
     """ Tests for the beeminder api """
 
     def test_config(self, beeminder_config):
