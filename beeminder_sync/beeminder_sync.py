@@ -64,7 +64,6 @@ class BeeSync:
                 sys.exit()
         if self._verify_config(config_file):
             self._spinner.fail("The configuration file provided is not valid")
-            raise ValueError("The configuration file provided is not valid")
         self.config_path = config_file
         self.config = self._read_replace_config()
         self._spinner.succeed(text="Initialization successful")
@@ -104,7 +103,6 @@ class BeeSync:
                 validity = True
         else:
             self._spinner.fail(f"The configuration file: {config_path} does not exist")
-            raise FileNotFoundError(f"The configuration file: {config_path} does not exist")
         return validity
 
     def _read_replace_config(self) -> ConfigParser:
@@ -151,6 +149,8 @@ class BeeSync:
                 Returns the value that was updated
         """
         self._spinner.start()
+        if section in self.config.sections() and option in self.config.options(section):
+            self._spinner.info("Overwriting current value")
         self.config.set(section, option, value=value)
         write_config(self.config_path, self.config)
         self._spinner.succeed(text="Update successful")
@@ -175,11 +175,13 @@ class BeeSync:
         self._spinner.start()
         if section in self.config.sections() and option in self.config.options(section):
             val = self.config.get(section, option)
-            self._spinner.succeed(text=val)
+            self._spinner.succeed(text=f"{section}.{option}: {val}")
             return val
         else:
             self._spinner.fail("Incorrect section or option value entered")
-            raise ValueError("Incorrect section or option value entered")
+            click.secho("Possible values are:")
+            for section in self.config.sections():
+                click.secho(f"section: {section}. options: {self.config.options(section)}")
 
     def set_spinner(self, settings: Dict[str, str]) -> Halo:
         """
