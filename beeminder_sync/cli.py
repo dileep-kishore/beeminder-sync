@@ -11,8 +11,6 @@ from . import BeeSync, BEESYNC_DIR
 from .beeminder import Beeminder
 
 
-# TODO: Anticipate for `envvar` as well.
-# What takes higher priority when both `envvar` and `default` are present
 ENV_PATH = os.environ.get('BEESYNC_DIR')
 BASE_DIR = ENV_PATH if ENV_PATH else str(BEESYNC_DIR)
 
