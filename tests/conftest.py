@@ -4,11 +4,22 @@
 
 from configparser import ConfigParser
 import pathlib
+
 import pytest
+
 from beeminder_sync.beeminder import Beeminder
+from beeminder_sync import BEESYNC_DIR
 
 
 BASE_DIR = pathlib.Path.cwd()
+
+
+@pytest.fixture(scope="module")
+def config_paths():
+    """ The configuration for the application data """
+    base_path = BEESYNC_DIR
+    config_path = base_path / "config.ini"
+    return base_path, config_path
 
 
 @pytest.fixture(scope="module")
