@@ -32,7 +32,7 @@ BASE_DIR = ENV_PATH if ENV_PATH else str(BEESYNC_DIR)
 )
 @click.pass_context
 def cli(ctx, basedir, config):
-    """ cli entry point to beeminder_sync """
+    """ Main entry point to beeminder_sync """
     ctx.obj['CONFIG'] = BeeSync(basedir, config)
     return None
 
