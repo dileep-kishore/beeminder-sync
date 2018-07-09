@@ -4,21 +4,25 @@
 
 from configparser import ConfigParser
 import pathlib
+import shutil
 
 import pytest
 
 from beeminder_sync.beeminder import Beeminder
-from beeminder_sync import BEESYNC_DIR
+from beeminder_sync import BeeSync
 
 
 BASE_DIR = pathlib.Path.cwd()
 
 
+# NOTE: We cannot test the creation a config because that requires a user input
 @pytest.fixture(scope="module")
-def config_paths():
+def config_paths(tmpdir_factory):
     """ The configuration for the application data """
-    base_path = BEESYNC_DIR
+    base_factory = tmpdir_factory.mktemp("beeminder_sync")
+    base_path = pathlib.Path(str(base_factory))
     config_path = base_path / "config.ini"
+    shutil.copy(BeeSync._config_template_path, config_path)
     return base_path, config_path
 
 
