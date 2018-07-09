@@ -34,6 +34,8 @@ class BeeSync:
         ----------
         base_dir : pathlib.Path
         config_path : pathlib.Path
+        config : ConfigParser
+            The configuration object
     """
     _config_template_path = pathlib.Path(__file__).parent / "config/config_template.ini"
 
