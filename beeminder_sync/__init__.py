@@ -8,3 +8,4 @@ __version__ = '0.1.0'
 
 
 from.beeminder_sync import BeeSync, BEESYNC_DIR
+from .logger import log
