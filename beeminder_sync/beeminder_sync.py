@@ -15,9 +15,6 @@ from halo import Halo
 from .config import read_config, verify_config, write_config
 
 
-BEESYNC_DIR = pathlib.Path(click.get_app_dir('beeminder_sync'))
-
-
 class BeeSync:
     """
         The main class for the package
