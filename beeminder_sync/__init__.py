@@ -6,6 +6,14 @@ __author__ = """Dileep Kishore"""
 __email__ = 'k.dileep1994@gmail.com'
 __version__ = '0.1.0'
 
+import pathlib
+import os
 
-from.beeminder_sync import BeeSync, BEESYNC_DIR
-from .logger import log
+import click
+
+from.beeminder_sync import BeeSync
+
+
+BEESYNC_DIR = pathlib.Path(click.get_app_dir('beeminder_sync'))
+ENV_PATH = os.environ.get('BEESYNC_DIR')
+BASE_DIR = pathlib.Path(ENV_PATH) if ENV_PATH else BEESYNC_DIR
