@@ -7,19 +7,15 @@ import sys
 
 import click
 
-from . import BeeSync, BEESYNC_DIR
+from . import BeeSync, BASE_DIR
 from .beeminder import Beeminder
-
-
-ENV_PATH = os.environ.get('BEESYNC_DIR')
-BASE_DIR = ENV_PATH if ENV_PATH else str(BEESYNC_DIR)
 
 
 @click.group()
 @click.option(
     "--basedir",
     "-d",
-    default=BASE_DIR,
+    default=str(BASE_DIR),
     type=click.Path(),
     help="The path to the base application directory"
 )
