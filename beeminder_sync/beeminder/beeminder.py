@@ -127,8 +127,13 @@ class Beeminder:
         log.info(f"Connection successful. Retrieving data-points for {goal}")
         return response.json()
 
-    def create_datapoint(self, goal: str, value: int, comment: str = '',
-                         timestamp: Union[int, float] = maya.now().epoch) -> bool:
+    def create_datapoint(
+            self,
+            goal: str,
+            value: int,
+            comment: str = '',
+            timestamp: Union[int, float] = maya.now().epoch
+    ) -> bool:
         """
             Create datapoint for a particular goal
 
