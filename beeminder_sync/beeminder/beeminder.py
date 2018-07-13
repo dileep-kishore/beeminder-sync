@@ -7,6 +7,7 @@ from typing import Any, Dict, List, Union
 import requests
 from furl import furl
 
+from beeminder_sync.logger import log
 
 class Beeminder:
     """
@@ -72,7 +73,9 @@ class Beeminder:
         """
         user_url = self._url_maker('user')
         response = requests.get(user_url)
+        log.info(f"Attempting to connect to {user_url}")
         response.raise_for_status()
+        log.info("Connection successful. Getting list of goals")
         response_data = response.json()
         self._user_resource = response_data
         return response_data['goals']
@@ -96,7 +99,9 @@ class Beeminder:
         goal_url = self._url_maker('goals')
         goal_url.add(path=f"{goal}.json")
         response = requests.get(goal_url)
+        log.info(f"Attempting to connect to {goal_url}")
         response.raise_for_status()
+        log.info(f"Connection successful. Retrieving data for {goal}")
         return response.json()
 
     def get_datapoints(self, goal: str) -> List[Dict[str, Any]]:
@@ -116,7 +121,9 @@ class Beeminder:
         data_url = self._url_maker('datapoints')
         data_url.add(path=f"{goal}/datapoints.json")
         response = requests.get(data_url)
+        log.info(f"Attempting to connect to {data_url}")
         response.raise_for_status()
+        log.info(f"Connection successful. Retrieving data-points for {goal}")
         return response.json()
 
     def create_datapoint(self, goal: str, value: int, comment: str = '',
@@ -143,5 +150,7 @@ class Beeminder:
             'comment': comment
         })
         response = requests.post(data_url)
+        log.info(f"Attempting to connect to {data_url}")
         response.raise_for_status()
+        log.info(f"Connection successful. Creating data-point for {goal}")
         return response.json()
