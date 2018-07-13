@@ -9,6 +9,7 @@ from furl import furl
 
 from beeminder_sync.logger import log
 
+
 class Beeminder:
     """
         Interface to the `beeminder` api
