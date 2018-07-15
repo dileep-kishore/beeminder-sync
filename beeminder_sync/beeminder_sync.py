@@ -26,6 +26,8 @@ class BeeSync:
             The default path to the settings directory
         config_path : str
             The default path to the configuration file
+        spinner : Halo
+            The `Halo` spinner object
 
         Attributes
         ----------
@@ -36,8 +38,8 @@ class BeeSync:
     """
     _config_template_path = pathlib.Path(__file__).parent / "config/config_template.ini"
 
-    def __init__(self, base_dir: str, config_path: str) -> None:
-        self._spinner = Halo(text="Initializing application...", color='green', spinner="dots")
+    def __init__(self, base_dir: str, config_path: str, spinner: Halo) -> None:
+        self._spinner = spinner
         self._spinner.start()
         self.base_dir = pathlib.Path(base_dir)
         if not self.base_dir.is_dir():
