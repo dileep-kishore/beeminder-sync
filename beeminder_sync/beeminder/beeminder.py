@@ -10,6 +10,7 @@ from furl import furl
 from halo import Halo
 
 from beeminder_sync.logger import log
+from ..beeminder_sync import BeeSync
 
 
 class Beeminder:
@@ -175,3 +176,43 @@ class Beeminder:
         log.info(f"Connection successful. Creating data-point for {goal}")
         self._spinner.succeed("Creation successful")
         return response.json()
+
+    @classmethod
+    def from_config(cls, beesync: BeeSync, spinner: Halo) -> "Beeminder":
+        """
+            Create `Beeminder` instance using configuration stored in `BeeSync` object
+
+            Parameters
+            ----------
+            beesync : BeeSync
+                The `BeeSync` object storing the configuration
+
+            Returns
+            -------
+            Beeminder
+        """
+        base_url = beesync.get('beeminder', 'api', silent=True)
+        user_name = beesync.get('beeminder', 'username', silent=True)
+        auth_token = beesync.get('beeminder', 'auth_token', silent=True)
+        return cls(base_url, user_name, auth_token, spinner)
+
+    def set_spinner(self, settings: Dict[str, str]) -> Halo:
+        """
+            Update settings for spinner instance
+
+            Parameters
+            ----------
+            settings : Dict[str, str]
+                A dictionary containing the updated settings for the spinner
+
+            Returns
+            -------
+            Halo
+                Returns the spinner instance
+        """
+        for key in settings:
+            if key in ['spinner', 'text', 'color']:
+                setattr(self._spinner, key, settings[key])
+            else:
+                raise KeyError("Unsupported attribute supplied to spinner instance")
+        return self._spinner
