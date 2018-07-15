@@ -129,7 +129,7 @@ class BeeSync:
             os.chmod(base_config, 0o600)
         return read_config(base_config)
 
-    def update(self, section: str, option: str, value: str):
+    def update(self, section: str, option: str, value: str, silent: bool = False) -> str:
         """
             Update a particular value in the configuration file
 
@@ -141,6 +141,8 @@ class BeeSync:
                 Option name
             value : str
                 Value to be added
+            silent : bool
+                Flag to silence printing to console
 
             Returns
             -------
@@ -149,13 +151,15 @@ class BeeSync:
         """
         self._spinner.start()
         if section in self.config.sections() and option in self.config.options(section):
-            self._spinner.info("Overwriting current value")
+            if not silent:
+                self._spinner.info("Overwriting current value")
         self.config.set(section, option, value=value)
         write_config(self.config_path, self.config)
-        self._spinner.succeed(text="Update successful")
+        if not silent:
+            self._spinner.succeed(text="Update successful")
         return self.config.get(section, option)
 
-    def get(self, section: str, option: str):
+    def get(self, section: str, option: str, silent: bool = False) -> str:
         """
             Get a particular value from the configuration file
 
@@ -165,6 +169,8 @@ class BeeSync:
                 Section header
             option : str
                 Option name
+            silent : bool
+                Flag to silence printing to console
 
             Returns
             -------
@@ -174,7 +180,8 @@ class BeeSync:
         self._spinner.start()
         if section in self.config.sections() and option in self.config.options(section):
             val = self.config.get(section, option)
-            self._spinner.succeed(text=f"{section}.{option}: {val}")
+            if not silent:
+                self._spinner.succeed(text=f"{section}.{option}: {val}")
             return val
         else:
             self._spinner.fail("Incorrect section or option value entered")
