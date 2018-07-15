@@ -2,10 +2,12 @@
     Console script for beeminder_sync.
 """
 
+import json
 import os
 import sys
 
 import click
+from halo import Halo
 
 from . import BeeSync, BASE_DIR
 from .beeminder import Beeminder
@@ -29,7 +31,8 @@ from .beeminder import Beeminder
 @click.pass_context
 def cli(ctx, basedir, config):
     """ Main entry point to beeminder_sync """
-    ctx.obj['CONFIG'] = BeeSync(basedir, config)
+    spinner = Halo(text="Initializing application...", color="green", spinner="dots")
+    ctx.obj['CONFIG'] = BeeSync(basedir, config, spinner)
     return None
 
 
@@ -53,14 +56,23 @@ def config(ctx, section, option, value):
     return conf_val
 
 
+# TODO: Where should we put the spinner object? All classes need that how to pass it around?
 @cli.command()
-@click.option("--username", "-u")
-@click.option("--authtoken", "-p")
-@click.argument("--method", "-m")  # TODO: correspond to methods like `get_datapoints`
+@click.option("--method", "-m")  # TODO: methods like `get_datapoints` -> use `GET` or `POST` instead
+@click.argument("method_args", nargs=-1)
 @click.pass_context
-def beeminder(ctx, username, authtoken, method):
+def beeminder(ctx, method, method_args):
     """ Access the beeminder interface """
+    spinner = Halo(text="Connection to Beeminder api...", color="blue", spinner="dots")
     beesync = ctx.obj['CONFIG']
+    bee = Beeminder.from_config(beesync, spinner)
+    if method == 'GET':
+        response = bee.get_datapoints(method_args[0])
+    elif method == 'POST':
+        response = bee.create_datapoint(method_args[0], method_args[1])
+    else:
+        spinner.fail(f"Unsupported method {method}. Valid options: ['GET', 'POST']")
+    click.secho(json.dumps(response, indent=2, sort_keys=True))
     return 0
 
 
