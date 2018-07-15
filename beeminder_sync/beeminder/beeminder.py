@@ -5,7 +5,9 @@
 import maya
 from typing import Any, Dict, List, Union
 import requests
+
 from furl import furl
+from halo import Halo
 
 from beeminder_sync.logger import log
 
@@ -22,6 +24,8 @@ class Beeminder:
             `beeminder` username
         auth_token : str
             `beeminder` authentication token
+        spinner : Halo
+            The `Halo` spinner object
 
         Attributes
         ----------
@@ -31,7 +35,9 @@ class Beeminder:
             Data for all goals
     """
 
-    def __init__(self, base_url: str, user_name: str, auth_token: str) -> None:
+    def __init__(self, base_url: str, user_name: str, auth_token: str, spinner: Halo) -> None:
+        self._spinner = spinner
+        self._spinner.start()
         self._base_url = base_url
         self._user_name = user_name
         self._auth_token = auth_token
@@ -119,12 +125,18 @@ class Beeminder:
             List[Dict[str, Any]]
                 A list of every datapoint entry for the goal
         """
+        self._spinner.text = "Retrieving datapoints..."
+        self._spinner.start()
         data_url = self._url_maker('datapoints')
         data_url.add(path=f"{goal}/datapoints.json")
         response = requests.get(data_url)
         log.info(f"Attempting to connect to {data_url}")
-        response.raise_for_status()
+        try:
+            response.raise_for_status()
+        except requests.HTTPError:
+            raise ValueError(f"Goal {goal} not found. The following goals were found: {self.goals}")
         log.info(f"Connection successful. Retrieving data-points for {goal}")
+        self._spinner.succeed("Retrieval successful")
         return response.json()
 
     def create_datapoint(
@@ -148,6 +160,8 @@ class Beeminder:
             comment : str
                 Comment for the new datapoint (default is '')
         """
+        self._spinner.text = "Creating datapoints..."
+        self._spinner.start()
         data_url = self._url_maker('datapoints')
         data_url.add(path=f"{goal}/datapoints.json")
         data_url.add(args={
@@ -159,4 +173,5 @@ class Beeminder:
         log.info(f"Attempting to connect to {data_url}")
         response.raise_for_status()
         log.info(f"Connection successful. Creating data-point for {goal}")
+        self._spinner.succeed("Creation successful")
         return response.json()
