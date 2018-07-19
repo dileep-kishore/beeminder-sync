@@ -25,8 +25,6 @@ class Beeminder:
             `beeminder` username
         auth_token : str
             `beeminder` authentication token
-        spinner : Halo
-            The `Halo` spinner object
 
         Attributes
         ----------
@@ -36,8 +34,8 @@ class Beeminder:
             Data for all goals
     """
 
-    def __init__(self, base_url: str, user_name: str, auth_token: str, spinner: Halo) -> None:
-        self._spinner = spinner
+    def __init__(self, base_url: str, user_name: str, auth_token: str) -> None:
+        self._spinner = Halo(text="Connecting to the Beeminder api...", color="blue", spinner="dots")
         self._spinner.start()
         self._base_url = base_url
         self._user_name = user_name
@@ -178,7 +176,7 @@ class Beeminder:
         return response.json()
 
     @classmethod
-    def from_config(cls, beesync: BeeSync, spinner: Halo) -> "Beeminder":
+    def from_config(cls, beesync: BeeSync) -> "Beeminder":
         """
             Create `Beeminder` instance using configuration stored in `BeeSync` object
 
@@ -194,7 +192,7 @@ class Beeminder:
         base_url = beesync.get('beeminder', 'api', silent=True)
         user_name = beesync.get('beeminder', 'username', silent=True)
         auth_token = beesync.get('beeminder', 'auth_token', silent=True)
-        return cls(base_url, user_name, auth_token, spinner)
+        return cls(base_url, user_name, auth_token)
 
     def set_spinner(self, settings: Dict[str, str]) -> Halo:
         """
