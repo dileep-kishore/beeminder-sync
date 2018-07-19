@@ -7,7 +7,7 @@ import os
 import pathlib
 import shutil
 import sys
-from typing import Dict
+from typing import Dict, Optional
 
 import click
 from halo import Halo
@@ -26,8 +26,6 @@ class BeeSync:
             The default path to the settings directory
         config_path : str
             The default path to the configuration file
-        spinner : Halo
-            The `Halo` spinner object
 
         Attributes
         ----------
@@ -38,8 +36,8 @@ class BeeSync:
     """
     _config_template_path = pathlib.Path(__file__).parent / "config/config_template.ini"
 
-    def __init__(self, base_dir: str, config_path: str, spinner: Halo) -> None:
-        self._spinner = spinner
+    def __init__(self, base_dir: str, config_path: str) -> None:
+        self._spinner = Halo(text="Initializing application...", color="green", spinner="dots")
         self._spinner.start()
         self.base_dir = pathlib.Path(base_dir)
         if not self.base_dir.is_dir():
@@ -151,7 +149,10 @@ class BeeSync:
             str
                 Returns the value that was updated
         """
-        self._spinner.start()
+        if not silent:
+            self._spinner.color = "blue"
+            self._spinner.text = "Updating configuration..."
+            self._spinner.start()
         if section in self.config.sections() and option in self.config.options(section):
             if not silent:
                 self._spinner.info("Overwriting current value")
@@ -161,7 +162,7 @@ class BeeSync:
             self._spinner.succeed(text="Update successful")
         return self.config.get(section, option)
 
-    def get(self, section: str, option: str, silent: bool = False) -> str:
+    def get(self, section: str, option: str, silent: bool = False) -> Optional[str]:
         """
             Get a particular value from the configuration file
 
@@ -179,7 +180,10 @@ class BeeSync:
             str
                 Returns the option value for the desired section and optio
         """
-        self._spinner.start()
+        if not silent:
+            self._spinner.color = "blue"
+            self._spinner.text = "Getting configuration..."
+            self._spinner.start()
         if section in self.config.sections() and option in self.config.options(section):
             val = self.config.get(section, option)
             if not silent:
