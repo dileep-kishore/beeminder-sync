@@ -7,7 +7,6 @@ import os
 import sys
 
 import click
-from halo import Halo
 
 from . import BeeSync, BASE_DIR
 from .beeminder import Beeminder
@@ -31,8 +30,7 @@ from .beeminder import Beeminder
 @click.pass_context
 def cli(ctx, basedir, config):
     """ Main entry point to beeminder_sync """
-    spinner = Halo(text="Initializing application...", color="green", spinner="dots")
-    ctx.obj['CONFIG'] = BeeSync(basedir, config, spinner)
+    ctx.obj['CONFIG'] = BeeSync(basedir, config)
     return None
 
 
@@ -43,35 +41,28 @@ def cli(ctx, basedir, config):
 @click.pass_context
 def config(ctx, section, option, value):
     """ Get and set configuration options """
-    spinner_settings = dict(color="blue", spinner="dots")
     beesync = ctx.obj['CONFIG']
     if value:
-        spinner_settings["text"] = "Updating configuration..."
-        beesync.set_spinner(spinner_settings)
         conf_val = beesync.update(section, option, value)
     else:
-        spinner_settings["text"] = "Getting configuration..."
-        beesync.set_spinner(spinner_settings)
         conf_val = beesync.get(section, option)
     return conf_val
 
 
-# TODO: Where should we put the spinner object? All classes need that how to pass it around?
 @cli.command()
 @click.option("--method", "-m")  # TODO: methods like `get_datapoints` -> use `GET` or `POST` instead
 @click.argument("method_args", nargs=-1)
 @click.pass_context
 def beeminder(ctx, method, method_args):
     """ Access the beeminder interface """
-    spinner = Halo(text="Connection to Beeminder api...", color="blue", spinner="dots")
     beesync = ctx.obj['CONFIG']
-    bee = Beeminder.from_config(beesync, spinner)
+    bee = Beeminder.from_config(beesync)
     if method == 'GET':
         response = bee.get_datapoints(method_args[0])
     elif method == 'POST':
         response = bee.create_datapoint(method_args[0], method_args[1])
     else:
-        spinner.fail(f"Unsupported method {method}. Valid options: ['GET', 'POST']")
+        bee.fail(f"Unsupported method {method}. Valid options: ['GET', 'POST']")
     click.secho(json.dumps(response, indent=2, sort_keys=True))
     return 0
 
