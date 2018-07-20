@@ -23,6 +23,8 @@ pytest-runner = "*"
 ipython = "*"
 pylint = "*"
 mypy = "*"
+tox-travis = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.6"
