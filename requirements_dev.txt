@@ -26,7 +26,7 @@ pyparsing==2.2.0
 pytest-runner==4.2
 pytest==3.6.2
 pytz==2018.4
-pyyaml==3.12
+pyyaml==3.13
 requests==2.19.1
 six==1.11.0
 snowballstemmer==1.2.1
