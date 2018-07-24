@@ -103,6 +103,7 @@ ENV/
 
 # Authentication
 config.ini
+config_example.ini
 
 # tags
 tags
