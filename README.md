@@ -1,10 +1,10 @@
 # Beeminder Sync
 
-[![image](https://img.shields.io/pypi/v/beeminder_sync.svg)](https://pypi.python.org/pypi/beeminder_sync)
-[![image](https://img.shields.io/travis/dileep-kishore/beeminder_sync.svg)](https://travis-ci.org/dileep-kishore/beeminder_sync)
+[![pypi](https://img.shields.io/pypi/v/beeminder_sync.svg)](https://pypi.python.org/pypi/beeminder_sync)
+[![Build Status](https://travis-ci.org/dileep-kishore/beeminder-sync.svg?branch=master)](https://travis-ci.org/dileep-kishore/beeminder-sync)
 [![Documentation Status](https://readthedocs.org/projects/beeminder-sync/badge/?version=latest)](https://beeminder-sync.readthedocs.io/en/latest/?badge=latest)
 [![Updates](https://pyup.io/repos/github/dileep-kishore/beeminder_sync/shield.svg)](https://pyup.io/repos/github/dileep-kishore/beeminder_sync/)
-![image](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
+![wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
 
 A `Python` CLI to sync various data sources with [Beeminder](https://github.com/dileep-kishore/beeminder-sync)
 
