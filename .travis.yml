@@ -4,4 +4,4 @@ install: pip install -r requirements_dev.txt
 script: tox
 before_install:
 - openssl aes-256-cbc -K $encrypted_09207bcf28b9_key -iv $encrypted_09207bcf28b9_iv
-  -in config.ini.enc -out config.ini -d
+  -in config_example.ini.enc -out config_example.ini -d
