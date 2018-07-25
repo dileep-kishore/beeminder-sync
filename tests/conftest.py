@@ -29,7 +29,7 @@ def config_paths(tmpdir_factory):
 @pytest.fixture(scope="module")
 def config():
     """ Configuration settings for all the apis """
-    fpath = BASE_DIR / "config.ini"
+    fpath = BASE_DIR / "config_example.ini"
     config = ConfigParser()
     with open(fpath, 'r') as fid:
         config.read_file(fid)
