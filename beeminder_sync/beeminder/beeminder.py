@@ -25,6 +25,9 @@ class Beeminder:
             `beeminder` username
         auth_token : str
             `beeminder` authentication token
+        spinner : bool, optional
+            If True then `Halo` spinners are enabled
+            Default value is True
 
         Attributes
         ----------
@@ -34,8 +37,13 @@ class Beeminder:
             Data for all goals
     """
 
-    def __init__(self, base_url: str, user_name: str, auth_token: str) -> None:
-        self._spinner = Halo(text="Connecting to the Beeminder api...", color="blue", spinner="dots")
+    def __init__(self, base_url: str, user_name: str, auth_token: str, spinner: bool = True) -> None:
+        self._spinner = Halo(
+            text="Connecting to the Beeminder api...",
+            color="blue",
+            spinner="dots",
+            enabled=spinner
+        )
         self._spinner.start()
         self._base_url = base_url
         self._user_name = user_name
