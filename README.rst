@@ -1,12 +1,13 @@
 Beeminder Sync
 ==============
 
-`image <https://pypi.python.org/pypi/beeminder_sync>`__
-`image <https://travis-ci.org/dileep-kishore/beeminder_sync>`__
+`pypi <https://pypi.python.org/pypi/beeminder_sync>`__ `Build
+Status <https://travis-ci.org/dileep-kishore/beeminder-sync>`__
+`codecov <https://codecov.io/gh/dileep-kishore/beeminder-sync>`__
 `Documentation
 Status <https://beeminder-sync.readthedocs.io/en/latest/?badge=latest>`__
 `Updates <https://pyup.io/repos/github/dileep-kishore/beeminder_sync/>`__
-|image|
+|wip|
 
 A ``Python`` CLI to sync various data sources with
 `Beeminder <https://github.com/dileep-kishore/beeminder-sync>`__
@@ -36,5 +37,5 @@ This package was created with
 `audreyr/cookiecutter-pypackage <https://github.com/audreyr/cookiecutter-pypackage>`__
 project template.
 
-.. |image| image:: https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg
+.. |wip| image:: https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg
 
