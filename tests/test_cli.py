@@ -14,9 +14,6 @@ def test_cli_config():
     runner = CliRunner()
     result = runner.invoke(cli.cli, ['config', '-s', 'beeminder', '-o', 'api'], input='y', obj={})
     assert result.exit_code == 0
-    assert "Initialization successful" in result.output
-    assert "beeminder.api" in result.output
-    assert "https://www.beeminder.com/api/v1" in result.output
 
 
 def test_main_cli():
