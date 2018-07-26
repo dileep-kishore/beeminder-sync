@@ -40,7 +40,12 @@ class BeeSync:
     _config_template_path = pathlib.Path(__file__).parent / "config/config_template.ini"
 
     def __init__(self, base_dir: str, config_path: str, spinner: bool = True) -> None:
-        self._spinner = Halo(text="Initializing application...", color="green", spinner="dots", enabled=spinner)
+        self._spinner = Halo(
+            text="Initializing application...",
+            color="green",
+            spinner="dots",
+            enabled=spinner
+        )
         self._spinner.start()
         self.base_dir = pathlib.Path(base_dir)
         if not self.base_dir.is_dir():
