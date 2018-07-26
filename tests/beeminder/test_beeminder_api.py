@@ -39,16 +39,16 @@ class TestBeeminderApi:
         base_url = beeminder_config["api"]
         username = beeminder_config["username"]
         auth_token = beeminder_config["auth_token"]
-        Beeminder(base_url, username, auth_token)
+        Beeminder(base_url, username, auth_token, spinner=False)
         with pytest.raises(requests.exceptions.HTTPError):
-            Beeminder(base_url, "test", "token")
+            Beeminder(base_url, "test", "token", spinner=False)
 
     def test_getitem(self, beeminder_config):
         """ Test whether the `Beeminder` interface gets goal data """
         base_url = beeminder_config["api"]
         username = beeminder_config["username"]
         auth_token = beeminder_config["auth_token"]
-        interface = Beeminder(base_url, username, auth_token)
+        interface = Beeminder(base_url, username, auth_token, spinner=False)
         goal = random.choice(interface.goals)
         goal_data = interface[goal]
         assert goal_data["slug"] == goal

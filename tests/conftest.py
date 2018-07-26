@@ -51,5 +51,5 @@ def beeminder_interface(beeminder_config):
     base_url = beeminder_config["api"]
     username = beeminder_config["username"]
     auth_token = beeminder_config["auth_token"]
-    interface = Beeminder(base_url, username, auth_token)
+    interface = Beeminder(base_url, username, auth_token, spinner=False)
     return interface
