@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/dileep-kishore/beeminder-sync.svg?branch=master)](https://travis-ci.org/dileep-kishore/beeminder-sync)
 [![codecov](https://codecov.io/gh/dileep-kishore/beeminder-sync/branch/master/graph/badge.svg)](https://codecov.io/gh/dileep-kishore/beeminder-sync)
 [![Documentation Status](https://readthedocs.org/projects/beeminder-sync/badge/?version=latest)](https://beeminder-sync.readthedocs.io/en/latest/?badge=latest)
-[![Updates](https://pyup.io/repos/github/dileep-kishore/beeminder_sync/shield.svg)](https://pyup.io/repos/github/dileep-kishore/beeminder_sync/)
+[![Updates](https://pyup.io/repos/github/dileep-kishore/beeminder-sync/shield.svg)](https://pyup.io/repos/github/dileep-kishore/beeminder-sync/)
 ![wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
 
 A `Python` CLI to sync various data sources with [Beeminder](https://github.com/dileep-kishore/beeminder-sync)
