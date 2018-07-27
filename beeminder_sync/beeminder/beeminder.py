@@ -222,3 +222,17 @@ class Beeminder:
             else:
                 raise KeyError("Unsupported attribute supplied to spinner instance")
         return self._spinner
+
+    def fail(self, text: str) -> None:
+        """
+            Creates a failure message using the `Halo` spinner object
+
+            Parameters
+            ----------
+            text : str
+
+            Returns
+            -------
+            None
+        """
+        self._spinner.fail(text)
