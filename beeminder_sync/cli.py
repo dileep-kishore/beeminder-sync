@@ -50,7 +50,7 @@ def config(ctx, section, option, value):
 
 
 @cli.command()
-@click.option("--method", "-m")  # TODO: methods like `get_datapoints` -> use `GET` or `POST` instead
+@click.option("--method", "-m")
 @click.argument("method_args", nargs=-1)
 @click.pass_context
 def beeminder(ctx, method, method_args):
