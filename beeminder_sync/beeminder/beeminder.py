@@ -174,6 +174,12 @@ class Beeminder:
         self._spinner.start()
         data_url = self._url_maker('datapoints')
         data_url.add(path=f"{goal}/datapoints.json")
+        if isinstance(timestamp, str):
+            try:
+                timestamp = maya.parse(timestamp).epoch
+            except:
+                self._spinner.fail(f"Invalid date string: {timestamp}")
+                sys.exit()
         data_url.add(args={
             'value': value,
             'timestamp': timestamp,
