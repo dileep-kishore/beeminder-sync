@@ -85,6 +85,8 @@ class Beeminder:
             List[str]
                 A list of goals in the current user's `beeminder` profile
         """
+        self._spinner.text = "Getting goal list..."
+        self._spinner.start()
         user_url = self._url_maker('user')
         response = requests.get(user_url)
         log.info(f"Attempting to connect to {user_url}")
@@ -92,6 +94,7 @@ class Beeminder:
         log.info("Connection successful. Getting list of goals")
         response_data = response.json()
         self._user_resource = response_data
+        self._spinner.succeed("Goal list retrieved succesfully")
         return response_data['goals']
 
     def __getitem__(self, goal: str) -> Dict[str, Any]:
