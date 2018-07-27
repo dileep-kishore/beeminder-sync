@@ -146,7 +146,7 @@ class Beeminder:
         except requests.HTTPError:
             raise ValueError(f"Goal {goal} not found. The following goals were found: {self.goals}")
         log.info(f"Connection successful. Retrieving data-points for {goal}")
-        self._spinner.succeed("Retrieval successful")
+        self._spinner.succeed(f"Data for {goal} retrieved successfully")
         return response.json()
 
     def create_datapoint(
