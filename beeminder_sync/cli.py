@@ -50,17 +50,25 @@ def config(ctx, section, option, value):
 
 
 @cli.command()
-@click.option("--method", "-m")
-@click.argument("method_args", nargs=-1)
+@click.option("--method", "-m", help="Either 'GET' or 'POST'")
+@click.argument("goal", nargs=1)
+@click.option("--value", "-v", default=None, type=click.INT, help="Value to add to the new data point")
+@click.option("--comment", "-c", default="", help="Comment to add to the nww data point")
+@click.option("--timestamp", "-t", default=None, help="Timestamp of the new data point")
 @click.pass_context
-def beeminder(ctx, method, method_args):
+def beeminder(ctx, method, goal, value, comment, timestamp):
     """ Access the beeminder interface """
     beesync = ctx.obj['CONFIG']
     bee = Beeminder.from_config(beesync)
-    if method == 'GET':
-        response = bee.get_datapoints(method_args[0])
+    if not goal:
+        response = bee.goals
+    elif method == 'GET':
+        response = bee.get_datapoints(goal)
     elif method == 'POST':
-        response = bee.create_datapoint(method_args[0], method_args[1])
+        if timestamp:
+            response = bee.create_datapoint(goal, value, comment, timestamp)
+        else:
+            response = bee.create_datapoint(goal, value, comment)
     else:
         bee.fail(f"Unsupported method {method}. Valid options: ['GET', 'POST']")
     click.secho(json.dumps(response, indent=2, sort_keys=True))
