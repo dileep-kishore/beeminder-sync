@@ -6,7 +6,7 @@ Status <https://travis-ci.org/dileep-kishore/beeminder-sync>`__
 `codecov <https://codecov.io/gh/dileep-kishore/beeminder-sync>`__
 `Documentation
 Status <https://beeminder-sync.readthedocs.io/en/latest/?badge=latest>`__
-`Updates <https://pyup.io/repos/github/dileep-kishore/beeminder_sync/>`__
+`Updates <https://pyup.io/repos/github/dileep-kishore/beeminder-sync/>`__
 |wip|
 
 A ``Python`` CLI to sync various data sources with
@@ -20,6 +20,8 @@ Work in progress
 
 This is a ‘work in progress’ and is not ready for use of any kind at
 this time.
+
+Demo |Demo|
 
 Features
 --------
@@ -38,4 +40,5 @@ This package was created with
 project template.
 
 .. |wip| image:: https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg
+.. |Demo| image:: assets/demo.gif
 
