@@ -76,7 +76,7 @@ cursorStyle: block
 fontFamily: "Monofur Nerd Font, Monaco, Lucida Console, Ubuntu Mono, Monospace"
 
 # The size of the font
-fontSize: 18
+fontSize: 30
 
 # The height of lines
 lineHeight: 1
