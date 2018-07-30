@@ -1,0 +1,305 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: /bin/zsh -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/dileep/Documents/Coding/100daysofcode/beeminder-sync/assets
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 235
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 55
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevnt limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a url, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monofur Nerd Font, Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 18
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 297
+    content: "\e[31mWARNING!\e[39m Your terminal appears to support fewer than 256 colors!\r\nIf your terminal supports 256 colors, please export the appropriate environment variable\r\n_before_ loading this theme in your ~/.zshrc. In most terminal emulators, putting\r\n\e[34mexport TERM=\"xterm-256color\"\e[39m at the top of your ~/.zshrc is sufficient.\r\n"
+  - delay: 12
+    content: "\e]4;0;#1f1c19\e\\\e]4;1;#b09a86\e\\\e]4;2;#aa8e73\e\\\e]4;3;#0d5aaa\e\\\e]4;4;#3a6faa\e\\\e]4;5;#6e89aa\e\\\e]4;6;#a09ea5\e\\\e]4;7;#c7c6c5\e\\\e]4;8;#575452\e\\\e]4;9;#b09a86\e\\\e]4;10;#aa8e73\e\\\e]4;11;#0d5aaa\e\\\e]4;12;#3a6faa\e\\\e]4;13;#6e89aa\e\\\e]4;14;#a09ea5\e\\\e]4;15;#c7c6c5\e\\\e]10;#c7c6c5\e\\\e]11;#1f1c19\e\\\e]12;#c7c6c5\e\\\e]13;#c7c6c5\e\\\e]17;#c7c6c5\e\\\e]19;#1f1c19\e\\\e]4;232;#1f1c19\e\\\e[s\e[1000H\e[8m\e]708;#1f1c19\e\\\e[u\e]13;#c7c6c5\e\\"
+  - delay: 220
+    content: "\e[31mWARNING!\e[39m Your terminal appears to support fewer than 256 colors!\r\nIf your terminal supports 256 colors, please export the appropriate environment variable\r\n_before_ loading this theme in your ~/.zshrc. In most terminal emulators, putting\r\n\e[34mexport TERM=\"xterm-256color\"\e[39m at the top of your ~/.zshrc is sufficient.\r\n"
+  - delay: 236
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                                                                                                          \r \r\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync/assets\a"
+  - delay: 13
+    content: "\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync/assets\a\e]1;..r-sync/assets\a\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync/assets\a\e]1;..r-sync/assets\a"
+  - delay: 17
+    content: "\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync/assets\a"
+  - delay: 67
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m… beeminder-sync assets \e[43m\e[34m \e[30m \e[39m\e[30m master   \e[49m\e[33m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[189C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 22:06\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[229D\e[?1h\e=\e[?2004h"
+  - delay: 696
+    content: "\e[1m\e[31mb\e[0m\e[39m\e[90meeminder_sync --help\e[39m\e[20D"
+  - delay: 70
+    content: "\b\e[1m\e[31mb\e[1m\e[31me\e[0m\e[39m"
+  - delay: 167
+    content: "\b\b\e[1m\e[31mb\e[1m\e[31me\e[1m\e[31me\e[0m\e[39m"
+  - delay: 85
+    content: "\b\e[1m\e[31me\e[1m\e[31mm\e[0m\e[39m"
+  - delay: 124
+    content: "\b\e[1m\e[31mm\e[1m\e[31mi\e[0m\e[39m"
+  - delay: 111
+    content: "\b\e[1m\e[31mi\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 41
+    content: "\b\e[1m\e[31mn\e[1m\e[31md\e[0m\e[39m"
+  - delay: 222
+    content: "\b\e[1m\e[31md\e[1m\e[31me\e[0m\e[39m"
+  - delay: 426
+    content: "\e[39mr\e[39m_\e[39ms\e[39my\e[39mn\e[39mc\e[39m \e[39m-\e[39m-\e[39mh\e[39me\e[39ml\e[39mp"
+  - delay: 5
+    content: "\e[21D\e[0m\e[32mb\e[0m\e[32me\e[0m\e[32me\e[0m\e[32mm\e[0m\e[32mi\e[0m\e[32mn\e[0m\e[32md\e[0m\e[32me\e[32mr\e[32m_\e[32ms\e[32my\e[32mn\e[32mc\e[39m\e[7C"
+  - delay: 331
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;beeminder_sync --help\a\e]1;beeminder_sync\a\e]2;beeminder_sync --help\a\e]1;beeminder_sync\a"
+  - delay: 526
+    content: "\e[0m\e[0m\e[0mUsage: beeminder_sync [OPTIONS] COMMAND [ARGS]...\r\n\r\n  Main entry point to beeminder_sync\r\n\r\nOptions:\r\n  -d, --basedir PATH  The path to the base application directory\r\n  -c, --config PATH   The path to the configuration file\r\n  --help              Show this message and exit.\r\n\r\nCommands:\r\n  beeminder  Access the beeminder interface\r\n  config     Get and set configuration options\r\n\e[0m\e[0m\e[0m\e[0m\e[0m"
+  - delay: 22
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                                                                                                          \r \r\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync/assets\a"
+  - delay: 13
+    content: "\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync/assets\a\e]1;..r-sync/assets\a\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync/assets\a\e]1;..r-sync/assets\a\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync/assets\a"
+  - delay: 81
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m… beeminder-sync assets \e[43m\e[34m \e[30m \e[39m\e[30m master   \e[49m\e[33m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[189C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 22:06\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[229D\e[?1h\e=\e[?2004h"
+  - delay: 986
+    content: "\e[1m\e[31mb\e[0m\e[39m\e[90meeminder_sync --help\e[39m\e[20D"
+  - delay: 102
+    content: "\b\e[1m\e[31mb\e[1m\e[31me\e[0m\e[39m"
+  - delay: 172
+    content: "\b\b\e[1m\e[31mb\e[1m\e[31me\e[1m\e[31me\e[0m\e[39m"
+  - delay: 76
+    content: "\b\e[1m\e[31me\e[1m\e[31mm\e[0m\e[39m"
+  - delay: 154
+    content: "\b\e[1m\e[31mm\e[1m\e[31mi\e[0m\e[39m"
+  - delay: 105
+    content: "\b\e[1m\e[31mi\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 52
+    content: "\b\e[1m\e[31mn\e[1m\e[31md\e[0m\e[39m"
+  - delay: 230
+    content: "\b\e[1m\e[31md\e[1m\e[31me\e[0m\e[39m"
+  - delay: 463
+    content: "\b\e[1m\e[31me\e[1m\e[31mr\e[0m\e[39m"
+  - delay: 302
+    content: "\b\e[1m\e[31mr\e[1m\e[31m_\e[0m\e[39m"
+  - delay: 235
+    content: "\b\e[1m\e[31m_\e[1m\e[31ms\e[0m\e[39m"
+  - delay: 115
+    content: "\b\e[1m\e[31ms\e[1m\e[31my\e[0m\e[39m"
+  - delay: 234
+    content: "\b\e[1m\e[31my\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 118
+    content: "\e[13D\e[0m\e[32mb\e[0m\e[32me\e[0m\e[32me\e[0m\e[32mm\e[0m\e[32mi\e[0m\e[32mn\e[0m\e[32md\e[0m\e[32me\e[0m\e[32mr\e[0m\e[32m_\e[0m\e[32ms\e[0m\e[32my\e[0m\e[32mn\e[32mc\e[39m"
+  - delay: 840
+    content: "\e[39m "
+  - delay: 741
+    content: "\e[39m\e[4mc\e[24m\e[90mo\e[90mn\e[90mf\e[90mi\e[90mg\e[90m -s beeminder -o api\e[39m\e[25D"
+  - delay: 171
+    content: "\b\e[4mc\e[39m\e[4mo\e[24m"
+  - delay: 117
+    content: "\b\e[4mo\e[39m\e[4mn\e[24m"
+  - delay: 106
+    content: "\b\e[4mn\e[39m\e[4mf\e[24m"
+  - delay: 162
+    content: "\b\e[4mf\e[39m\e[4mi\e[24m"
+  - delay: 100
+    content: "\b\e[4mi\e[39m\e[4mg\e[24m"
+  - delay: 152
+    content: "\b\b\b\b\b\b\e[24mc\e[24mo\e[24mn\e[24mf\e[24mi\e[24mg\e[39m "
+  - delay: 1066
+    content: "\e[39m-\e[39ms\e[39m \e[39mb\e[39me\e[39me\e[39mm\e[39mi\e[39mn\e[39md\e[39me\e[39mr\e[39m \e[39m-\e[39mo\e[39m \e[39ma\e[39mp\e[39mi"
+  - delay: 1072
+    content: "\e[?1l\e>"
+  - delay: 5
+    content: "\e[?2004l\r\r\n\e]2;beeminder_sync config -s beeminder -o api\a\e]1;beeminder_sync\a\e]2;beeminder_sync config -s beeminder -o api\a\e]1;beeminder_sync\a"
+  - delay: 590
+    content: "\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠋\e[0m Initializing application...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠙\e[0m Initializing application...\e[0m\e[0m"
+  - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Initialization successful\r\n\e[0m\e[0m\e[0m\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠋\e[0m Getting configuration...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠙\e[0m Getting configuration...\e[0m\e[0m"
+  - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m beeminder.api: https://www.beeminder.com/api/v1/\r\n\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[0m\e[0m"
+  - delay: 38
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                                                                                                          \r \r\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync/assets\a"
+  - delay: 12
+    content: "\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync/assets\a\e]1;..r-sync/assets\a\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync/assets\a\e]1;..r-sync/assets\a\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync/assets\a"
+  - delay: 81
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m… beeminder-sync assets \e[43m\e[34m \e[30m \e[39m\e[30m master   \e[49m\e[33m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[189C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 22:06\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[229D\e[?1h\e=\e[?2004h"
+  - delay: 786
+    content: "\e[1m\e[31mb\e[0m\e[39m\e[90meeminder_sync config -s beeminder -o api\e[39m\e[40D"
+  - delay: 112
+    content: "\b\e[1m\e[31mb\e[1m\e[31me\e[0m\e[39m"
+  - delay: 859
+    content: "\b\b\e[1m\e[31mb\e[1m\e[31me\e[1m\e[31me\e[0m\e[39m"
+  - delay: 176
+    content: "\b\e[1m\e[31me\e[1m\e[31mm\e[0m\e[39m"
+  - delay: 130
+    content: "\b\e[1m\e[31mm\e[1m\e[31mi\e[0m\e[39m"
+  - delay: 91
+    content: "\b\e[1m\e[31mi\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 64
+    content: "\b\e[1m\e[31mn\e[1m\e[31md\e[0m\e[39m"
+  - delay: 198
+    content: "\b\e[1m\e[31md\e[1m\e[31me\e[0m\e[39m"
+  - delay: 73
+    content: "\b\e[1m\e[31me\e[1m\e[31mr\e[0m\e[39m"
+  - delay: 290
+    content: "\b\e[1m\e[31mr\e[1m\e[31m_\e[0m\e[39m"
+  - delay: 212
+    content: "\b\e[1m\e[31m_\e[1m\e[31ms\e[0m\e[39m"
+  - delay: 142
+    content: "\b\e[1m\e[31ms\e[1m\e[31my\e[0m\e[39m"
+  - delay: 217
+    content: "\b\e[1m\e[31my\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 80
+    content: "\e[13D\e[0m\e[32mb\e[0m\e[32me\e[0m\e[32me\e[0m\e[32mm\e[0m\e[32mi\e[0m\e[32mn\e[0m\e[32md\e[0m\e[32me\e[0m\e[32mr\e[0m\e[32m_\e[0m\e[32ms\e[0m\e[32my\e[0m\e[32mn\e[32mc\e[39m"
+  - delay: 132
+    content: "\e[39m "
+  - delay: 192
+    content: "\e[39mb\e[90me\e[90me\e[90mm\e[90mi\e[90mn\e[90md\e[90me\e[90mr\e[90m \e[90m-\e[90mm\e[90m \e[90mG\e[90mE\e[90mT\e[90m \e[90mb\e[90me\e[90me\e[90mt\e[90me\e[90ms\e[90mt\e[39m\e[39m \e[39m \e[25D"
+  - delay: 84
+    content: "\e[39me"
+  - delay: 178
+    content: "\e[39me"
+  - delay: 604
+    content: "\e[39mm\e[39mi\e[39mn\e[39md\e[39me\e[39mr\e[39m \e[39m-\e[39mm\e[39m \e[39mG\e[39mE\e[39mT\e[39m \e[39mb\e[39me\e[39me\e[39mt\e[39me\e[39ms\e[39mt"
+  - delay: 2624
+    content: "\e[?1l\e>"
+  - delay: 10
+    content: "\e[?2004l\r\r\n\e]2;beeminder_sync beeminder -m GET beetest\a\e]1;beeminder_sync\a\e]2;beeminder_sync beeminder -m GET beetest\a\e]1;beeminder_sync\a"
+  - delay: 585
+    content: "\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠋\e[0m Initializing application...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠙\e[0m Initializing application...\e[0m\e[0m"
+  - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Initialization successful\r\n\e[0m\e[0m\e[0m\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠋\e[0m Connecting to the Beeminder api...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠙\e[0m Connecting to the Beeminder api...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠹\e[0m Getting goal list...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠸\e[0m Getting goal list...\e[0m\e[0m"
+  - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠼\e[0m Getting goal list...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠴\e[0m Getting goal list...\e[0m\e[0m"
+  - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠦\e[0m Getting goal list...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠧\e[0m Getting goal list...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠇\e[0m Getting goal list...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Goal list retrieved succesfully\r\n\e[0m\e[0m\e[0m\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠋\e[0m Retrieving datapoints...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠙\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠹\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠸\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠼\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠴\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠦\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠧\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠇\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Data for beetest retrieved successfully\r\n\e[0m\e[0m\e[0m\e[0m\e[0m\e[0m[\r\n  {\r\n    \"canonical\": \"27 1 \\\"Testing post\\\"\",\r\n    \"comment\": \"Testing post\",\r\n    \"daystamp\": \"20180727\",\r\n    \"fulltext\": \"2018-Jul-27 entered at 21:29 via api\",\r\n    \"id\": \"5b5bc6debfec034f92002f64\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532741340,\r\n    \"updated_at\": 1532741342,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"27 2 \\\"Testing post\\\"\",\r\n    \"comment\": \"Testing post\",\r\n    \"daystamp\": \"20180727\",\r\n    \"fulltext\": \"2018-Jul-27 entered at 21:22 via api\",\r\n    \"id\": \"5b5bc55bbfec034f92002f52\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532740954,\r\n    \"updated_at\": 1532740955,\r\n    \"value\": 2.0\r\n  },\r\n  {\r\n    \"canonical\": \"27 1 \\\"Testing post\\\"\",\r\n    \"comment\": \"Testing post\",\r\n    \"daystamp\": \"20180727\",\r\n    \"fulltext\": \"2018-Jul-27 entered at 21:14 via api\",\r\n    \"id\": \"5b5bc372bfec034ffe000a39\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532740465,\r\n    \"updated_at\": 1532740466,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"26 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n    \"comment\": \"Test sub from beeminder-sync\",\r\n    \"daystamp\": \"20180726\",\r\n    \"fulltext\": \"2018-Jul-26 entered at 21:38 via api\",\r\n    \"id\": \"5b5a778abfec034ffe0005b7\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532655494,\r\n    \"updated_at\": 1532655499,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"26 1 \\\"Test add from beeminder-sync\\\"\",\r\n    \"comment\": \"Test add from beeminder-sync\",\r\n    \"daystamp\": \"20180726\",\r\n    \"fulltext\": \"2018-Jul-26 entered at 21:38 via api\",\r\n    \"id\": \"5b5a778abfec034ffe0005b6\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532655494,\r\n    \"updated_at\": 1532655498,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"26 1 \\\"Manual test with date\\\"\",\r\n    \"comment\": \"Manual test with date\",\r\n    \"daystamp\": \"20180726\",\r\n    \"fulltext\": \"2018-Jul-26 entered at 21:30 via api\",\r\n    \"id\": \"5b5a75d3bfec034f92001d85\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532655058,\r\n    \"updated_at\": 1532655059,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"26 1 \\\"Manual test\\\"\",\r\n    \"comment\": \"Manual test\",\r\n    \"daystamp\": \"20180726\",\r\n    \"fulltext\": \"2018-Jul-26 entered at 21:18 via api\",\r\n    \"id\": \"5b5a72d3bfec034f92001d60\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532654290,\r\n    \"updated_at\": 1532654291,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"26 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n    \"comment\": \"Test sub from beeminder-sync\",\r\n    \"daystamp\": \"20180726\",\r\n    \"fulltext\": \"2018-Jul-26 entered at 11:38 via api\",\r\n    \"id\": \"5b59eb06bfec034ffe000379\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532619522,\r\n    \"updated_at\": 1532619526,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"26 1 \\\"Test add from beeminder-sync\\\"\",\r\n    \"comment\": \"Test add from beeminder-sync\",\r\n    \"daystamp\": \"20180726\",\r\n    \"fulltext\": \"2018-Jul-26 entered at 11:38 via api\",\r\n    \"id\": \"5b59eb06bfec034f92001597\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532619522,\r\n    \"updated_at\": 1532619526,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 1 \\\"Test add from beeminder-sync\\\"\",\r\n    \"comment\": \"Test add from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 21:48 via api\",\r\n    \"id\": \"5b59285ebfec034ffe000138\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532569691,\r\n    \"updated_at\": 1532569694,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n    \"comment\": \"Test sub from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 21:48 via api\",\r\n    \"id\": \"5b59285ebfec034f92000aa6\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532569691,\r\n    \"updated_at\": 1532569694,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n    \"comment\": \"Test sub from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 21:31 via api\",\r\n    \"id\": \"5b592481bfec034f92000a75\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532568701,\r\n    \"updated_at\": 1532568705,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 1 \\\"Test add from beeminder-sync\\\"\",\r\n    \"comment\": \"Test add from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 21:31 via api\",\r\n    \"id\": \"5b592481bfec034f92000a74\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532568701,\r\n    \"updated_at\": 1532568705,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n    \"comment\": \"Test sub from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 21:27 via api\",\r\n    \"id\": \"5b592366bfec034f92000a69\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532568418,\r\n    \"updated_at\": 1532568422,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 1 \\\"Test add from beeminder-sync\\\"\",\r\n    \"comment\": \"Test add from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 21:27 via api\",\r\n    \"id\": \"5b592366bfec034f92000a68\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532568418,\r\n    \"updated_at\": 1532568422,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n    \"comment\": \"Test sub from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 21:22 via api\",\r\n    \"id\": \"5b592242bfec034f92000a26\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532568124,\r\n    \"updated_at\": 1532568130,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 1 \\\"Test add from beeminder-sync\\\"\",\r\n    \"comment\": \"Test add from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 21:22 via api\",\r\n    \"id\": \"5b592241bfec034f92000a25\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532568124,\r\n    \"updated_at\": 1532568129,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n    \"comment\": \"Test sub from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 21:17 via api\",\r\n    \"id\": \"5b592137bfec034f9200081f\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532567859,\r\n    \"updated_at\": 1532567863,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 1 \\\"Test add from beeminder-sync\\\"\",\r\n    \"comment\": \"Test add from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 21:17 via api\",\r\n    \"id\": \"5b592136bfec034ffe00011e\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532567859,\r\n    \"updated_at\": 1532567862,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n    \"comment\": \"Test sub from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 21:02 via api\",\r\n    \"id\": \"5b591d91bfec034f92000666\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532566923,\r\n    \"updated_at\": 1532566929,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 1 \\\"Test add from beeminder-sync\\\"\",\r\n    \"comment\": \"Test add from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 21:02 via api\",\r\n    \"id\": \"5b591d90bfec034f92000665\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532566923,\r\n    \"updated_at\": 1532566928,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n    \"comment\": \"Test sub from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 20:49 via api\",\r\n    \"id\": \"5b591a94bfec034f92000567\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532566157,\r\n    \"updated_at\": 1532566164,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 1 \\\"Test add from beeminder-sync\\\"\",\r\n    \"comment\": \"Test add from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 20:49 via api\",\r\n    \"id\": \"5b591a93bfec034f92000566\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532566157,\r\n    \"updated_at\": 1532566163,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n    \"comment\": \"Test sub from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 20:45 via api\",\r\n    \"id\": \"5b59199cbfec034f920004f0\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532565911,\r\n    \"updated_at\": 1532565916,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 1 \\\"Test add from beeminder-sync\\\"\",\r\n    \"comment\": \"Test add from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 20:45 via api\",\r\n    \"id\": \"5b59199bbfec034f920004ef\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532565911,\r\n    \"updated_at\": 1532565915,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n    \"comment\": \"Test sub from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 20:42 via api\",\r\n    \"id\": \"5b5918fcbfec034ffe00009f\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532565750,\r\n    \"updated_at\": 1532565756,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 1 \\\"Test add from beeminder-sync\\\"\",\r\n    \"comment\": \"Test add from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 20:42 via api\",\r\n    \"id\": \"5b5918fbbfec034f920004e4\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532565750,\r\n    \"updated_at\": 1532565755,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n    \"comment\": \"Test sub from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 20:35 via api\",\r\n    \"id\": \"5b59173dbfec035017000089\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532565297,\r\n    \"updated_at\": 1532565309,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"25 1 \\\"Test add from beeminder-sync\\\"\",\r\n    \"comment\": \"Test add from beeminder-sync\",\r\n    \"daystamp\": \"20180725\",\r\n    \"fulltext\": \"2018-Jul-25 entered at 20:35 via api\",\r\n    \"id\": \"5b59173bbfec034ffe000097\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532565297,\r\n    \"updated_at\": 1532565307,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"24 1 \\\"Test add from beeminder-sync\\\"\",\r\n    \"comment\": \"Test add from beeminder-sync\",\r\n    \"daystamp\": \"20180724\",\r\n    \"fulltext\": \"2018-Jul-24 entered at 21:37 via api\",\r\n    \"id\": \"5b57d473bfec037eb4000176\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532482670,\r\n    \"updated_at\": 1532482675,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"24 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n    \"comment\": \"Test sub from beeminder-sync\",\r\n    \"daystamp\": \"20180724\",\r\n    \"fulltext\": \"2018-Jul-24 entered at 21:37 via api\",\r\n    \"id\": \"5b57d473bfec03132100216b\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532482670,\r\n    \"updated_at\": 1532482675,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"24 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n    \"comment\": \"Test sub from beeminder-sync\",\r\n    \"daystamp\": \"20180724\",\r\n    \"fulltext\": \"2018-Jul-24 entered at 21:20 via api\",\r\n    \"id\": \"5b57d05abfec031321002130\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532481619,\r\n    \"updated_at\": 1532481626,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"24 1 \\\"Test add from beeminder-sync\\\"\",\r\n    \"comment\": \"Test add from beeminder-sync\",\r\n    \"daystamp\": \"20180724\",\r\n    \"fulltext\": \"2018-Jul-24 entered at 21:20 via api\",\r\n    \"id\": \"5b57d059bfec03132100212f\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532481619,\r\n    \"updated_at\": 1532481625,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"24 0 \\\"RESTARTED ON THE 24th\\\"\",\r\n    \"comment\": \"RESTARTED ON THE 24th\",\r\n    \"daystamp\": \"20180724\",\r\n    \"fulltext\": \"2018-Jul-24 entered at 21:12 via web\",\r\n    \"id\": \"5b57ce6abfec031321002119\",\r\n    \"origin\": \"web\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532491199,\r\n    \"updated_at\": 1532481130,\r\n    \"value\": 0.0\r\n  },\r\n  {\r\n    \"canonical\": \"24 3\",\r\n    \"comment\": \"\",\r\n    \"daystamp\": \"20180724\",\r\n    \"fulltext\": \"2018-Jul-24 entered at 21:08 via api\",\r\n    \"id\": \"5b57cd76bfec03132100210d\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532480885,\r\n    \"updated_at\": 1532480886,\r\n    \"value\": 3.0\r\n  },\r\n  {\r\n    \"canonical\": \"24 1\",\r\n    \"comment\": \"\",\r\n    \"daystamp\": \"20180724\",\r\n    \"fulltext\": \"2018-Jul-24 entered at 21:06 via api\",\r\n    \"id\": \"5b57cd21bfec031321002108\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1532480799,\r\n    \"updated_at\": 1532480801,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"18 -1\",\r\n    \"comment\": \"\",\r\n    \"daystamp\": \"20180718\",\r\n    \"fulltext\": \"2018-Jul-18 entered at 22:36 via api\",\r\n    \"id\": \"5b4ff936bfec0315940001e3\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1531967797,\r\n    \"updated_at\": 1531967798,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"18 -1\",\r\n    \"comment\": \"\",\r\n    \"daystamp\": \"20180718\",\r\n    \"fulltext\": \"2018-Jul-18 entered at 22:13 via api\",\r\n    \"id\": \"5b4ff3dcbfec03159400018f\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1531966426,\r\n    \"updated_at\": 1531966428,\r\n    \"value\": -1.0\r\n  },\r\n  {\r\n    \"canonical\": \"14 1\",\r\n    \"comment\": \"\",\r\n    \"daystamp\": \"20180714\",\r\n    \"fulltext\": \"2018-Jul-14 entered at 21:51 via api\",\r\n    \"id\": \"5b4aa8b7bfec0318c5000b91\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1531619510,\r\n    \"updated_at\": 1531619511,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"14 2\",\r\n    \"comment\": \"\",\r\n    \"daystamp\": \"20180714\",\r\n    \"fulltext\": \"2018-Jul-14 entered at 21:24 via api\",\r\n    \"id\": \"5b4aa248bfec0318c5000b5c\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1531617863,\r\n    \"updated_at\": 1531617864,\r\n    \"value\": 2.0\r\n  },\r\n  {\r\n    \"canonical\": \"28 1\",\r\n    \"comment\": \"\",\r\n    \"daystamp\": \"20180628\",\r\n    \"fulltext\": \"2018-Jun-28 entered at 21:55 via Beeminder Web\",\r\n    \"id\": \"5b35918bbfec034fc6001c6f\",\r\n    \"origin\": \"Beeminder Web\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1530244799,\r\n    \"updated_at\": 1530237323,\r\n    \"value\": 1.0\r\n  },\r\n  {\r\n    \"canonical\": \"28 0 \\\"initial datapoint of 0.0 on the 28th\\\"\",\r\n    \"comment\": \"initial datapoint of 0.0 on the 28th\",\r\n    \"daystamp\": \"20180628\",\r\n    \"fulltext\": \"2018-Jun-28 entered at 21:53 via api\",\r\n    \"id\": \"5b359109bfec034fbb007075\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"timestamp\": 1530237193,\r\n    \"updated_at\": 1530237193,\r\n    \"value\": 0.0\r\n  }\r\n]\e[0m\r\n\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[0m\e[0m"
+  - delay: 55
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                                                                                                          \r \r\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync/assets\a"
+  - delay: 13
+    content: "\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync/assets\a\e]1;..r-sync/assets\a\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync/assets\a\e]1;..r-sync/assets\a\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync/assets\a"
+  - delay: 85
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m… beeminder-sync assets \e[43m\e[34m \e[30m \e[39m\e[30m master   \e[49m\e[33m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[189C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 22:06\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[229D\e[?1h\e=\e[?2004h"
+  - delay: 1844
+    content: "\e[?2004l\r\r\n"

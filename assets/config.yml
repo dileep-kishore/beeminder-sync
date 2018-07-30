@@ -30,7 +30,7 @@ repeat: 0
 
 # Quality
 # 1 - 100
-quality: 50
+quality: 100
 
 # Delay between frames in ms
 # If the value is `auto` use the actual recording delays
@@ -76,7 +76,7 @@ cursorStyle: block
 fontFamily: "Monofur Nerd Font, Monaco, Lucida Console, Ubuntu Mono, Monospace"
 
 # The size of the font
-fontSize: 12
+fontSize: 18
 
 # The height of lines
 lineHeight: 1
