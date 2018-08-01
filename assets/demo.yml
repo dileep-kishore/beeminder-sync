@@ -23,7 +23,7 @@ config:
   # Explicitly set the number of rows
   # or use `auto` to take the current
   # number of rows of your shell
-  rows: 55
+  rows: 35
 
   # Amount of times to repeat GIF
   # If value is -1, play once
@@ -33,7 +33,7 @@ config:
 
   # Quality
   # 1 - 100
-  quality: 100
+  quality: 50
 
   # Delay between frames in ms
   # If the value is `auto` use the actual recording delays
@@ -49,12 +49,12 @@ config:
   # To hide the title use the value null
   # Don't forget to add a backgroundColor style with a null as type
   frameBox:
-    type: floating
-    title: Terminalizer
+    type: solid
+    title: null
     style:
       border: 0px black solid
-      # boxShadow: none
-      # margin: 0px
+      boxShadow: none
+      margin: 0px
 
   # Add a watermark image to the rendered gif
   # You need to specify an absolute path for
@@ -79,7 +79,7 @@ config:
   fontFamily: "Monofur Nerd Font, Monaco, Lucida Console, Ubuntu Mono, Monospace"
 
   # The size of the font
-  fontSize: 30
+  fontSize: 20
 
   # The height of lines
   lineHeight: 1
