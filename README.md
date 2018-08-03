@@ -1,11 +1,11 @@
 # Beeminder Sync
 
-[![pypi](https://img.shields.io/pypi/v/beeminder_sync.svg)](https://pypi.python.org/pypi/beeminder_sync)
-[![Build Status](https://travis-ci.org/dileep-kishore/beeminder-sync.svg?branch=master)](https://travis-ci.org/dileep-kishore/beeminder-sync)
-[![codecov](https://codecov.io/gh/dileep-kishore/beeminder-sync/branch/master/graph/badge.svg)](https://codecov.io/gh/dileep-kishore/beeminder-sync)
-[![Documentation Status](https://readthedocs.org/projects/beeminder-sync/badge/?version=latest)](https://beeminder-sync.readthedocs.io/en/latest/?badge=latest)
+[![pypi](https://img.shields.io/pypi/v/beeminder_sync.svg?style=for-the-badge)](https://pypi.python.org/pypi/beeminder_sync)
+[![Build Status](https://img.shields.io/travis/dileep-kishore/beeminder-sync.svg?style=for-the-badge)](https://travis-ci.org/dileep-kishore/beeminder-sync)
+[![codecov](https://img.shields.io/codecov/c/github/dileep-kishore/beeminder-sync.svg?style=for-the-badge)](https://codecov.io/gh/dileep-kishore/beeminder-sync)
+[![Documentation Status](https://img.shields.io/readthedocs/beeminder-sync.svg?style=for-the-badge)](https://beeminder-sync.readthedocs.io/en/latest/?badge=latest)
 [![Updates](https://pyup.io/repos/github/dileep-kishore/beeminder-sync/shield.svg)](https://pyup.io/repos/github/dileep-kishore/beeminder-sync/)
-![wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
+![WIP](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg?style=for-the-badge)
 
 A `Python` CLI to sync various data sources with [Beeminder](https://github.com/dileep-kishore/beeminder-sync)
 
