@@ -16,7 +16,8 @@ A `Python` CLI to sync various data sources with [Beeminder](https://github.com/
 This is a 'work in progress' and is not ready for use of any kind at
 this time.
 
-Demo
+### Demo
+
 ![Demo](assets/demo.gif)
 
 ## Features
