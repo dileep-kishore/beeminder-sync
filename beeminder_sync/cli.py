@@ -71,6 +71,7 @@ def beeminder(ctx, method, goal, value, comment, timestamp):
             response = bee.create_datapoint(goal, value, comment)
     else:
         bee.fail(f"Unsupported method {method}. Valid options: ['GET', 'POST']")
+    click.secho('-' * 36 + "[OUTPUT]" + '-' * 36, fg="white")
     click.secho(json.dumps(response, indent=2, sort_keys=True))
     return 0
 
