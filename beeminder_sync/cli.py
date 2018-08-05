@@ -51,7 +51,7 @@ def config(ctx, section, option, value):
 
 @cli.command()
 @click.option("--method", "-m", help="Either 'GET' or 'POST'")
-@click.argument("goal", nargs=1)
+@click.option("--goal", "-g", default=None, help="Beeminder goal to use")
 @click.option("--value", "-v", default=None, type=click.INT, help="Value to add to the new data point")
 @click.option("--comment", "-c", default="", help="Comment to add to the nww data point")
 @click.option("--timestamp", "-t", default=None, help="Timestamp of the new data point")
