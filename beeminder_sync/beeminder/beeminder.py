@@ -76,6 +76,18 @@ class Beeminder:
         url.add(args={"auth_token": self._auth_token})
         return url
 
+    @property
+    def user_details(self) -> Dict[str, Any]:
+        """
+            Get user details
+
+            Returns
+            -------
+            Dict[str, Any]
+        """
+        data = {i: self._user_resource[i] for i in ["username", "timezone", "subscription", "updated_at", "id"]}
+        return data
+
     # TODO: Incorporate `diff_since` in the call
     def _get_goals(self) -> List[str]:
         """
