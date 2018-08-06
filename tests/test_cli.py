@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """Tests for `beeminder_sync` package."""
 
 from click.testing import CliRunner
