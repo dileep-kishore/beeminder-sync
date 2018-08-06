@@ -20,7 +20,15 @@ def test_cli_config(tmpdir):
         obj={}
     )
     if result.exit_code == 1:
-        result = runner.invoke(cli.cli, ['config', '-s', 'beeminder', '-o', 'api'], input='y', obj={})
+        result = runner.invoke(
+            cli.cli,
+            [
+                '-d', base_dir,
+                'config', '-s', 'beeminder', '-o', 'api'
+            ],
+            input='y',
+            obj={}
+        )
     assert result.exit_code == 0
     # TODO: Find a way to assert the stdout
 
