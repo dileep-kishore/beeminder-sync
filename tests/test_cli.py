@@ -9,10 +9,19 @@ import pytest
 from beeminder_sync import cli
 
 
-def test_cli_config():
+def test_cli_config(tmpdir):
     """ Test getting configuration value """
+    base_dir = tmpdir.mkdir("beeminder_sync")
     runner = CliRunner()
-    result = runner.invoke(cli.cli, ['config', '-s', 'beeminder', '-o', 'api'], input='y', obj={})
+    result = runner.invoke(
+        cli.cli,
+        [
+            '-d', base_dir,
+            'config', '-s', 'beeminder', '-o', 'api'
+        ],
+        input='y',
+        obj={}
+    )
     if result.exit_code == 1:
         result = runner.invoke(cli.cli, ['config', '-s', 'beeminder', '-o', 'api'], input='y', obj={})
     assert result.exit_code == 0
