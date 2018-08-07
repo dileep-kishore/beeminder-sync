@@ -86,7 +86,7 @@ class Beeminder:
             Dict[str, Any]
         """
         data = {i: self._user_resource[i] for i in ["username", "timezone", "subscription", "updated_at", "id"]}
-        return data
+        return {"user": data}
 
     # TODO: Incorporate `diff_since` in the call
     def _get_goals(self) -> List[str]:
@@ -132,7 +132,7 @@ class Beeminder:
         log.info(f"Attempting to connect to {goal_url}")
         response.raise_for_status()
         log.info(f"Connection successful. Retrieving data for {goal}")
-        return response.json()
+        return {"goal": response.json()}
 
     def get_datapoints(self, goal: str) -> List[Dict[str, Any]]:
         """
@@ -160,7 +160,7 @@ class Beeminder:
             raise ValueError(f"Goal {goal} not found. The following goals were found: {self.goals}")
         log.info(f"Connection successful. Retrieving data-points for {goal}")
         self._spinner.succeed(f"Data for {goal} retrieved successfully")
-        return response.json()
+        return {"datapoints": response.json()}
 
     def create_datapoint(
             self,
@@ -203,7 +203,7 @@ class Beeminder:
         response.raise_for_status()
         log.info(f"Connection successful. Creating data-point for {goal}")
         self._spinner.succeed("Creation successful")
-        return response.json()
+        return {"datapoints": response.json()}
 
     @classmethod
     def from_config(cls, beesync: BeeSync) -> "Beeminder":

@@ -63,7 +63,7 @@ def beeminder(ctx, method, goal, value, comment, timestamp):
     if not method:
         response = bee.user_details
     elif not goal:
-        response = bee.goals
+        response = {"goals": bee.goals}
     elif method == 'GET':
         response = bee.get_datapoints(goal)
     elif method == 'POST':
