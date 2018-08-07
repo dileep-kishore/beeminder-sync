@@ -52,9 +52,9 @@ def config(ctx, section, option, value):
 @cli.command()
 @click.option("--method", "-m", default=None, help="Either 'GET' or 'POST'")
 @click.option("--goal", "-g", default=None, help="Beeminder goal to use")
-@click.option("--value", "-v", default=None, type=click.INT, help="Value to add to the new data point")
-@click.option("--comment", "-c", default="", help="Comment to add to the nww data point")
-@click.option("--timestamp", "-t", default=None, help="Timestamp of the new data point")
+@click.option("--value", "-v", default=None, type=click.INT, help="Value to add to the new data point (POST only)")
+@click.option("--comment", "-c", default="", help="Comment to add to the nww data point (POST only)")
+@click.option("--timestamp", "-t", default=None, help="Timestamp of the new data point (POST only)")
 @click.pass_context
 def beeminder(ctx, method, goal, value, comment, timestamp):
     """ Access the beeminder interface """
