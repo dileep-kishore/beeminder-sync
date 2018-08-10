@@ -23,7 +23,6 @@ pytest-runner = "*"
 ipython = "*"
 pylint = "*"
 mypy = "*"
-tox-travis = "*"
 pytest-cov = "*"
 codecov = "*"
 
