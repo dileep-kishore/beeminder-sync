@@ -51,7 +51,7 @@ class TestBeeminderApi:
         interface = Beeminder(base_url, username, auth_token, spinner=False)
         goal = random.choice(interface.goals)
         goal_data = interface[goal]
-        assert goal_data["slug"] == goal
+        assert goal_data["goal"]["slug"] == goal
 
     def test_get_datapoints(self, beeminder_interface):
         goal = random.choice(beeminder_interface.goals)
@@ -64,12 +64,12 @@ class TestBeeminderApi:
             beeminder_interface
             .create_datapoint(goal, 1, comment='Test add from beeminder-sync')
         )
-        assert dpt1['status'] == 'created'
-        dpt1.pop('status', None)
+        assert dpt1["datapoints"]["status"] == 'created'
+        dpt1["datapoints"].pop("status", None)
         actual_dpts = beeminder_interface.get_datapoints(goal)
-        assert dpt1 == actual_dpts[0]
+        assert dpt1["datapoints"] == actual_dpts["datapoints"][0]
         dpt2 = (
             beeminder_interface
             .create_datapoint(goal, -1, comment='Test sub from beeminder-sync')
         )
-        assert dpt2['status'] == 'created'
+        assert dpt2["datapoints"]["status"] == 'created'
