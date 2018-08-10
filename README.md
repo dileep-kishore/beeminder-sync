@@ -1,4 +1,4 @@
-# Beeminder Sync ![WIP](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg?style=for-the-badge)
+# Beeminder Sync
 
 [![Documentation Status](https://img.shields.io/readthedocs/beeminder-sync.svg?style=for-the-badge)](https://beeminder-sync.readthedocs.io/en/latest/?badge=latest)
 [![Build Status](https://img.shields.io/travis/dileep-kishore/beeminder-sync.svg?style=for-the-badge)](https://travis-ci.org/dileep-kishore/beeminder-sync)
@@ -13,8 +13,7 @@ A `Python` CLI to sync various data sources with [Beeminder](https://github.com/
 
 ## Work in progress
 
-This is a 'work in progress' and is not ready for use of any kind at
-this time.
+This is a 'work in progress' use with caution
 
 ### Demo
 
@@ -22,8 +21,14 @@ this time.
 
 ## Features
 
-  - Cool interactive CLI created using [`click`](http://click.pocoo.org/6/) and [`halo`](https://github.com/ManrajGrover/halo)
-  - Use the Beeminder api from the comfort of your terminal!
+- Use the Beeminder api from the comfort of your terminal!
+- Cool interactive CLI created using [`click`](http://click.pocoo.org/6/) and [`halo`](https://github.com/ManrajGrover/halo)
+
+## Coming Soon
+
+- Filter output
+- Integrations with other api
+- Ability to run as a background service
 
 ## Credits
 
