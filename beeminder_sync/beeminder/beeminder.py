@@ -12,6 +12,7 @@ from halo import Halo
 
 from beeminder_sync.logger import log
 from ..beeminder_sync import BeeSync
+from ..query import query
 
 
 class Beeminder:
@@ -258,3 +259,21 @@ class Beeminder:
             None
         """
         self._spinner.fail(text)
+
+    @staticmethod
+    def query(response: dict, query_string: str) -> dict:
+        """
+            Query beeminder api response using query_string
+
+            Parameters
+            ----------
+            response : dict
+                Beeminder api response to query
+            query_string : str
+                `jq` compatible query string
+
+            Returns
+            -------
+            dict
+        """
+        return query(response, query_string)
