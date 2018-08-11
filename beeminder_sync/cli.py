@@ -55,8 +55,9 @@ def config(ctx, section, option, value):
 @click.option("--value", "-v", default=None, type=click.INT, help="Value to add to the new data point (POST only)")
 @click.option("--comment", "-c", default="", help="Comment to add to the new data point (POST only)")
 @click.option("--timestamp", "-t", default=None, help="Timestamp of the new data point (POST only)")
+@click.option("--query", "-q", default=None, help="jq style query string (must be quoted)")
 @click.pass_context
-def beeminder(ctx, method, goal, value, comment, timestamp):
+def beeminder(ctx, method, goal, value, comment, timestamp, query):
     """ Access the beeminder interface """
     beesync = ctx.obj['CONFIG']
     bee = Beeminder.from_config(beesync)
@@ -73,8 +74,10 @@ def beeminder(ctx, method, goal, value, comment, timestamp):
             response = bee.create_datapoint(goal, value, comment)
     else:
         bee.fail(f"Unsupported method {method}. Valid options: ['GET', 'POST']")
+    if query:
+        queried_response = bee.query(response, query)
     click.secho('\n' + '=' * 36 + "[OUTPUT]" + '=' * 36, fg="white")
-    click.secho(json.dumps(response, indent=2, sort_keys=True))
+    click.secho(json.dumps(queried_response, indent=2, sort_keys=True))
     return 0
 
 
