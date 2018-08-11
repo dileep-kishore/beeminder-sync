@@ -9,6 +9,7 @@ halo = "*"
 furl = "*"
 sqlalchemy = "*"
 maya = "*"
+pyjq = "*"
 
 [dev-packages]
 bumpversion = "*"
