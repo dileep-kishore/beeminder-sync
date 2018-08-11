@@ -17,6 +17,7 @@ requirements = [
     'halo',
     'furl',
     'maya',
+    'pyjq',
 ]
 
 setup_requirements = ['pytest-runner', ]
