@@ -4,8 +4,10 @@
 
 import random
 import requests
+
 import pytest
 from furl import furl
+
 from beeminder_sync.beeminder import Beeminder
 
 
