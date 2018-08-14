@@ -5,7 +5,7 @@
 import pyjq
 
 
-def query(response: dict, query_string: str) -> dict:
+def query(response: dict, query_string: str) -> list:
     """
         Get subset of response dictionary using the query string
         The format for the 'query_string' is identical to `jq`
