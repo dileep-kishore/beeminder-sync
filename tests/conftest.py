@@ -4,6 +4,7 @@
 
 from configparser import ConfigParser
 import pathlib
+import requests
 import shutil
 
 import pytest
@@ -53,3 +54,11 @@ def beeminder_interface(beeminder_config):
     auth_token = beeminder_config["auth_token"]
     interface = Beeminder(base_url, username, auth_token, spinner=False)
     return interface
+
+
+@pytest.fixture
+def github_json():
+    """ A response to the query of the github api """
+    url = "https://api.github.com/repos/stedolan/jq/commits?per_page=5"
+    response = requests.get(url)
+    return response.json()
