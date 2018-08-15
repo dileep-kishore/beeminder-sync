@@ -2,7 +2,6 @@
     Console script for beeminder_sync.
 """
 
-import json
 import os
 import sys
 
@@ -56,8 +55,9 @@ def config(ctx, section, option, value):
 @click.option("--comment", "-c", default="", help="Comment to add to the new data point (POST only)")
 @click.option("--timestamp", "-t", default=None, help="Timestamp of the new data point (POST only)")
 @click.option("--query", "-q", default=None, help="jq style query string (must be quoted)")
+@click.option("--output", "-o", default="json", help="Format of output. Either 'json' or 'table'")
 @click.pass_context
-def beeminder(ctx, method, goal, value, comment, timestamp, query):
+def beeminder(ctx, method, goal, value, comment, timestamp, query, output):
     """ Access the beeminder interface """
     beesync = ctx.obj['CONFIG']
     bee = Beeminder.from_config(beesync)
@@ -77,7 +77,7 @@ def beeminder(ctx, method, goal, value, comment, timestamp, query):
     if query:
         queried_response = bee.query(response, query)
     click.secho('\n' + '=' * 36 + "[OUTPUT]" + '=' * 36, fg="blue", bold=True)
-    click.secho(json.dumps(queried_response, indent=2, sort_keys=True))
+    click.secho(bee.output(queried_response, output))
     return 0
 
 
