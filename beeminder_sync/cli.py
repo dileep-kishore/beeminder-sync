@@ -76,7 +76,7 @@ def beeminder(ctx, method, goal, value, comment, timestamp, query):
         bee.fail(f"Unsupported method {method}. Valid options: ['GET', 'POST']")
     if query:
         queried_response = bee.query(response, query)
-    click.secho('\n' + '=' * 36 + "[OUTPUT]" + '=' * 36, fg="white")
+    click.secho('\n' + '=' * 36 + "[OUTPUT]" + '=' * 36, fg="blue", bold=True)
     click.secho(json.dumps(queried_response, indent=2, sort_keys=True))
     return 0
 
