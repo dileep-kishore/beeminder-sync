@@ -13,6 +13,7 @@ from halo import Halo
 from beeminder_sync.logger import log
 from ..beeminder_sync import BeeSync
 from ..query import query
+from ..output import output
 
 
 class Beeminder:
@@ -277,3 +278,21 @@ class Beeminder:
             dict
         """
         return query(response, query_string)
+
+    @staticmethod
+    def output(response: dict, format: str) -> str:
+        """
+            Format beeminder api response
+
+            Parameters
+            ----------
+            response : dict
+                Beeminder api response to format
+            format : {'json', 'table'}
+                Output format
+
+            Returns
+            -------
+            str
+        """
+        return output(response, format)
