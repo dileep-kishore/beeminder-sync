@@ -13,7 +13,7 @@ def query(response: dict, query_string: str) -> list:
         Parameters
         ----------
         response : dict
-            The output of the beeminder subcommand
+            The API response JSON
         query_string : str
             String to query the response
             Eg. '.datapoints[] | {comment, timestamp}'
