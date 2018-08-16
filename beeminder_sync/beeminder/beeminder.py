@@ -262,7 +262,7 @@ class Beeminder:
         self._spinner.fail(text)
 
     @staticmethod
-    def query(response: dict, query_string: str) -> dict:
+    def query(response: dict, query_string: str) -> list:
         """
             Query beeminder api response using query_string
 
