@@ -23,7 +23,7 @@ def query(response: dict, query_string: str) -> dict:
         dict
             The parsed dictionary
 
-        Refer
+        Notes
         -----
         `jq` is a lightweight and flexible command-line JSON processor
         refer: https://stedolan.github.io/jq/
