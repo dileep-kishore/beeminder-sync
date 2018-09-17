@@ -52,6 +52,8 @@ def table_output(response: dict) -> str:
         row_data = [''] * len(row)
         for key, value in row.items():
             ind = cols.index(key)
+            if value is None:
+                value = "null"
             row_data[ind] = "|{content:^{width}}|".format(content=value, width=col_width - 2)
         table.append(''.join(row_data))
     return '\n'.join(table)
