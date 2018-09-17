@@ -6,6 +6,7 @@ import pytest
 
 from beeminder_sync.query import query
 
+
 @pytest.mark.usefixtures("github_json")
 class TestQuery:
     """ Tests for the query function """
