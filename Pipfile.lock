@@ -633,11 +633,11 @@
         },
         "sphinx": {
             "hashes": [
-                "sha256:217a7705adcb573da5bbe1e0f5cab4fa0bd89fd9342c9159121746f593c2d5a4",
-                "sha256:a602513f385f1d5785ff1ca420d9c7eb1a1b63381733b2f0ea8188a391314a86"
+                "sha256:95acd6648902333647a0e0564abdb28a74b0a76d2333148aa35e5ed1f56d3c4b",
+                "sha256:c091dbdd5cc5aac6eb95d591a819fd18bccec90ffb048ec465b165a48b839b45"
             ],
             "index": "pypi",
-            "version": "==1.7.9"
+            "version": "==1.8.0"
         },
         "sphinxcontrib-websupport": {
             "hashes": [
@@ -647,13 +647,20 @@
             "markers": "python_version >= '2.7' and python_version != '3.0.*' and python_version != '3.1.*' and python_version != '3.3.*' and python_version != '3.2.*'",
             "version": "==1.1.0"
         },
+        "toml": {
+            "hashes": [
+                "sha256:380178cde50a6a79f9d2cf6f42a62a5174febe5eea4126fe4038785f1d888d42",
+                "sha256:a7901919d3e4f92ffba7ff40a9d697e35bbbc8a8049fe8da742f34c83606d957"
+            ],
+            "version": "==0.9.6"
+        },
         "tox": {
             "hashes": [
-                "sha256:37cf240781b662fb790710c6998527e65ca6851eace84d1595ee71f7af4e85f7",
-                "sha256:eb61aa5bcce65325538686f09848f04ef679b5cd9b83cc491272099b28739600"
+                "sha256:433bb93c57edae263150767e672a0d468ab4fefcc1958eb4013e56a670bb851e",
+                "sha256:bfb4e4efb7c61a54bc010a5c00fdbe0973bc4bdf04090bfcd3c93c901006177c"
             ],
             "index": "pypi",
-            "version": "==3.2.1"
+            "version": "==3.3.0"
         },
         "traitlets": {
             "hashes": [

@@ -49,9 +49,10 @@ requests==2.19.1; python_version != '3.2.*'
 simplegeneric==0.8.1
 six==1.11.0
 snowballstemmer==1.2.1
-sphinx==1.7.9
+sphinx==1.8.0
 sphinxcontrib-websupport==1.1.0; python_version != '3.2.*'
-tox==3.2.1
+toml==0.9.6
+tox==3.3.0
 traitlets==4.3.2
 typed-ast==1.1.0; python_version < '3.7' and implementation_name == 'cpython'
 urllib3==1.23; python_version != '3.2.*'
