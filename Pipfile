@@ -26,6 +26,7 @@ pylint = "*"
 mypy = "*"
 pytest-cov = "*"
 codecov = "*"
+sphinx-rtd-theme = "*"
 
 [requires]
 python_version = "3.6"

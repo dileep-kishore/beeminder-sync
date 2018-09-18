@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "39749770121e793c81b9bf8ee1e9015c31f24cc65c62eabe6752bf3e45b165b6"
+            "sha256": "ee9790526e4e3702a0e24902a128d20c1c6a0a87a33a2d465a4a9e96529bc73a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -448,11 +448,18 @@
         },
         "mypy": {
             "hashes": [
-                "sha256:673ea75fb750289b7d1da1331c125dc62fc1c3a8db9129bb372ae7b7d5bf300a",
-                "sha256:c770605a579fdd4a014e9f0a34b6c7a36ce69b08100ff728e96e27445cef3b3c"
+                "sha256:00b95bfdc0d5b9aa53c906e56fb91937743f2121d66684db5f947ec5d75f565d",
+                "sha256:6704586b4c2bf7dfa5e87a422be9ca57db622bab65008245759f3d4baeb219dd"
             ],
             "index": "pypi",
-            "version": "==0.620"
+            "version": "==0.630"
+        },
+        "mypy-extensions": {
+            "hashes": [
+                "sha256:37e0e956f41369209a3d5f34580150bcacfabaa57b33a15c0b25f4b5725e0812",
+                "sha256:b16cabe759f55e3409a7d231ebd2841378fb0c27a5d1994719e340e4f429ac3e"
+            ],
+            "version": "==0.4.1"
         },
         "packaging": {
             "hashes": [
@@ -638,6 +645,14 @@
             ],
             "index": "pypi",
             "version": "==1.8.0"
+        },
+        "sphinx-rtd-theme": {
+            "hashes": [
+                "sha256:3b49758a64f8a1ebd8a33cb6cc9093c3935a908b716edfaa5772fd86aac27ef6",
+                "sha256:80e01ec0eb711abacb1fa507f3eae8b805ae8fa3e8b057abfdf497e3f644c82c"
+            ],
+            "index": "pypi",
+            "version": "==0.4.1"
         },
         "sphinxcontrib-websupport": {
             "hashes": [
