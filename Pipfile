@@ -27,6 +27,7 @@ mypy = "*"
 pytest-cov = "*"
 codecov = "*"
 sphinx-rtd-theme = "*"
+twine = "*"
 
 [requires]
 python_version = "3.6"
