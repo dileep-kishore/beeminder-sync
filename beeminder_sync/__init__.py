@@ -4,7 +4,7 @@
 
 __author__ = """Dileep Kishore"""
 __email__ = 'k.dileep1994@gmail.com'
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 import pathlib
 import os
