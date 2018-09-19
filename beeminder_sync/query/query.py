@@ -29,4 +29,7 @@ def query(response: dict, query_string: str) -> dict:
         refer: https://stedolan.github.io/jq/
     """
     key = query_string.split('|')[0].strip().split('[')[0].strip('.')
-    return {key: pyjq.all(query_string, response)}
+    result = pyjq.all(query_string, response)
+    if len(result) == 1 and isinstance(result[0], list):
+        result = result[0]
+    return {key: result}
