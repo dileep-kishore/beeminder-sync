@@ -46,12 +46,12 @@ maxIdleTime: 2000
 # To hide the title use the value null
 # Don't forget to add a backgroundColor style with a null as type
 frameBox:
-  type: solid
-  title: null
+  type: floating
+  title: beeminder_sync
   style:
-    border: 0px black solid
+    border: 1px black solid
     boxShadow: none
-    margin: 0px
+    margin: 1px
 
 # Add a watermark image to the rendered gif
 # You need to specify an absolute path for

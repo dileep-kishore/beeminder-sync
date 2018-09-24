@@ -6,44 +6,44 @@ config:
   # the default is bash for Linux
   # or powershell.exe for Windows
   command: /bin/zsh -l
-
+  
   # Specify the current working directory path
   # the default is the current working directory path
-  cwd: /home/dileep/Documents/Coding/100daysofcode/beeminder-sync
-
+  cwd: /home/dileep
+  
   # Export additional ENV variables
   env:
     recording: true
-
+  
   # Explicitly set the number of columns
   # or use `auto` to take the current
   # number of columns of your shell
-  cols: 117
-
+  cols: 239
+  
   # Explicitly set the number of rows
   # or use `auto` to take the current
   # number of rows of your shell
-  rows: 27
-
+  rows: 59
+  
   # Amount of times to repeat GIF
   # If value is -1, play once
   # If value is 0, loop indefinitely
   # If value is a positive number, loop n times
   repeat: 0
-
+  
   # Quality
   # 1 - 100
   quality: 50
-
+  
   # Delay between frames in ms
   # If the value is `auto` use the actual recording delays
   frameDelay: auto
-
+  
   # Maximum delay between frames in ms
   # Ignored if the `frameDelay` isn't set to `auto`
   # Set to `auto` to prevnt limiting the max idle time
   maxIdleTime: 2000
-
+  
   # The surrounding frame box
   # The `type` can be null, window, floating, or solid`
   # To hide the title use the value null
@@ -52,10 +52,10 @@ config:
     type: floating
     title: beeminder_sync
     style:
-      border: 0px black solid
+      border: 1px black solid
       boxShadow: none
-      margin: 0px
-
+      margin: 1px
+  
   # Add a watermark image to the rendered gif
   # You need to specify an absolute path for
   # the image on your machine or a url, and you can also
@@ -68,25 +68,25 @@ config:
       bottom: 15px
       width: 100px
       opacity: 0.9
-
+  
   # Cursor style can be one of
   # `block`, `underline`, or `bar`
   cursorStyle: block
-
+  
   # Font family
   # You can use any font that is installed on your machine
   # in CSS-like syntax
   fontFamily: "Monofur Nerd Font, Monaco, Lucida Console, Ubuntu Mono, Monospace"
-
+  
   # The size of the font
   fontSize: 30
-
+  
   # The height of lines
   lineHeight: 1
-
+  
   # The spacing between letters
   letterSpacing: 0
-
+  
   # Theme
   theme:
     background: "transparent"
@@ -108,356 +108,374 @@ config:
     brightMagenta: "#ae89fe"
     brightCyan: "#b1c6ca"
     brightWhite: "#f9f9f4"
-
+  
 # Records, feel free to edit them
 records:
-  - delay: 458
+  - delay: 310
     content: "\e[31mWARNING!\e[39m Your terminal appears to support fewer than 256 colors!\r\nIf your terminal supports 256 colors, please export the appropriate environment variable\r\n_before_ loading this theme in your ~/.zshrc. In most terminal emulators, putting\r\n\e[34mexport TERM=\"xterm-256color\"\e[39m at the top of your ~/.zshrc is sufficient.\r\n"
   - delay: 12
-    content: "\e]4;0;#1f1d1b\e\\\e]4;1;#a96a47\e\\\e]4;2;#a79a87\e\\\e]4;3;#9ba951\e\\\e]4;4;#8caa1f\e\\\e]4;5;#bfc1c2\e\\\e]4;6;#a0b0c3\e\\\e]4;7;#c7c6c6\e\\\e]4;8;#575554\e\\\e]4;9;#a96a47\e\\\e]4;10;#a79a87\e\\\e]4;11;#9ba951\e\\\e]4;12;#8caa1f\e\\\e]4;13;#bfc1c2\e\\\e]4;14;#a0b0c3\e\\\e]4;15;#c7c6c6\e\\\e]10;#c7c6c6\e\\\e]11;#1f1d1b\e\\\e]12;#c7c6c6\e\\\e]13;#c7c6c6\e\\\e]17;#c7c6c6\e\\\e]19;#1f1d1b\e\\\e]4;232;#1f1d1b\e\\\e[s\e[1000H\e[8m\e]708;#1f1d1b\e\\\e[u\e]13;#c7c6c6\e\\"
-  - delay: 207
+    content: "\e]4;0;#201411\e\\\e]4;1;#ab8275\e\\\e]4;2;#ac5034\e\\\e]4;3;#95a4a6\e\\\e]4;4;#5e9caa\e\\\e]4;5;#1b8eaa\e\\\e]4;6;#99bac5\e\\\e]4;7;#c7c4c3\e\\\e]4;8;#574e4c\e\\\e]4;9;#ab8275\e\\\e]4;10;#ac5034\e\\\e]4;11;#95a4a6\e\\\e]4;12;#5e9caa\e\\\e]4;13;#1b8eaa\e\\\e]4;14;#99bac5\e\\\e]4;15;#c7c4c3\e\\\e]10;#c7c4c3\e\\\e]11;#201411\e\\\e]12;#c7c4c3\e\\\e]13;#c7c4c3\e\\\e]17;#c7c4c3\e\\\e]19;#201411\e\\\e]4;232;#201411\e\\\e[s\e[1000H\e[8m\e]708;#201411\e\\\e[u\e]13;#c7c4c3\e\\"
+  - delay: 215
     content: "\e[31mWARNING!\e[39m Your terminal appears to support fewer than 256 colors!\r\nIf your terminal supports 256 colors, please export the appropriate environment variable\r\n_before_ loading this theme in your ~/.zshrc. In most terminal emulators, putting\r\n\e[34mexport TERM=\"xterm-256color\"\e[39m at the top of your ~/.zshrc is sufficient.\r\n"
-  - delay: 240
-    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                    \r \r\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync\a"
-  - delay: 12
-    content: "\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync\a\e]1;..eeminder-sync\a\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync\a\e]1;..eeminder-sync\a"
-  - delay: 23
-    content: "\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync\a"
-  - delay: 66
-    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m… 100daysofcode beeminder-sync \e[43m\e[34m \e[30m \e[39m\e[30m master   \e[49m\e[33m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[71C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:20\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[111D\e[?1h\e=\e[?2004h"
-  - delay: 1249
-    content: "\e[4mb\e[24m\e[90meeminder_sync beeminder -m POST -v 1 -c \"Testing post\" beetest\e[39m\e[62D"
-  - delay: 132
-    content: "\b\e[4mb\e[39m\e[4me\e[24m"
-  - delay: 183
-    content: "\b\b\e[4mb\e[4me\e[39m\e[4me\e[24m"
-  - delay: 142
-    content: "\b\e[4me\e[39m\e[4mm\e[24m"
-  - delay: 143
-    content: "\b\e[4mm\e[39m\e[4mi\e[24m"
-  - delay: 114
-    content: "\b\e[4mi\e[39m\e[4mn\e[24m"
-  - delay: 88
-    content: "\b\e[4mn\e[39m\e[4md\e[24m"
-  - delay: 212
-    content: "\b\e[4md\e[39m\e[4me\e[24m"
-  - delay: 95
-    content: "\b\e[4me\e[39m\e[4mr\e[24m"
-  - delay: 280
-    content: "\b\e[4mr\e[39m\e[4m_\e[24m"
-  - delay: 180
-    content: "\b\e[4m_\e[39m\e[4ms\e[24m"
-  - delay: 106
-    content: "\b\e[4ms\e[39m\e[4my\e[24m"
-  - delay: 243
-    content: "\b\e[4my\e[39m\e[4mn\e[24m"
-  - delay: 117
-    content: "\e[13D\e[24m\e[32mb\e[24m\e[32me\e[24m\e[32me\e[24m\e[32mm\e[24m\e[32mi\e[24m\e[32mn\e[24m\e[32md\e[24m\e[32me\e[24m\e[32mr\e[24m\e[32m_\e[24m\e[32ms\e[24m\e[32my\e[24m\e[32mn\e[32mc\e[39m"
-  - delay: 147
-    content: "\e[39m "
-  - delay: 170
-    content: "\e[39m-\e[90m-\e[90mh\e[90me\e[90ml\e[90mp\e[39m\e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[47D"
-  - delay: 153
-    content: "\e[39m-"
-  - delay: 180
-    content: "\e[39mh"
-  - delay: 97
-    content: "\e[39me"
-  - delay: 88
-    content: "\e[39ml"
-  - delay: 194
-    content: "\e[39mp"
-  - delay: 791
-    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;beeminder_sync --help\a\e]1;beeminder_sync\a\e]2;beeminder_sync --help\a\e]1;beeminder_sync\a"
-  - delay: 440
-    content: "\e[0m\e[0m\e[0mUsage: beeminder_sync [OPTIONS] COMMAND [ARGS]...\r\n\r\n  Main entry point to beeminder_sync\r\n\r\nOptions:\r\n  -d, --basedir PATH  The path to the base application directory\r\n  -c, --config PATH   The path to the configuration file\r\n  --help              Show this message and exit.\r\n\r\nCommands:\r\n  beeminder  Access the beeminder interface\r\n  config     Get and set configuration options\r\n\e[0m\e[0m\e[0m\e[0m\e[0m"
-  - delay: 22
-    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                    \r \r\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync\a"
-  - delay: 12
-    content: "\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync\a\e]1;..eeminder-sync\a\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync\a\e]1;..eeminder-sync\a\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync\a"
-  - delay: 78
-    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m… 100daysofcode beeminder-sync \e[43m\e[34m \e[30m \e[39m\e[30m master   \e[49m\e[33m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[71C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:21\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[111D\e[?1h\e=\e[?2004h"
-  - delay: 1459
-    content: "\e[4mb\e[24m\e[90meeminder_sync --help\e[39m\e[20D"
-  - delay: 127
-    content: "\b\e[4mb\e[39m\e[4me\e[24m"
-  - delay: 169
-    content: "\b\b\e[4mb\e[4me\e[39m\e[4me\e[24m"
-  - delay: 142
-    content: "\b\e[4me\e[39m\e[4mm\e[24m"
-  - delay: 105
-    content: "\b\e[4mm\e[39m\e[4mi\e[24m"
-  - delay: 114
-    content: "\b\e[4mi\e[39m\e[4mn\e[24m"
-  - delay: 88
-    content: "\b\e[4mn\e[39m\e[4md\e[24m"
-  - delay: 212
-    content: "\b\e[4md\e[39m\e[4me\e[24m"
-  - delay: 87
-    content: "\b\e[4me\e[39m\e[4mr\e[24m"
-  - delay: 354
-    content: "\b\e[4mr\e[39m\e[4m_\e[24m"
-  - delay: 492
-    content: "\b\e[4m_\e[39m\e[4ms\e[24m"
-  - delay: 168
-    content: "\b\e[4ms\e[39m\e[4my\e[24m"
-  - delay: 388
-    content: "\b\e[4my\e[39m\e[4mn\e[24m"
-  - delay: 446
-    content: "\e[13D\e[24m\e[32mb\e[24m\e[32me\e[24m\e[32me\e[24m\e[32mm\e[24m\e[32mi\e[24m\e[32mn\e[24m\e[32md\e[24m\e[32me\e[24m\e[32mr\e[24m\e[32m_\e[24m\e[32ms\e[24m\e[32my\e[24m\e[32mn\e[32mc\e[39m"
-  - delay: 257
-    content: "\e[39m "
-  - delay: 189
-    content: "\e[39m\e[4mc\e[24m\e[90mo\e[90mn\e[90mf\e[90mi\e[90mg\e[90m -s beeminder -o api\e[39m\e[25D"
-  - delay: 93
-    content: "\b\e[4mc\e[39m\e[4mo\e[24m"
-  - delay: 91
-    content: "\b\e[4mo\e[39m\e[4mn\e[24m"
-  - delay: 143
-    content: "\b\e[4mn\e[39m\e[4mf\e[24m"
-  - delay: 138
-    content: "\b\e[4mf\e[39m\e[4mi\e[24m"
-  - delay: 120
-    content: "\b\e[4mi\e[39m\e[4mg\e[24m"
-  - delay: 170
-    content: "\b\b\b\b\b\b\e[24mc\e[24mo\e[24mn\e[24mf\e[24mi\e[24mg\e[39m "
-  - delay: 170
-    content: "\e[39m-"
-  - delay: 182
-    content: "\e[39m-\e[90mh\e[90me\e[90ml\e[90mp\e[39m\e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[17D"
-  - delay: 201
-    content: "\e[39mh"
-  - delay: 364
-    content: "\e[39me"
-  - delay: 145
-    content: "\e[39ml"
-  - delay: 182
-    content: "\e[39mp"
-  - delay: 269
-    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;beeminder_sync config --help\a\e]1;beeminder_sync\a\e]2;beeminder_sync config --help\a\e]1;beeminder_sync\a"
-  - delay: 561
-    content: "\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠋\e[0m Initializing application...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠙\e[0m Initializing application...\e[0m\e[0m"
-  - delay: 81
-    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Initialization successful\r\n\e[0m\e[0m\e[0m\e[0m\e[0m\e[0mUsage: beeminder_sync config [OPTIONS] [VALUE]\r\n\r\n  Get and set configuration options\r\n\r\nOptions:\r\n  -s, --section TEXT  Configuration section header\r\n  -o, --option TEXT   Option name under section\r\n  --help              Show this message and exit.\r\n\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[0m\e[0m"
-  - delay: 49
-    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                    \r \r\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync\a"
-  - delay: 12
-    content: "\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync\a\e]1;..eeminder-sync\a\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync\a\e]1;..eeminder-sync\a\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync\a"
+  - delay: 104
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                                                                                                              \r \r\e]7;file:///home/dileep\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]2;dileep@red-peep: ~\a\e]1;~\a"
+  - delay: 17
+    content: "\e]7;file:///home/dileep\a"
+  - delay: 42
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m~ \e[49m\e[34m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[193C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:44\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[233D\e[?1h\e=\e[?2004h"
+  - delay: 565
+    content: "\e[1m\e[31mc\e[0m\e[39m\e[90mlear\e[39m\b\b\b\b"
+  - delay: 108
+    content: "\b\e[1m\e[31mc\e[1m\e[31ml\e[0m\e[39m"
+  - delay: 100
+    content: "\b\b\e[1m\e[31mc\e[1m\e[31ml\e[1m\e[31me\e[0m\e[39m"
+  - delay: 130
+    content: "\b\e[1m\e[31me\e[1m\e[31ma\e[0m\e[39m"
   - delay: 79
-    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m… 100daysofcode beeminder-sync \e[43m\e[34m \e[30m \e[39m\e[30m master   \e[49m\e[33m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[71C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:21\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[111D\e[?1h\e=\e[?2004h"
-  - delay: 499
-    content: "\e[4mb\e[24m\e[90meeminder_sync config --help\e[39m\e[27D"
-  - delay: 80
-    content: "\b\e[4mb\e[39m\e[4me\e[24m"
-  - delay: 176
-    content: "\b\b\e[4mb\e[4me\e[39m\e[4me\e[24m"
-  - delay: 123
-    content: "\b\e[4me\e[39m\e[4mm\e[24m"
-  - delay: 91
-    content: "\b\e[4mm\e[39m\e[4mi\e[24m"
-  - delay: 120
-    content: "\b\e[4mi\e[39m\e[4mn\e[24m"
-  - delay: 70
-    content: "\b\e[4mn\e[39m\e[4md\e[24m"
-  - delay: 193
-    content: "\b\e[4md\e[39m\e[4me\e[24m"
-  - delay: 77
-    content: "\b\e[4me\e[39m\e[4mr\e[24m"
-  - delay: 529
-    content: "\b\e[4mr\e[39m\e[4m_\e[24m"
-  - delay: 147
-    content: "\b\e[4m_\e[39m\e[4ms\e[24m"
-  - delay: 142
-    content: "\b\e[4ms\e[39m\e[4my\e[24m"
-  - delay: 221
-    content: "\b\e[4my\e[39m\e[4mn\e[24m"
-  - delay: 86
-    content: "\e[13D\e[24m\e[32mb\e[24m\e[32me\e[24m\e[32me\e[24m\e[32mm\e[24m\e[32mi\e[24m\e[32mn\e[24m\e[32md\e[24m\e[32me\e[24m\e[32mr\e[24m\e[32m_\e[24m\e[32ms\e[24m\e[32my\e[24m\e[32mn\e[32mc\e[39m"
-  - delay: 173
-    content: "\e[39m "
-  - delay: 221
-    content: "\e[39m\e[4mc\e[24m"
-  - delay: 74
-    content: "\b\e[4mc\e[39m\e[4mo\e[24m"
-  - delay: 102
-    content: "\b\e[4mo\e[39m\e[4mn\e[24m"
-  - delay: 78
-    content: "\b\e[4mn\e[39m\e[4mf\e[24m"
-  - delay: 186
-    content: "\b\e[4mf\e[39m\e[4mi\e[24m"
-  - delay: 115
-    content: "\b\e[4mi\e[39m\e[4mg\e[24m"
-  - delay: 308
-    content: "\b\b\b\b\b\b\e[24mc\e[24mo\e[24mn\e[24mf\e[24mi\e[24mg\e[39m "
-  - delay: 705
-    content: "\e[39m-"
+    content: "\b\b\b\b\e[0m\e[32mc\e[0m\e[32ml\e[0m\e[32me\e[0m\e[32ma\e[32mr\e[39m"
+  - delay: 232
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;clear\a\e]1;clear\a\e]2;clear\a\e]1;clear\a"
+  - delay: 63
+    content: "\e[H\e[2J\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                                                                                                              \r \r\e]7;file:///home/dileep\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]7;file:///home/dileep\a"
+  - delay: 52
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m~ \e[49m\e[34m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[193C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:44\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[233D\e[?1h\e=\e[?2004h"
+  - delay: 1767
+    content: "\e[4mb\e[24m\e[90meeminder_sync beeminder -m POST -v 1 -c \"Testing post\" -g beetest\e[39m\e[65D"
+  - delay: 122
+    content: "\b\e[24m\e[1m\e[31mb\e[1m\e[31me\e[0m\e[39m"
+  - delay: 209
+    content: "\b\b\e[1m\e[31mb\e[1m\e[31me\e[1m\e[31me\e[0m\e[39m"
+  - delay: 2373
+    content: "\b\e[1m\e[31me\e[1m\e[31me\e[0m\e[39m\e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[62D"
+  - delay: 426
+    content: "\b\b\e[1m\e[31me\e[0m\e[39m\e[0m\e[90mm\e[90minder_sync beeminder -m POST -v 1 -c \"Testing post\" -g beetest\e[39m\e[63D"
+  - delay: 210
+    content: "\b\e[1m\e[31me\e[1m\e[31mm\e[0m\e[39m"
+  - delay: 118
+    content: "\b\e[1m\e[31mm\e[1m\e[31mi\e[0m\e[39m"
+  - delay: 124
+    content: "\b\e[1m\e[31mi\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 56
+    content: "\b\e[1m\e[31mn\e[1m\e[31md\e[0m\e[39m"
+  - delay: 397
+    content: "\b\e[1m\e[31md\e[1m\e[31me\e[0m\e[39m"
+  - delay: 105
+    content: "\b\e[1m\e[31me\e[1m\e[31mr\e[0m\e[39m"
+  - delay: 324
+    content: "\b\e[1m\e[31mr\e[1m\e[31m_\e[0m\e[39m"
+  - delay: 127
+    content: "\b\e[1m\e[31m_\e[1m\e[31ms\e[0m\e[39m"
   - delay: 119
-    content: "\e[39ms\e[90m \e[90mb\e[90me\e[90me\e[90mminder -o api\e[39m\e[17D"
+    content: "\b\e[1m\e[31ms\e[1m\e[31my\e[0m\e[39m"
+  - delay: 196
+    content: "\b\e[1m\e[31my\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 61
+    content: "\e[13D\e[0m\e[32mb\e[0m\e[32me\e[0m\e[32me\e[0m\e[32mm\e[0m\e[32mi\e[0m\e[32mn\e[0m\e[32md\e[0m\e[32me\e[0m\e[32mr\e[0m\e[32m_\e[0m\e[32ms\e[0m\e[32my\e[0m\e[32mn\e[32mc\e[39m"
+  - delay: 101
+    content: "\e[39m "
+  - delay: 202
+    content: "\e[39m-\e[90m-\e[90mh\e[90me\e[90ml\e[90mp\e[39m\e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[50D"
+  - delay: 154
+    content: "\e[39m-"
+  - delay: 198
+    content: "\e[39mh"
+  - delay: 116
+    content: "\e[39me"
+  - delay: 94
+    content: "\e[39mo\e[39m \b"
+  - delay: 530
+    content: "\b\e[90ml\e[90mp\e[39m\b\b"
+  - delay: 222
+    content: "\e[39ml"
+  - delay: 171
+    content: "\e[39mp"
+  - delay: 224
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;beeminder_sync --help\a\e]1;beeminder_sync\a\e]2;beeminder_sync --help\a\e]1;beeminder_sync\a"
+  - delay: 418
+    content: "\e[0m\e[0m\e[0mUsage: beeminder_sync [OPTIONS] COMMAND [ARGS]...\r\n\r\n  Main entry point to beeminder_sync\r\n\r\nOptions:\r\n  -d, --basedir PATH  The path to the base application directory\r\n  -c, --config PATH   The path to the configuration file\r\n  --help              Show this message and exit.\r\n\r\nCommands:\r\n  beeminder  Access the beeminder interface\r\n  config     Get and set configuration options\r\n\e[0m\e[0m\e[0m\e[0m\e[0m"
+  - delay: 20
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                                                                                                              \r \r\e]7;file:///home/dileep\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]7;file:///home/dileep\a"
+  - delay: 52
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m~ \e[49m\e[34m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[193C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:45\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[233D\e[?1h\e=\e[?2004h"
+  - delay: 1072
+    content: "\e[4mb\e[24m\e[90meeminder_sync --help\e[39m\e[20D"
+  - delay: 187
+    content: "\b\e[24m\e[1m\e[31mb\e[1m\e[31me\e[0m\e[39m"
+  - delay: 205
+    content: "\b\b\e[1m\e[31mb\e[1m\e[31me\e[1m\e[31me\e[0m\e[39m"
+  - delay: 170
+    content: "\b\e[1m\e[31me\e[1m\e[31mm\e[0m\e[39m"
+  - delay: 119
+    content: "\b\e[1m\e[31mm\e[1m\e[31mi\e[0m\e[39m"
+  - delay: 150
+    content: "\b\e[1m\e[31mi\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 166
+    content: "\b\e[1m\e[31mn\e[1m\e[31md\e[0m\e[39m"
+  - delay: 263
+    content: "\b\e[1m\e[31md\e[1m\e[31me\e[0m\e[39m"
+  - delay: 149
+    content: "\b\e[1m\e[31me\e[1m\e[31mr\e[0m\e[39m"
+  - delay: 356
+    content: "\b\e[1m\e[31mr\e[1m\e[31m_\e[0m\e[39m"
+  - delay: 215
+    content: "\b\e[1m\e[31m_\e[1m\e[31ms\e[0m\e[39m"
+  - delay: 145
+    content: "\b\e[1m\e[31ms\e[1m\e[31my\e[0m\e[39m"
+  - delay: 452
+    content: "\b\e[1m\e[31my\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 146
+    content: "\e[13D\e[0m\e[32mb\e[0m\e[32me\e[0m\e[32me\e[0m\e[32mm\e[0m\e[32mi\e[0m\e[32mn\e[0m\e[32md\e[0m\e[32me\e[0m\e[32mr\e[0m\e[32m_\e[0m\e[32ms\e[0m\e[32my\e[0m\e[32mn\e[32mc\e[39m"
+  - delay: 563
+    content: "\e[39m "
+  - delay: 301
+    content: "\e[39mc\e[90mo\e[90mn\e[90mf\e[90mi\e[90mg\e[90m -s beeminder -o api\e[39m\e[25D"
+  - delay: 108
+    content: "\e[39mo"
+  - delay: 69
+    content: "\e[39mn"
+  - delay: 160
+    content: "\e[39mf"
+  - delay: 151
+    content: "\e[39mi"
+  - delay: 85
+    content: "\e[39mg"
+  - delay: 152
+    content: "\e[39m "
+  - delay: 142
+    content: "\e[39m-"
+  - delay: 155
+    content: "\e[39m-\e[90mh\e[90me\e[90ml\e[90mp\e[39m\e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[17D"
+  - delay: 208
+    content: "\e[39mh"
+  - delay: 93
+    content: "\e[39me"
+  - delay: 102
+    content: "\e[39ml"
+  - delay: 208
+    content: "\e[39mp"
+  - delay: 320
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;beeminder_sync config --help\a\e]1;beeminder_sync\a\e]2;beeminder_sync config --help\a\e]1;beeminder_sync\a"
+  - delay: 357
+    content: "\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠋\e[0m Initializing application...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠙\e[0m Initializing application...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Initialization successful\r\n\e[0m\e[0m\e[0m\e[0m\e[0m\e[0mUsage: beeminder_sync config [OPTIONS] [VALUE]\r\n\r\n  Get and set configuration options\r\n\r\nOptions:\r\n  -s, --section TEXT  Configuration section header\r\n  -o, --option TEXT   Option name under section\r\n  --help              Show this message and exit.\r\n\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[0m\e[0m"
+  - delay: 43
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                                                                                                              \r \r\e]7;file:///home/dileep\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]7;file:///home/dileep\a"
+  - delay: 55
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m~ \e[49m\e[34m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[193C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:45\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[233D\e[?1h\e=\e[?2004h"
+  - delay: 577
+    content: "\e[4mb\e[24m\e[90meeminder_sync config --help\e[39m\e[27D"
+  - delay: 180
+    content: "\b\e[24m\e[1m\e[31mb\e[1m\e[31me\e[0m\e[39m"
+  - delay: 187
+    content: "\b\b\e[1m\e[31mb\e[1m\e[31me\e[1m\e[31me\e[0m\e[39m"
+  - delay: 157
+    content: "\b\e[1m\e[31me\e[1m\e[31mm\e[0m\e[39m"
+  - delay: 124
+    content: "\b\e[1m\e[31mm\e[1m\e[31mi\e[0m\e[39m"
+  - delay: 125
+    content: "\b\e[1m\e[31mi\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 107
+    content: "\b\e[1m\e[31mn\e[1m\e[31md\e[0m\e[39m"
+  - delay: 193
+    content: "\b\e[1m\e[31md\e[1m\e[31me\e[0m\e[39m"
+  - delay: 76
+    content: "\b\e[1m\e[31me\e[1m\e[31mr\e[0m\e[39m"
+  - delay: 326
+    content: "\b\e[1m\e[31mr\e[1m\e[31m_\e[0m\e[39m"
+  - delay: 239
+    content: "\b\e[1m\e[31m_\e[1m\e[31ms\e[0m\e[39m"
+  - delay: 176
+    content: "\b\e[1m\e[31ms\e[1m\e[31my\e[0m\e[39m"
+  - delay: 384
+    content: "\b\e[1m\e[31my\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 128
+    content: "\e[13D\e[0m\e[32mb\e[0m\e[32me\e[0m\e[32me\e[0m\e[32mm\e[0m\e[32mi\e[0m\e[32mn\e[0m\e[32md\e[0m\e[32me\e[0m\e[32mr\e[0m\e[32m_\e[0m\e[32ms\e[0m\e[32my\e[0m\e[32mn\e[32mc\e[39m"
+  - delay: 233
+    content: "\e[39m "
+  - delay: 818
+    content: "\e[39mc"
+  - delay: 117
+    content: "\e[39mo"
+  - delay: 78
+    content: "\e[39mn"
+  - delay: 98
+    content: "\e[39mf"
+  - delay: 161
+    content: "\e[39mi"
+  - delay: 74
+    content: "\e[39mg"
   - delay: 169
     content: "\e[39m "
-  - delay: 653
-    content: "\e[39mb\e[39me\e[39me\e[39mm\e[39mi\e[39mn\e[39md\e[39me\e[39mr\e[39m \e[39m-\e[39mo\e[39m \e[39ma\e[39mp\e[39mi"
-  - delay: 1156
-    content: "\e[?1l\e>"
-  - delay: 11
-    content: "\e[?2004l\r\r\n\e]2;beeminder_sync config -s beeminder -o api\a\e]1;beeminder_sync\a\e]2;beeminder_sync config -s beeminder -o api\a\e]1;beeminder_sync\a"
-  - delay: 546
+  - delay: 219
+    content: "\e[39m-"
+  - delay: 91
+    content: "\e[39ms\e[90m \e[90mb\e[90me\e[90me\e[90mminder -o api\e[39m\e[17D"
+  - delay: 514
+    content: "\e[39m \e[39mb\e[39me\e[39me\e[39mm\e[39mi\e[39mn\e[39md\e[39me\e[39mr\e[39m \e[39m-\e[39mo\e[39m \e[39ma\e[39mp\e[39mi"
+  - delay: 316
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;beeminder_sync config -s beeminder -o api\a\e]1;beeminder_sync\a\e]2;beeminder_sync config -s beeminder -o api\a\e]1;beeminder_sync\a"
+  - delay: 332
     content: "\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠋\e[0m Initializing application...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠙\e[0m Initializing application...\e[0m\e[0m"
   - delay: 81
     content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Initialization successful\r\n\e[0m\e[0m\e[0m\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠋\e[0m Getting configuration...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠙\e[0m Getting configuration...\e[0m\e[0m"
   - delay: 80
     content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m beeminder.api: https://www.beeminder.com/api/v1/\r\n\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[0m\e[0m"
-  - delay: 51
-    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                    \r \r\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync\a"
-  - delay: 12
-    content: "\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync\a\e]1;..eeminder-sync\a\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync\a\e]1;..eeminder-sync\a\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync\a"
-  - delay: 78
-    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m… 100daysofcode beeminder-sync \e[43m\e[34m \e[30m \e[39m\e[30m master   \e[49m\e[33m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[71C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:21\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[111D\e[?1h\e=\e[?2004h"
-  - delay: 587
+  - delay: 49
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                                                                                                              \r \r\e]7;file:///home/dileep\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]7;file:///home/dileep\a"
+  - delay: 56
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m~ \e[49m\e[34m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[193C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:45\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[233D\e[?1h\e=\e[?2004h"
+  - delay: 642
     content: "\e[4mb\e[24m\e[90meeminder_sync config -s beeminder -o api\e[39m\e[40D"
-  - delay: 108
-    content: "\b\e[4mb\e[39m\e[4me\e[24m"
-  - delay: 175
-    content: "\b\b\e[4mb\e[4me\e[39m\e[4me\e[24m"
-  - delay: 124
-    content: "\b\e[4me\e[39m\e[4mm\e[24m"
+  - delay: 105
+    content: "\b\e[24m\e[1m\e[31mb\e[1m\e[31me\e[0m\e[39m"
+  - delay: 157
+    content: "\b\b\e[1m\e[31mb\e[1m\e[31me\e[1m\e[31me\e[0m\e[39m"
+  - delay: 171
+    content: "\b\e[1m\e[31me\e[1m\e[31mm\e[0m\e[39m"
+  - delay: 142
+    content: "\b\e[1m\e[31mm\e[1m\e[31mi\e[0m\e[39m"
+  - delay: 102
+    content: "\b\e[1m\e[31mi\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 91
+    content: "\b\e[1m\e[31mn\e[1m\e[31md\e[0m\e[39m"
+  - delay: 184
+    content: "\b\e[1m\e[31md\e[1m\e[31me\e[0m\e[39m"
+  - delay: 235
+    content: "\b\e[1m\e[31me\e[1m\e[31mr\e[0m\e[39m"
+  - delay: 334
+    content: "\b\e[1m\e[31mr\e[1m\e[31m_\e[0m\e[39m"
+  - delay: 171
+    content: "\b\e[1m\e[31m_\e[1m\e[31ms\e[0m\e[39m"
+  - delay: 125
+    content: "\b\e[1m\e[31ms\e[1m\e[31my\e[0m\e[39m"
+  - delay: 224
+    content: "\b\e[1m\e[31my\e[1m\e[31mn\e[0m\e[39m"
   - delay: 96
-    content: "\b\e[4mm\e[39m\e[4mi\e[24m"
-  - delay: 137
-    content: "\b\e[4mi\e[39m\e[4mn\e[24m"
-  - delay: 35
-    content: "\b\e[4mn\e[39m\e[4md\e[24m"
-  - delay: 192
-    content: "\b\e[4md\e[39m\e[4me\e[24m"
-  - delay: 146
-    content: "\b\e[4me\e[39m\e[4mr\e[24m"
-  - delay: 309
-    content: "\b\e[4mr\e[39m\e[4m_\e[24m"
-  - delay: 179
-    content: "\b\e[4m_\e[39m\e[4ms\e[24m"
+    content: "\e[13D\e[0m\e[32mb\e[0m\e[32me\e[0m\e[32me\e[0m\e[32mm\e[0m\e[32mi\e[0m\e[32mn\e[0m\e[32md\e[0m\e[32me\e[0m\e[32mr\e[0m\e[32m_\e[0m\e[32ms\e[0m\e[32my\e[0m\e[32mn\e[32mc\e[39m"
   - delay: 126
-    content: "\b\e[4ms\e[39m\e[4my\e[24m"
-  - delay: 513
-    content: "\b\e[4my\e[39m\e[4mn\e[24m"
-  - delay: 109
-    content: "\e[13D\e[24m\e[32mb\e[24m\e[32me\e[24m\e[32me\e[24m\e[32mm\e[24m\e[32mi\e[24m\e[32mn\e[24m\e[32md\e[24m\e[32me\e[24m\e[32mr\e[24m\e[32m_\e[24m\e[32ms\e[24m\e[32my\e[24m\e[32mn\e[32mc\e[39m"
-  - delay: 162
     content: "\e[39m "
-  - delay: 316
-    content: "\e[39m\e[4mb\e[24m\e[90me\e[90me\e[90mm\e[90mi\e[90mn\e[90md\e[90me\e[90mr\e[90m \e[90m-\e[90mm\e[90m \e[90mP\e[90mO\e[90mS\e[90mT\e[90m \e[90m-\e[90mv\e[90m \e[90m1\e[90m \e[90m-\e[90mc\e[90m \e[90m\"Testing post\" beetest\e[39m\e[47D"
-  - delay: 99
-    content: "\b\e[4mb\e[39m\e[4me\e[24m"
-  - delay: 178
-    content: "\b\e[4me\e[39m\e[4me\e[24m"
-  - delay: 95
-    content: "\b\e[4me\e[39m\e[4mm\e[24m"
-  - delay: 163
-    content: "\b\e[4mm\e[39m\e[4mi\e[24m"
-  - delay: 73
-    content: "\b\e[4mi\e[39m\e[4mn\e[24m"
-  - delay: 57
-    content: "\b\e[4mn\e[39m\e[4md\e[24m"
-  - delay: 199
-    content: "\b\e[4md\e[39m\e[4me\e[24m"
-  - delay: 196
-    content: "\b\e[4me\e[39m\e[4mr\e[24m"
-  - delay: 147
-    content: "\e[9D\e[24mb\e[24me\e[24me\e[24mm\e[24mi\e[24mn\e[24md\e[24me\e[24mr\e[39m "
-  - delay: 143
-    content: "\e[39m-"
-  - delay: 159
-    content: "\e[39m-\e[90mh\e[90me\e[90ml\e[90mp\e[39m\e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[36D"
-  - delay: 201
-    content: "\e[39mh"
-  - delay: 111
+  - delay: 633
+    content: "\e[39mc"
+  - delay: 510
+    content: "\b\e[90mc\b"
+  - delay: 262
+    content: "\e[39m\e[39m\e[4mb\e[24m\e[90me\e[90me\e[90mm\e[90mi\e[90mn\e[90md\e[90me\e[90mr\e[90m \e[90m-\e[90mm\e[90m \e[90mP\e[90mO\e[90mS\e[90mT\e[90m \e[90m-\e[90mv\e[90m \e[90m1\e[90m \e[90m-\e[90mc\e[90m \e[90m\"Testing post\" -g beetest\e[39m\e[50D"
+  - delay: 83
+    content: "\b\e[24mb\e[39me"
+  - delay: 180
     content: "\e[39me"
-  - delay: 121
+  - delay: 179
+    content: "\e[39mm"
+  - delay: 106
+    content: "\e[39mi"
+  - delay: 105
+    content: "\e[39mn"
+  - delay: 116
+    content: "\e[39md"
+  - delay: 195
+    content: "\e[39me"
+  - delay: 154
+    content: "\e[39mr"
+  - delay: 286
+    content: "\e[39m "
+  - delay: 205
+    content: "\e[39m-"
+  - delay: 187
+    content: "\e[39m-\e[90mh\e[90me\e[90ml\e[90mp\e[39m\e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39D"
+  - delay: 168
+    content: "\e[39mh"
+  - delay: 100
+    content: "\e[39me"
+  - delay: 92
     content: "\e[39ml"
-  - delay: 193
+  - delay: 253
     content: "\e[39mp"
-  - delay: 779
+  - delay: 445
     content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;beeminder_sync beeminder --help\a\e]1;beeminder_sync\a\e]2;beeminder_sync beeminder --help\a\e]1;beeminder_sync\a"
-  - delay: 539
+  - delay: 355
     content: "\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠋\e[0m Initializing application...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠙\e[0m Initializing application...\e[0m\e[0m"
   - delay: 80
-    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Initialization successful\r\n\e[0m\e[0m\e[0m\e[0m\e[0m\e[0mUsage: beeminder_sync beeminder [OPTIONS] GOAL\r\n\r\n  Access the beeminder interface\r\n\r\nOptions:\r\n  -m, --method TEXT     Either 'GET' or 'POST'\r\n  -v, --value INTEGER   Value to add to the new data point\r\n  -c, --comment TEXT    Comment to add to the nww data point\r\n  -t, --timestamp TEXT  Timestamp of the new data point\r\n  --help                Show this message and exit.\r\n\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[0m\e[0m"
-  - delay: 54
-    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                    \r \r\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync\a"
-  - delay: 13
-    content: "\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync\a\e]1;..eeminder-sync\a\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync\a\e]1;..eeminder-sync\a\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync\a"
-  - delay: 77
-    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m… 100daysofcode beeminder-sync \e[43m\e[34m \e[30m \e[39m\e[30m master   \e[49m\e[33m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[71C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:21\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[111D\e[?1h\e=\e[?2004h"
-  - delay: 521
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Initialization successful\r\n\e[0m\e[0m\e[0m\e[0m\e[0m\e[0mUsage: beeminder_sync beeminder [OPTIONS]\r\n\r\n  Access the beeminder interface\r\n\r\nOptions:\r\n  -m, --method TEXT     Either 'GET' or 'POST'\r\n  -g, --goal TEXT       Beeminder goal to use\r\n  -v, --value INTEGER   Value to add to the new data point (POST only)\r\n  -c, --comment TEXT    Comment to add to the new data point (POST only)\r\n  -t, --timestamp TEXT  Timestamp of the new data point (POST only)\r\n  -q, --query TEXT      jq style query string (must be quoted)\r\n  -o, --output TEXT     Format of output. Either 'json' or 'table'\r\n  --help                Show this message and exit.\r\n\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[0m\e[0m"
+  - delay: 43
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                                                                                                              \r \r\e]7;file:///home/dileep\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]7;file:///home/dileep\a"
+  - delay: 62
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m~ \e[49m\e[34m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[193C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:45\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[233D\e[?1h\e=\e[?2004h"
+  - delay: 135
     content: "\e[4mb\e[24m\e[90meeminder_sync beeminder --help\e[39m\e[30D"
-  - delay: 109
-    content: "\b\e[4mb\e[39m\e[4me\e[24m"
-  - delay: 187
-    content: "\b\b\e[4mb\e[4me\e[39m\e[4me\e[24m"
-  - delay: 111
-    content: "\b\e[4me\e[39m\e[4mm\e[24m"
-  - delay: 95
-    content: "\b\e[4mm\e[39m\e[4mi\e[24m"
-  - delay: 115
-    content: "\b\e[4mi\e[39m\e[4mn\e[24m"
-  - delay: 56
-    content: "\b\e[4mn\e[39m\e[4md\e[24m"
-  - delay: 174
-    content: "\b\e[4md\e[39m\e[4me\e[24m"
+  - delay: 299
+    content: "\b\e[24m\e[1m\e[31mb\e[1m\e[31me\e[0m\e[39m"
+  - delay: 197
+    content: "\b\b\e[1m\e[31mb\e[1m\e[31me\e[1m\e[31me\e[0m\e[39m"
+  - delay: 88
+    content: "\b\e[1m\e[31me\e[1m\e[31mm\e[0m\e[39m"
+  - delay: 129
+    content: "\b\e[1m\e[31mm\e[1m\e[31mi\e[0m\e[39m"
+  - delay: 97
+    content: "\b\e[1m\e[31mi\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 72
+    content: "\b\e[1m\e[31mn\e[1m\e[31md\e[0m\e[39m"
+  - delay: 198
+    content: "\b\e[1m\e[31md\e[1m\e[31me\e[0m\e[39m"
   - delay: 84
-    content: "\b\e[4me\e[39m\e[4mr\e[24m"
-  - delay: 269
-    content: "\b\e[4mr\e[39m\e[4m_\e[24m"
-  - delay: 164
-    content: "\b\e[4m_\e[39m\e[4ms\e[24m"
-  - delay: 101
-    content: "\b\e[4ms\e[39m\e[4my\e[24m"
-  - delay: 216
-    content: "\b\e[4my\e[39m\e[4mn\e[24m"
-  - delay: 78
-    content: "\e[13D\e[24m\e[32mb\e[24m\e[32me\e[24m\e[32me\e[24m\e[32mm\e[24m\e[32mi\e[24m\e[32mn\e[24m\e[32md\e[24m\e[32me\e[24m\e[32mr\e[24m\e[32m_\e[24m\e[32ms\e[24m\e[32my\e[24m\e[32mn\e[32mc\e[39m"
-  - delay: 115
+    content: "\b\e[1m\e[31me\e[1m\e[31mr\e[0m\e[39m"
+  - delay: 257
+    content: "\b\e[1m\e[31mr\e[1m\e[31m_\e[0m\e[39m"
+  - delay: 194
+    content: "\b\e[1m\e[31m_\e[1m\e[31ms\e[0m\e[39m"
+  - delay: 152
+    content: "\b\e[1m\e[31ms\e[1m\e[31my\e[0m\e[39m"
+  - delay: 643
+    content: "\b\e[1m\e[31my\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 140
+    content: "\e[13D\e[0m\e[32mb\e[0m\e[32me\e[0m\e[32me\e[0m\e[32mm\e[0m\e[32mi\e[0m\e[32mn\e[0m\e[32md\e[0m\e[32me\e[0m\e[32mr\e[0m\e[32m_\e[0m\e[32ms\e[0m\e[32my\e[0m\e[32mn\e[32mc\e[39m"
+  - delay: 389
     content: "\e[39m "
-  - delay: 162
+  - delay: 217
     content: "\e[39m\e[4mb\e[24m"
-  - delay: 89
-    content: "\b\e[4mb\e[39m\e[4me\e[24m"
-  - delay: 176
-    content: "\b\e[4me\e[39m\e[4me\e[24m"
-  - delay: 83
-    content: "\b\e[4me\e[39m\e[4mm\e[24m"
-  - delay: 117
-    content: "\b\e[4mm\e[39m\e[4mi\e[24m"
-  - delay: 124
-    content: "\b\e[4mi\e[39m\e[4mn\e[24m"
-  - delay: 89
-    content: "\b\e[4mn\e[39m\e[4md\e[24m"
-  - delay: 203
-    content: "\b\e[4md\e[39m\e[4me\e[24m"
+  - delay: 81
+    content: "\b\e[24mb\e[39me"
+  - delay: 175
+    content: "\e[39me"
   - delay: 145
-    content: "\b\e[4me\e[39m\e[4mr\e[24m"
-  - delay: 333
-    content: "\e[9D\e[24mb\e[24me\e[24me\e[24mm\e[24mi\e[24mn\e[24md\e[24me\e[24mr\e[39m "
-  - delay: 376
-    content: "\e[39m\e[4mP\e[24m\e[39m \e[39m \e[39m \e[39m \e[39m \b\b\b\b\b"
-  - delay: 467
-    content: "\b\e[24m\e[90m-\e[90m-help\e[39m\b\b\b\b\b\b"
-  - delay: 308
-    content: "\e[39m-"
-  - delay: 230
-    content: "\e[39mm\e[90m \e[90mP\e[90mO\e[90mS\e[90mT -v 1 -c \"Testing post\" beetest\e[39m\e[36D"
-  - delay: 171
+    content: "\e[39mm"
+  - delay: 186
+    content: "\e[39mi"
+  - delay: 108
+    content: "\e[39mn"
+  - delay: 150
+    content: "\e[39md"
+  - delay: 246
+    content: "\e[39me"
+  - delay: 126
+    content: "\e[39mr"
+  - delay: 147
     content: "\e[39m "
-  - delay: 679
-    content: "\e[39mP\e[39mO\e[39mS\e[39mT\e[39m \e[39m-\e[39mv\e[39m \e[39m1\e[39m \e[39m-\e[39mc\e[39m \e[39m\"\e[39mT\e[39me\e[39ms\e[39mt\e[39mi\e[39mn\e[39mg\e[39m \e[39mp\e[39mo\e[39ms\e[39mt\e[39m\"\e[39m \e[39mb\e[39me\e[39me\e[39mt\e[39me\e[39ms\e[39mt"
-  - delay: 16
-    content: "\e[22D\e[33m\"\e[33mT\e[33me\e[33ms\e[33mt\e[33mi\e[33mn\e[33mg\e[33m \e[33mp\e[33mo\e[33ms\e[33mt\e[33m\"\e[39m\e[8C"
-  - delay: 788
+  - delay: 220
+    content: "\e[39m-"
+  - delay: 416
+    content: "\e[39mm\e[90m \e[90mP\e[90mO\e[90mS\e[90mT -v 1 -c \"Testing post\" -g beetest\e[39m\e[39D"
+  - delay: 202
+    content: "\e[39m "
+  - delay: 283
+    content: "\e[39mG\e[90mE\e[90mT\e[90m \e[90m-\e[90m-\e[90mg\e[90mo\e[90ma\e[90ml\e[90m \e[90mt\e[90me\e[90ms\e[90mt\e[90m_\e[90mg\e[90mo\e[90ma\e[90ml\e[90m \e[90m-\e[90m-\e[90mq\e[90mu\e[90me\e[90mr\e[90my\e[90m \e[90m\"\e[90m.\e[90md\e[90ma\e[90mt\e[90ma\e[90mp\e[90mo\e[90mi\e[90mnts[:2]\" --output json\e[39m\e[59D"
+  - delay: 200
+    content: "\e[39mE"
+  - delay: 124
+    content: "\e[39mT"
+  - delay: 450
+    content: "\e[39m "
+  - delay: 2748
+    content: "\e[39m-\e[39m-\e[39mg\e[39mo\e[39ma\e[39ml\e[39m \e[39mt\e[39me\e[39ms\e[39mt\e[39m_\e[39mg\e[39mo\e[39ma\e[39ml\e[39m \e[39m-\e[39m-\e[39mq\e[39mu\e[39me\e[39mr\e[39my\e[39m \e[39m\"\e[39m.\e[39md\e[39ma\e[39mt\e[39ma\e[39mp\e[39mo\e[39mi\e[39mn\e[39mt\e[39ms\e[39m[\e[39m:\e[39m2\e[39m]\e[39m\"\e[39m \e[39m-\e[39m-\e[39mo\e[39mu\e[39mt\e[39mp\e[39mu\e[39mt\e[39m \e[39mj\e[39ms\e[39mo\e[39mn"
+  - delay: 22
+    content: "\e[31D\e[33m\"\e[33m.\e[33md\e[33ma\e[33mt\e[33ma\e[33mp\e[33mo\e[33mi\e[33mn\e[33mt\e[33ms\e[33m[\e[33m:\e[33m2\e[33m]\e[33m\"\e[39m\e[14C"
+  - delay: 515
     content: "\e[?1l\e>"
   - delay: 5
-    content: "\e[?2004l\r\r\n\e]2;beeminder_sync beeminder -m POST -v 1 -c \"Testing post\" beetest\a\e]1;beeminder_sync\a\e]2;beeminder_sync beeminder -m POST -v 1 -c \"Testing post\" beetest\a\e]1;beeminder_sync\a"
-  - delay: 544
+    content: "\e[?2004l\r\r\n\e]2;beeminder_sync beeminder -m GET --goal test_goal --query \".datapoints[:2]\"  \a\e]1;beeminder_sync\a\e]2;beeminder_sync beeminder -m GET --goal test_goal --query \".datapoints[:2]\"  \a\e]1;beeminder_sync\a"
+  - delay: 346
     content: "\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠋\e[0m Initializing application...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠙\e[0m Initializing application...\e[0m\e[0m"
-  - delay: 80
+  - delay: 81
     content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Initialization successful\r\n\e[0m\e[0m\e[0m\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠋\e[0m Connecting to the Beeminder api...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠙\e[0m Connecting to the Beeminder api...\e[0m\e[0m"
   - delay: 80
     content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠹\e[0m Getting goal list...\e[0m\e[0m"
@@ -465,45 +483,317 @@ records:
     content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠸\e[0m Getting goal list...\e[0m\e[0m"
   - delay: 80
     content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠼\e[0m Getting goal list...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠴\e[0m Getting goal list...\e[0m\e[0m"
   - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Goal list retrieved succesfully\r\n\e[0m\e[0m\e[0m\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠋\e[0m Retrieving datapoints...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠙\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠹\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠸\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠼\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 79
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠴\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠦\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠧\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Data for test_goal retrieved successfully\r\n\e[0m\e[0m"
+  - delay: 7
+    content: "\e[0m\e[0m\e[0m\e[0m\e[34m\e[1m\r\n====================================[OUTPUT]====================================\e[0m\r\n\e[0m\e[0m\e[0m{\r\n  \"datapoints\": [\r\n    {\r\n      \"canonical\": \"17 -1 \\\"Test sub from beeminder-sync\\\"\",\r\n      \"comment\": \"Test sub from beeminder-sync\",\r\n      \"daystamp\": \"20180917\",\r\n      \"fulltext\": \"2018-Sep-17 entered at 21:38 via api\",\r\n      \"id\": \"5ba0570abfec03485500140f\",\r\n      \"origin\": \"api\",\r\n      \"requestid\": null,\r\n      \"timestamp\": 1537234693,\r\n      \"updated_at\": 1537234698,\r\n      \"value\": -1\r\n    },\r\n    {\r\n      \"canonical\": \"17 1 \\\"Test add from beeminder-sync\\\"\",\r\n      \"comment\": \"Test add from beeminder-sync\",\r\n      \"daystamp\": \"20180917\",\r\n      \"fulltext\": \"2018-Sep-17 entered at 21:38 via api\",\r\n      \"id\": \"5ba0570abfec03485500140e\",\r\n      \"origin\": \"api\",\r\n      \"requestid\": null,\r\n      \"timestamp\": 1537234693,\r\n      \"updated_at\": 1537234698,\r\n      \"value\": 1\r\n    }\r\n  ]\r\n}\e[0m\r\n\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[0m\e[0m"
+  - delay: 19
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                                                                                                              \r \r\e]7;file:///home/dileep\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]7;file:///home/dileep\a"
+  - delay: 53
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m~ \e[49m\e[34m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[193C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:45\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[233D\e[?1h\e=\e[?2004h"
+  - delay: 643
+    content: "\e[4mb\e[24m\e[90meeminder_sync beeminder -m GET --goal test_goal --query \".datapoints[:2]\" --output json\e[39m\e[87D"
+  - delay: 103
+    content: "\b\e[24m\e[1m\e[31mb\e[1m\e[31me\e[0m\e[39m"
+  - delay: 183
+    content: "\b\b\e[1m\e[31mb\e[1m\e[31me\e[1m\e[31me\e[0m\e[39m"
+  - delay: 125
+    content: "\b\e[1m\e[31me\e[1m\e[31mm\e[0m\e[39m"
+  - delay: 132
+    content: "\b\e[1m\e[31mm\e[1m\e[31mi\e[0m\e[39m"
+  - delay: 112
+    content: "\b\e[1m\e[31mi\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 41
+    content: "\b\e[1m\e[31mn\e[1m\e[31md\e[0m\e[39m"
+  - delay: 197
+    content: "\b\e[1m\e[31md\e[1m\e[31me\e[0m\e[39m"
+  - delay: 100
+    content: "\b\e[1m\e[31me\e[1m\e[31mr\e[0m\e[39m"
+  - delay: 306
+    content: "\b\e[1m\e[31mr\e[1m\e[31m_\e[0m\e[39m"
+  - delay: 115
+    content: "\b\e[1m\e[31m_\e[1m\e[31ms\e[0m\e[39m"
+  - delay: 122
+    content: "\b\e[1m\e[31ms\e[1m\e[31my\e[0m\e[39m"
+  - delay: 218
+    content: "\b\e[1m\e[31my\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 72
+    content: "\e[13D\e[0m\e[32mb\e[0m\e[32me\e[0m\e[32me\e[0m\e[32mm\e[0m\e[32mi\e[0m\e[32mn\e[0m\e[32md\e[0m\e[32me\e[0m\e[32mr\e[0m\e[32m_\e[0m\e[32ms\e[0m\e[32my\e[0m\e[32mn\e[32mc\e[39m"
+  - delay: 117
+    content: "\e[39m "
+  - delay: 140
+    content: "\e[39m\e[4mb\e[24m"
+  - delay: 89
+    content: "\b\e[24mb\e[39me"
+  - delay: 165
+    content: "\e[39me"
+  - delay: 80
+    content: "\e[39mm"
+  - delay: 134
+    content: "\e[39mi"
+  - delay: 92
+    content: "\e[39mn"
+  - delay: 51
+    content: "\e[39md"
+  - delay: 173
+    content: "\e[39me"
+  - delay: 86
+    content: "\e[39mr"
+  - delay: 223
+    content: "\e[39m-\e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[63D"
+  - delay: 447
+    content: "\b\e[90m \e[90m-m GET --goal test_goal --query \".datapoints[:2]\" --output json\e[39m\e[64D"
+  - delay: 159
+    content: "\e[39m "
+  - delay: 115
+    content: "\e[39m-"
+  - delay: 220
+    content: "\e[39mm"
+  - delay: 142
+    content: "\e[39m "
+  - delay: 208
+    content: "\e[39mG"
+  - delay: 107
+    content: "\e[39mE"
+  - delay: 124
+    content: "\e[39mT"
+  - delay: 101
+    content: "\e[39m "
+  - delay: 148
+    content: "\e[39m-"
+  - delay: 161
+    content: "\e[39m-"
+  - delay: 55
+    content: "\e[39mg"
+  - delay: 203
+    content: "\e[39mo"
+  - delay: 107
+    content: "\e[39ma"
+  - delay: 141
+    content: "\e[39ml"
+  - delay: 109
+    content: "\e[39m "
+  - delay: 201
+    content: "\e[39mt"
+  - delay: 76
+    content: "\e[39me"
+  - delay: 135
+    content: "\e[39ms"
+  - delay: 69
+    content: "\e[39mt"
+  - delay: 723
+    content: "\e[39m_"
+  - delay: 143
+    content: "\e[39mg"
+  - delay: 197
+    content: "\e[39mo"
+  - delay: 78
+    content: "\e[39ma"
+  - delay: 143
+    content: "\e[39ml"
+  - delay: 126
+    content: "\e[39m "
+  - delay: 216
+    content: "\e[39m-"
+  - delay: 152
+    content: "\e[39m-"
+  - delay: 82
+    content: "\e[39mq"
+  - delay: 184
+    content: "\e[39mu"
+  - delay: 47
+    content: "\e[39me"
+  - delay: 116
+    content: "\e[39mr"
+  - delay: 101
+    content: "\e[39my"
+  - delay: 226
+    content: "\e[39m "
+  - delay: 297
+    content: "\e[33m\"\e[39m"
+  - delay: 492
+    content: "\b\e[33m\"\e[33m.\e[39m"
+  - delay: 295
+    content: "\b\e[33m.\e[33md\e[39m"
+  - delay: 92
+    content: "\b\e[33md\e[33ma\e[39m"
+  - delay: 71
+    content: "\b\e[33ma\e[33mt\e[39m"
+  - delay: 129
+    content: "\b\e[33mt\e[33ma\e[39m"
+  - delay: 160
+    content: "\b\e[33ma\e[33mp\e[39m"
+  - delay: 145
+    content: "\b\e[33mp\e[33mo\e[39m"
+  - delay: 10
+    content: "\b\e[33mo\e[33mi\e[39m"
+  - delay: 221
+    content: "\b\e[33mi\e[33mn\e[39m"
+  - delay: 387
+    content: "\b\e[33mn\e[33mt\e[39m"
+  - delay: 190
+    content: "\b\e[33mt\e[33ms\e[39m"
+  - delay: 332
+    content: "\b\e[33ms\e[33m[\e[39m"
+  - delay: 550
+    content: "\b\e[33m[\e[33m:\e[39m"
+  - delay: 154
+    content: "\b\e[33m:\e[33m1\e[39m\e[90m0\e[90m]\e[90m \e[90m|\e[90m \e[90m.\e[90m[\e[90m]\e[90m \e[90m|\e[90m \e[90m \e[90m{\e[90mt\e[90mi\e[90mm\e[90me: .timestamp, id: .id, comment: .comment}\" --output table\e[39m\e[74D"
+  - delay: 119
+    content: "\b\e[33m1\e[33m0\e[39m"
+  - delay: 622
+    content: "\e[39m]\e[39m \e[39m|\e[39m \e[39m.\e[39m[\e[39m]\e[39m \e[39m|\e[39m \e[39m \e[39m{\e[39mt\e[39mi\e[39mm\e[39me\e[39m:\e[39m \e[39m.\e[39mt\e[39mi\e[39mm\e[39me\e[39ms\e[39mt\e[39ma\e[39mm\e[39mp\e[39m,\e[39m \e[39mi\e[39md\e[39m:\e[39m \e[39m.\e[39mi\e[39md\e[39m,\e[39m \e[39mc\e[39mo\e[39mm\e[39mm\e[39me\e[39mn\e[39mt\e[39m:\e[39m \e[39m.\e[39mc\e[39mo\e[39mm\e[39mm\e[39me\e[39mn\e[39mt\e[39m}\e[39m\"\e[39m \e[39m-\e[39m-\e[39mo\e[39mu\e[39mt\e[39mp\e[39mu\e[39mt\e[39m \e[39mt\e[39ma\e[39mb\e[39ml\e[39me"
+  - delay: 7
+    content: "\e[74D\e[33m0\e[33m]\e[33m \e[33m|\e[33m \e[33m.\e[33m[\e[33m]\e[33m \e[33m|\e[33m \e[33m \e[33m{\e[33mt\e[33mi\e[33mm\e[33me\e[33m:\e[33m \e[33m.\e[33mt\e[33mi\e[33mm\e[33me\e[33ms\e[33mt\e[33ma\e[33mm\e[33mp\e[33m,\e[33m \e[33mi\e[33md\e[33m:\e[33m \e[33m.\e[33mi\e[33md\e[33m,\e[33m \e[33mc\e[33mo\e[33mm\e[33mm\e[33me\e[33mn\e[33mt\e[33m:\e[33m \e[33m.\e[33mc\e[33mo\e[33mm\e[33mm\e[33me\e[33mn\e[33mt\e[33m}\e[33m\"\e[39m\e[15C"
+  - delay: 1079
+    content: "\e[?1l\e>"
+  - delay: 7
+    content: "\e[?2004l\r\r\n\e]2;beeminder_sync beeminder -m GET --goal test_goal --query  --output table\a\e]1;beeminder_sync\a\e]2;beeminder_sync beeminder -m GET --goal test_goal --query  --output table\a\e]1;beeminder_sync\a"
+  - delay: 325
+    content: "\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠋\e[0m Initializing application...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠙\e[0m Initializing application...\e[0m\e[0m"
+  - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Initialization successful\r\n\e[0m\e[0m\e[0m\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠋\e[0m Connecting to the Beeminder api...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠙\e[0m Connecting to the Beeminder api...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠹\e[0m Getting goal list...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠸\e[0m Getting goal list...\e[0m\e[0m"
+  - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠼\e[0m Getting goal list...\e[0m\e[0m"
+  - delay: 80
     content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠴\e[0m Getting goal list...\e[0m\e[0m"
   - delay: 80
-    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠦\e[0m Getting goal list...\e[0m\e[0m"
-  - delay: 81
-    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠧\e[0m Getting goal list...\e[0m\e[0m"
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Goal list retrieved succesfully\r\n\e[0m\e[0m\e[0m\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠋\e[0m Retrieving datapoints...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠙\e[0m Retrieving datapoints...\e[0m\e[0m"
   - delay: 80
-    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠇\e[0m Getting goal list...\e[0m\e[0m"
-  - delay: 81
-    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠏\e[0m Getting goal list...\e[0m\e[0m"
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠹\e[0m Retrieving datapoints...\e[0m\e[0m"
   - delay: 80
-    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠋\e[0m Getting goal list...\e[0m\e[0m"
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠸\e[0m Retrieving datapoints...\e[0m\e[0m"
   - delay: 81
-    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠙\e[0m Getting goal list...\e[0m\e[0m"
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠼\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠴\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠦\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠧\e[0m Retrieving datapoints...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Data for test_goal retrieved successfully\r\n\e[0m\e[0m\e[0m\e[0m\e[0m\e[0m\e[34m\e[1m\r\n====================================[OUTPUT]====================================\e[0m\r\n\e[0m\e[0m\e[0m------------------------------------------------------------------------------------------------------------------------\r\n|                                                      datapoints                                                      |\r\n------------------------------------------------------------------------------------------------------------------------\r\n|                 time                 ||                  id                  ||               comment                |\r\n------------------------------------------------------------------------------------------------------------------------\r\n|              1537234693              ||       5ba0570abfec03485500140f       ||     Test sub from beeminder-sync     |\r\n|              1537234693              ||       5ba0570abfec03485500140e       ||     Test add from beeminder-sync     |\r\n|              1537233966              ||       5ba05432bfec034855001402       ||     Test sub from beeminder-sync     |\r\n|              1537233966              ||       5ba05431bfec034855001401       ||     Test add from beeminder-sync     |\r\n|              1534297413              ||       5b738549bfec03317c00015f       ||     Test add from beeminder-sync     |\r\n|              1534297413              ||       5b738549bfec033144000683       ||     Test sub from beeminder-sync     |\r\n|              1534210231              ||       5b7230bcbfec03705c001b71       ||     Test sub from beeminder-sync     |\r\n|              1534210231              ||       5b7230bbbfec03705c001b70       ||     Test add from beeminder-sync     |\r\n|              1534209906              ||       5b722f77bfec03705c001b4f       ||     Test sub from beeminder-sync     |\r\n|              1534209906              ||       5b722f76bfec03705c001b4e       ||     Test add from beeminder-sync     |\e[0m\r\n\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[0m\e[0m"
+  - delay: 20
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                                                                                                              \r \r\e]7;file:///home/dileep\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]7;file:///home/dileep\a"
+  - delay: 53
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m~ \e[49m\e[34m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[193C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:45\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[233D\e[?1h\e=\e[?2004h"
+  - delay: 1535
+    content: "\e[4mb\e[24m\e[90meeminder_sync beeminder -m GET --goal test_goal --query \".datapoints[:10] | .[] |  {time: .timestamp, id: .id, comment: .comment}\" --output table\e[39m\e[145D"
+  - delay: 149
+    content: "\b\e[24m\e[1m\e[31mb\e[1m\e[31me\e[0m\e[39m"
+  - delay: 151
+    content: "\b\b\e[1m\e[31mb\e[1m\e[31me\e[1m\e[31me\e[0m\e[39m"
+  - delay: 129
+    content: "\b\e[1m\e[31me\e[1m\e[31mm\e[0m\e[39m"
+  - delay: 90
+    content: "\b\e[1m\e[31mm\e[1m\e[31mi\e[0m\e[39m"
+  - delay: 121
+    content: "\b\e[1m\e[31mi\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 79
+    content: "\b\e[1m\e[31mn\e[1m\e[31md\e[0m\e[39m"
+  - delay: 183
+    content: "\b\e[1m\e[31md\e[1m\e[31me\e[0m\e[39m"
+  - delay: 85
+    content: "\b\e[1m\e[31me\e[1m\e[31mr\e[0m\e[39m"
+  - delay: 267
+    content: "\b\e[1m\e[31mr\e[1m\e[31m_\e[0m\e[39m"
+  - delay: 164
+    content: "\b\e[1m\e[31m_\e[1m\e[31ms\e[0m\e[39m"
+  - delay: 113
+    content: "\b\e[1m\e[31ms\e[1m\e[31my\e[0m\e[39m"
+  - delay: 207
+    content: "\b\e[1m\e[31my\e[1m\e[31mn\e[0m\e[39m"
+  - delay: 80
+    content: "\e[13D\e[0m\e[32mb\e[0m\e[32me\e[0m\e[32me\e[0m\e[32mm\e[0m\e[32mi\e[0m\e[32mn\e[0m\e[32md\e[0m\e[32me\e[0m\e[32mr\e[0m\e[32m_\e[0m\e[32ms\e[0m\e[32my\e[0m\e[32mn\e[32mc\e[39m"
+  - delay: 110
+    content: "\e[39m "
+  - delay: 143
+    content: "\e[39m\e[4mb\e[24m"
+  - delay: 69
+    content: "\b\e[24mb\e[39me"
+  - delay: 189
+    content: "\e[39me"
+  - delay: 108
+    content: "\e[39mm"
+  - delay: 136
+    content: "\e[39mi"
+  - delay: 124
+    content: "\e[39mn"
+  - delay: 40
+    content: "\e[39md"
+  - delay: 198
+    content: "\e[39me"
+  - delay: 93
+    content: "\e[39mr"
+  - delay: 123
+    content: "\e[39m "
+  - delay: 222
+    content: "\e[39m-"
+  - delay: 123
+    content: "\e[39mm"
+  - delay: 211
+    content: "\e[39m "
+  - delay: 294
+    content: "\e[39m\e[4mP\e[24m\e[90mO\e[90mS\e[90mT\e[90m \e[90m-\e[90mv\e[90m \e[90m1\e[90m \e[90m-\e[90mc\e[90m \e[90m\"\e[90mT\e[90me\e[90ms\e[90mt\e[90mi\e[90mn\e[90mg\e[90m \e[90mp\e[90mo\e[90ms\e[90mt\e[90m\"\e[90m \e[90m-\e[90mg\e[90m \e[90mb\e[90me\e[90me\e[90mt\e[90me\e[90ms\e[90mt\e[39m\e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[117D"
+  - delay: 229
+    content: "\b\e[24mP\e[39mO"
+  - delay: 127
+    content: "\e[39mS"
+  - delay: 619
+    content: "\e[39mT\e[39m \e[39m-\e[39mv\e[39m \e[39m1\e[39m \e[39m-\e[39mc\e[39m \e[39m\"\e[39mT\e[39me\e[39ms\e[39mt\e[39mi\e[39mn\e[39mg\e[39m \e[39mp\e[39mo\e[39ms\e[39mt\e[39m\"\e[39m \e[39m-\e[39mg\e[39m \e[39mb\e[39me\e[39me\e[39mt\e[39me\e[39ms\e[39mt"
+  - delay: 8
+    content: "\e[25D\e[33m\"\e[33mT\e[33me\e[33ms\e[33mt\e[33mi\e[33mn\e[33mg\e[33m \e[33mp\e[33mo\e[33ms\e[33mt\e[33m\"\e[39m\e[11C"
+  - delay: 682
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;beeminder_sync beeminder -m POST -v 1 -c \"Testing post\" -g beetest\a\e]1;beeminder_sync\a\e]2;beeminder_sync beeminder -m POST -v 1 -c \"Testing post\" -g beetest\a\e]1;beeminder_sync\a"
+  - delay: 333
+    content: "\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠋\e[0m Initializing application...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[32m⠙\e[0m Initializing application...\e[0m\e[0m"
+  - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Initialization successful\r\n\e[0m\e[0m\e[0m\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠋\e[0m Connecting to the Beeminder api...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠙\e[0m Connecting to the Beeminder api...\e[0m\e[0m"
+  - delay: 81
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠹\e[0m Getting goal list...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠸\e[0m Getting goal list...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠼\e[0m Getting goal list...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠴\e[0m Getting goal list...\e[0m\e[0m"
   - delay: 80
     content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Goal list retrieved succesfully\r\n\e[0m\e[0m\e[0m\e[?25l\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠋\e[0m Creating datapoints...\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠙\e[0m Creating datapoints...\e[0m\e[0m"
   - delay: 80
     content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠹\e[0m Creating datapoints...\e[0m\e[0m"
-  - delay: 81
+  - delay: 80
     content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠸\e[0m Creating datapoints...\e[0m\e[0m"
   - delay: 80
     content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠼\e[0m Creating datapoints...\e[0m\e[0m"
-  - delay: 81
+  - delay: 80
     content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠴\e[0m Creating datapoints...\e[0m\e[0m"
-  - delay: 80
-    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠦\e[0m Creating datapoints...\e[0m\e[0m"
-  - delay: 81
-    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠧\e[0m Creating datapoints...\e[0m\e[0m"
-  - delay: 80
-    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠇\e[0m Creating datapoints...\e[0m\e[0m"
-  - delay: 81
-    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠏\e[0m Creating datapoints...\e[0m\e[0m"
-  - delay: 80
-    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Creation successful\r\n\e[0m\e[0m\e[0m\e[0m\e[0m\e[0m{\r\n  \"canonical\": \"03 1 \\\"Testing post\\\"\",\r\n  \"comment\": \"Testing post\",\r\n  \"daystamp\": \"20180803\",\r\n  \"fulltext\": \"2018-Aug-03 entered at 21:21 via api\",\r\n  \"id\": \"5b64ff9cbfec036a2a000f0d\",\r\n  \"origin\": \"api\",\r\n  \"requestid\": null,\r\n  \"status\": \"created\",\r\n  \"timestamp\": 1533345690,\r\n  \"updated_at\": 1533345692,\r\n  \"value\": 1.0\r\n}\e[0m\r\n\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[0m\e[0m"
-  - delay: 59
-    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                    \r \r\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync\a"
-  - delay: 13
-    content: "\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync\a\e]1;..eeminder-sync\a\e]2;dileep@red-peep: ~/Documents/Coding/100daysofcode/beeminder-sync\a\e]1;..eeminder-sync\a\e]7;file:///home/dileep/Documents/Coding/100daysofcode/beeminder-sync\a"
   - delay: 79
-    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m… 100daysofcode beeminder-sync \e[43m\e[34m \e[30m \e[39m\e[30m master   \e[49m\e[33m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[71C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:21\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[111D\e[?1h\e=\e[?2004h"
-  - delay: 708
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\r\e[1m\e[34m⠦\e[0m Creating datapoints...\e[0m\e[0m"
+  - delay: 80
+    content: "\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[32m✔\e[39m Creation successful\r\n\e[0m\e[0m\e[0m\e[0m\e[0m\e[0m\e[34m\e[1m\r\n====================================[OUTPUT]====================================\e[0m\r\n\e[0m\e[0m\e[0m{\r\n  \"datapoints\": {\r\n    \"canonical\": \"23 1 \\\"Testing post\\\"\",\r\n    \"comment\": \"Testing post\",\r\n    \"daystamp\": \"20180923\",\r\n    \"fulltext\": \"2018-Sep-23 entered at 21:46 via api\",\r\n    \"id\": \"5ba841d9bfec032d80002229\",\r\n    \"origin\": \"api\",\r\n    \"requestid\": null,\r\n    \"status\": \"created\",\r\n    \"timestamp\": 1537753560,\r\n    \"updated_at\": 1537753561,\r\n    \"value\": 1.0\r\n  }\r\n}\e[0m\r\n\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\r\e[0m\e[0m\e[0m\e[K\e[0m\e[0m\e[0m\e[?25h\e[0m\e[0m\e[0m\e[0m\e[0m"
+  - delay: 20
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                                                                                                              \r \r\e]7;file:///home/dileep\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]2;dileep@red-peep: ~\a\e]1;~\a\e]7;file:///home/dileep\a"
+  - delay: 73
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[38;5;50m┏\e[39m\e[0m\e[49m\e[40m \e[37m  \e[44m\e[30m \e[30m \e[39m\e[30m~ \e[49m\e[34m\e[39m \r\n\e[38;5;50m┗\e[33m\e[31m \e[K\e[193C\e[39m\e[0m\e[49m\e[34m\e[39m\e[44m\e[30m beeminder-sync-test\e[30m \e[39m \e[39m\e[37m\e[39m\e[47m\e[30m 21:46\e[30m  \e[39m \e[39m\e[30m\e[39m\e[40m\e[34m Ins\e[K\e[00m\e[31m\e[49m\e[233D\e[?1h\e=\e[?2004h"
+  - delay: 1295
     content: "\e[?2004l\r\r\n"
