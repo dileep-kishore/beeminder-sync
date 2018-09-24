@@ -5,6 +5,17 @@ Changelog
 Unreleased
 ----------
 
+
+0.2.1 (2018-09-17)
+------------------
+
+Fixed
++++++
+- Update ``query`` function to work when a list slice is requested
+- Fix issue of ``output`` function not being in ``output`` namespace
+- Update dev dependencies
+
+
 0.2.0 (2018-09-17)
 ------------------
 
