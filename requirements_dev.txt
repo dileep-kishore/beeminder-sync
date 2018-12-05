@@ -48,7 +48,7 @@ pytest==3.8.0
 pytz==2018.5
 pyyaml==3.13
 requests-toolbelt==0.8.0
-requests==2.19.1; python_version != '3.2.*'
+requests==2.20.1; python_version != '3.2.*'
 simplegeneric==0.8.1
 six==1.11.0
 snowballstemmer==1.2.1
