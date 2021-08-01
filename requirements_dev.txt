@@ -10,7 +10,7 @@ bumpversion==0.5.3
 certifi==2018.8.24
 chardet==3.0.4
 codecov==2.1.11
-coverage==4.5.1
+coverage==5.5
 decorator==4.3.0
 docutils==0.14
 flake8==3.5.0
