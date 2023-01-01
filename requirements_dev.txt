@@ -4,7 +4,7 @@ argh==0.26.2
 astroid==2.0.4
 atomicwrites==1.2.1; python_version >= '2.7'
 attrs==18.2.0
-babel==2.6.0
+babel==2.11.0
 backcall==0.1.0
 bumpversion==0.5.3
 certifi==2018.8.24
