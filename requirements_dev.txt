@@ -9,7 +9,7 @@ backcall==0.1.0
 bumpversion==0.5.3
 certifi==2022.12.7
 chardet==3.0.4
-codecov==2.0.15
+codecov==2.1.12
 coverage==4.5.1
 decorator==4.3.0
 docutils==0.14
