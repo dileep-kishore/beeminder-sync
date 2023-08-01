@@ -1,5 +1,5 @@
 -i https://pypi.python.org/simple
-click==6.7
+click==8.1.6
 colorama==0.3.9
 cursor==1.2.0
 dateparser==0.7.0
