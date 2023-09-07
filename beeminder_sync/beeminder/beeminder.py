@@ -71,7 +71,7 @@ class Beeminder:
         url = furl(self._base_url)
         if endpoint == 'user':
             url.add(path=f"users/{self._user_name}.json")
-        elif endpoint in ['goals', 'datapoints']:
+        elif endpoint in {'goals', 'datapoints'}:
             url.add(path=f"users/{self._user_name}/goals/")
         else:
             raise TypeError("The endpoint you entered is not supported")

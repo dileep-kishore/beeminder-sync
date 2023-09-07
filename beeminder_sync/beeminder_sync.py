@@ -59,12 +59,9 @@ class BeeSync:
         if not config_file.exists():
             new_config_path = self.base_dir / "config.ini"
             self._spinner.fail("Could not find a configuration file.")
-            answer = click.confirm(
-                f"Create new one at {new_config_path}?",
-                default=False,
-                abort=True
-            )
-            if answer:
+            if answer := click.confirm(
+                f"Create new one at {new_config_path}?", default=False, abort=True
+            ):
                 self._spinner.text = "Creating new configuration file template"
                 self._create_config(new_config_path)
                 self._spinner.succeed("Configuration template created. Please fill in the required options")
@@ -122,19 +119,19 @@ class BeeSync:
             ConfigParser
         """
         base_config = self.base_dir / "config.ini"
-        if base_config != self.config_path and base_config.exists():
-            answer = click.confirm(
-                "A configuration file already exists at {self.base_dir}. Replace?",
-                default=False,
-                abort=True,
-            )
-            if answer:
-                shutil.copy(base_config, self.base_dir / "config.ini.bak")
+        if base_config != self.config_path:
+            if base_config.exists():
+                if answer := click.confirm(
+                    "A configuration file already exists at {self.base_dir}. Replace?",
+                    default=False,
+                    abort=True,
+                ):
+                    shutil.copy(base_config, self.base_dir / "config.ini.bak")
+                    shutil.copy(self.config_path, base_config)
+                    os.chmod(base_config, 0o600)
+            else:
                 shutil.copy(self.config_path, base_config)
                 os.chmod(base_config, 0o600)
-        elif base_config != self.config_path:
-            shutil.copy(self.config_path, base_config)
-            os.chmod(base_config, 0o600)
         return read_config(base_config)
 
     def update(self, section: str, option: str, value: str, silent: bool = False) -> str:

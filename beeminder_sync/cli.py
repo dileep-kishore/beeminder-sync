@@ -41,11 +41,11 @@ def cli(ctx, basedir, config):
 def config(ctx, section, option, value):
     """ Get and set configuration options """
     beesync = ctx.obj['CONFIG']
-    if value:
-        conf_val = beesync.update(section, option, value)
-    else:
-        conf_val = beesync.get(section, option)
-    return conf_val
+    return (
+        beesync.update(section, option, value)
+        if value
+        else beesync.get(section, option)
+    )
 
 
 @cli.command()
@@ -74,10 +74,7 @@ def beeminder(ctx, method, goal, value, comment, timestamp, query, output):
             response = bee.create_datapoint(goal, value, comment)
     else:
         bee.fail(f"Unsupported method {method}. Valid options: ['GET', 'POST']")
-    if query:
-        queried_response = bee.query(response, query)
-    else:
-        queried_response = response
+    queried_response = bee.query(response, query) if query else response
     click.secho('\n' + '=' * 36 + "[OUTPUT]" + '=' * 36, fg="blue", bold=True)
     click.secho(bee.output(queried_response, output))
     return 0

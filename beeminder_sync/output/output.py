@@ -39,15 +39,17 @@ def table_output(response: dict) -> str:
     rows = list(response[header])
     # NOTE: We assume that all items in list have the same number of keys
     cols = list(rows[0].keys())
-    table = ['-' * width]
-    table.append("|{content:^{width}}|".format(content=header, width=width - 2))
-    table.append('-' * width)
+    table = [
+        '-' * width,
+        "|{content:^{width}}|".format(content=header, width=width - 2),
+        '-' * width,
+    ]
     col_width = width // len(cols)
-    col_headers = []
-    for col in cols:
-        col_headers.append("|{content:^{width}}|".format(content=col, width=col_width - 2))
-    table.append(''.join(col_headers))
-    table.append('-' * width)
+    col_headers = [
+        "|{content:^{width}}|".format(content=col, width=col_width - 2)
+        for col in cols
+    ]
+    table.extend((''.join(col_headers), '-' * width))
     for row in rows:
         row_data = [''] * len(row)
         for key, value in row.items():
